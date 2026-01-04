@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "services": "Services",
+    "requirements": "Requirements",
+    "howItWorks": "How It Works",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Starte deine Ausbildung in Deutschland",
+    "subtitle": "Wir begleiten dich Schritt für Schritt"
+  }
+}
