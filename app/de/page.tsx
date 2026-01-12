@@ -3,7 +3,7 @@ import Services from "../components/Services";
 import Requirements from "../components/Requirements";
 import OurStory from "../components/AboutUs";
 import WhyChooseUs from "../components/WhyChooseUs";
-import HowItWorks from "../components/HowItWorks";
+import HowItWorks from "../components/Process";
 import Contact from "../components/Contact";
 import FAQ from "../components/FAQ";
 

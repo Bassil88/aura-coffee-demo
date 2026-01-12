@@ -4,7 +4,7 @@ export default function Hero({ locale }: { locale: "de" | "en" }) {
   const t = translations[locale].hero;
 
   return (
-    <section className="pt-28 pb-20 bg-[#f7f8fa] text-black text-center" id="hero">
+    <section className="pt-50 pb-20 bg-[#f7f8fa]  text-black text-center" id="hero ">
       <div className="mx-3">
 
       <h2 className=" font-bold mb-4">

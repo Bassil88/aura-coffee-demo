@@ -15,10 +15,12 @@ html, body {
 /* ===== Neumorphic Navbar ===== */
 .neu-navbar {
   background-color: #f7f8fa;
-  border-radius: 96% 4% 86% 14% / 4% 70% 30% 96%;
+  border-radius: 99% 99% 16% 14% / 14% 10% 99% 92%;
   box-shadow:
-    0 8px 20px rgba(0, 0, 0, 0.06),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.6);
+    6px 6px 14px rgba(0, 0, 0, 0.08),
+    -6px -6px 14px rgba(255, 255, 255, 0.9),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
   overflow: hidden;
   
 }
@@ -36,14 +38,21 @@ html, body {
 
 .neu-nav-link {
   position: relative;
-  padding: 6px 12px;
+  /* padding: 6px 12px; */
+  padding: clamp(4px, 0.6vw, 6px) clamp(10px, 1vw, 14px);
   border-radius: 999px;
   transition: all 0.2s ease;
   white-space: nowrap; /* CRITICAL */
-    font-size: 0.95rem; /* ~15px */
+    /* font-size: 0.95rem;  */
+    font-size: clamp(0.85rem, 1.1vw, 1rem); 
   line-height: 1;
 }
 
+.neu-navbar.is-scrolled {
+  box-shadow:
+    inset 6px 6px 12px rgba(0, 0, 0, 0.08),
+    inset -6px -6px 12px rgba(255, 255, 255, 0.9);
+}
 
 /* hover only on non-touch devices */
 @media (hover: hover) {
@@ -69,29 +78,28 @@ html, body {
   }
 }
 
-/* ===== Neumorphic Card ===== */
 .neu-card {
-  background: #ffffff;
-  border-radius: 50px;
+  background: #f5f6f8;
+  border-radius: 40px;
 
-  /* key change: stronger contrast */
   box-shadow:
-    14px 14px 30px rgba(0, 0, 0, 0.15),
-    -14px -14px 30px rgba(255, 255, 255, 1);
+    8px 8px 16px rgba(0, 0, 0, 0.08),
+    -8px -8px 16px rgba(255, 255, 255, 0.9);
 
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
   overflow: hidden;
 }
 
-/* hover = lifted */
+
 .neu-card:hover {
   box-shadow:
-    18px 18px 40px rgba(0, 0, 0, 0.2),
-    -18px -18px 40px rgba(255, 255, 255, 1);
-  transform: translateY(-4px);
-}
-.neu-card {
-  border: 1px solid rgba(0, 0, 0, 0.04);
+    12px 12px 22px rgba(0, 0, 0, 0.12),
+    -12px -12px 22px rgba(255, 255, 255, 0.95);
+
+  transform: translateY(-2px);
 }
 /* ===== Neumorphic Button ===== */
 .neu-button {
@@ -147,6 +155,43 @@ html, body {
   border-radius: 91% 9% 93% 7% / 20% 100% 0% 80% 
 }
 
+/* ===== Warum wir – Neumorphic bullet ===== */
+.why-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  flex-shrink: 0;
+
+  background: #7f97ad;
+
+  box-shadow:
+    2px 2px 4px rgba(0, 0, 0, 0.15),
+    -2px -2px 4px rgba(255, 255, 255, 0.6);
+}
+#whyChooseUs p {
+  line-height: 1.6;
+}
+
+#whyChooseUs {
+  text-align: center;
+}
+
+#whyChooseUs .why-item {
+  text-align: left;
+}
+
+
+@media (hover: hover) {
+  #whyChooseUs .why-dot {
+    transition: transform 0.2s ease;
+  }
+
+  #whyChooseUs div:hover .why-dot {
+    transform: scale(1.1);
+  }
+}
+
+
 
 
 /* ===== How It Works Steps ===== */
@@ -157,18 +202,30 @@ html, body {
 }
 
 .step-number {
-  min-width: 28px;
-  height: 28px;
+  min-width: 30px;
+  height: 30px;
   border-radius: 999px;
-  background: #2563eb;
-  color: white;
+
   font-size: 14px;
   font-weight: 600;
+  color: #ffffff;
+
+  /* LIGHTER base for neumorphism */
+  background: #7f97ad;
+
+  /* REAL neumorphic depth */
+  box-shadow:
+    4px 4px 8px rgba(0, 0, 0, 0.18),
+    -4px -4px 8px rgba(255, 255, 255, 0.7),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.45),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.2);
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+
 
 .step-text {
   font-size: 16px;
@@ -204,6 +261,103 @@ html, body {
     line-height: 1.6;
   }
 
+  /* ===== Voraussetzungen – Neumorphic Pills ===== */
+.req-pill {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 10px 16px;
+  border-radius: 999px;
+
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #374151;
+
+  background: #f5f6f8;
+
+  box-shadow:
+    4px 4px 10px rgba(0, 0, 0, 0.12),
+    -4px -4px 10px rgba(255, 255, 255, 0.9);
+
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .req-pill {
+    white-space: normal;
+  }
+}
+
+/* ===== Neumorphic Image Wrapper ===== */
+/* .neu-image-wrapper {
+  position: relative;
+  border-radius: 91% 9% 93% 7% / 20% 100% 0% 80% ;
+  background: #f5f6f8;
+
+  box-shadow:
+    8px 8px 20px rgba(0, 0, 0, 0.15),
+    -8px -8px 20px rgba(255, 255, 255, 0.9);
+
+  padding: 6px;
+}
+
+.neu-image-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 91% 9% 93% 7% / 20% 100% 0% 80% ;
+  box-shadow:
+    inset 1px 1px 3px rgba(255, 255, 255, 0.35),
+    inset -1px -1px 3px rgba(0, 0, 0, 0.12);
+  pointer-events: none;
+} */
+.neu-image-wrapper {
+  position: relative;
+  overflow: hidden; /* ✅ THIS IS THE FIX */
+
+  border-radius: 91% 9% 93% 7% / 20% 100% 0% 80%;
+  /* background: #f5f6f8; */
+
+  box-shadow:
+    8px 8px 20px rgba(0, 0, 0, 0.15),
+    -8px -8px 20px rgba(255, 255, 255, 0.9);
+
+  padding: 6px;
+}
+
+.neu-image-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 91% 9% 93% 7% / 20% 100% 0% 80%;
+  box-shadow:
+    inset 1px 1px 3px rgba(255, 255, 255, 0.35),
+    inset -1px -1px 3px rgba(0, 0, 0, 0.12);
+  pointer-events: none;
+}
+
+/* INNER = clips image with your fancy organic radius */
+.neu-image-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden; /* ✅ clipping happens here */
+  border-radius: 91% 9% 93% 7% / 20% 100% 0% 80%;
+}
+
+/* Optional: inner inset (neumorphic pressed edge) */
+.neu-image-inner::after {
+  content: "";
+  position: absolute;
+  inset: 0; /* ✅ apply to the clipped area */
+  border-radius: inherit;
+  box-shadow:
+    inset 1px 1px 3px rgba(255, 255, 255, 0.35),
+    inset -1px -1px 3px rgba(0, 0, 0, 0.12);
+  pointer-events: none;
+}
+
+
 /* ================================
    Responsive Typography System
    ================================ */
@@ -238,4 +392,53 @@ small {
 }
 .hero h1 {
   font-size: clamp(2.5rem, 6vw, 4rem);
+}
+
+
+.neu-container-wrapper {
+  position: relative;
+  overflow: hidden; /* ✅ THIS IS THE FIX */
+
+  border-radius: 91% 9% 93% 7% / 20% 100% 0% 80%;
+  /* background: #f5f6f8; */
+  background: #f5f6f8;
+
+  box-shadow:
+    8px 8px 20px rgba(0, 0, 0, 0.15),
+    -8px -8px 20px rgba(255, 255, 255, 0.9);
+
+  padding: 6px;
+}
+
+.neu-container-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  /* border-radius: 91% 9% 93% 7% / 20% 100% 0% 80%; */
+  box-shadow:
+    inset 1px 1px 3px rgba(255, 255, 255, 0.35),
+    inset -1px -1px 3px rgba(0, 0, 0, 0.12);
+  pointer-events: none;
+}
+
+/* INNER = clips container with your fancy organic radius */
+.neu-container-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden; /* ✅ clipping happens here */
+  /* border-radius: 91% 9% 93% 7% / 20% 100% 0% 80%; */
+}
+
+/* Optional: inner inset (neumorphic pressed edge) */
+.neu-container-inner::after {
+  content: "";
+  position: absolute;
+  inset: 0; /* ✅ apply to the clipped area */
+  border-radius: inherit;
+  box-shadow:
+    inset 1px 1px 3px rgba(255, 255, 255, 0.35),
+    inset -1px -1px 3px rgba(0, 0, 0, 0.12);
+  pointer-events: none;
 }

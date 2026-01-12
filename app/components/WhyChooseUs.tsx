@@ -11,21 +11,23 @@ export default function WhyChooseUs({ locale }: { locale: "de" | "en" }) {
           {t.title}
         </h3>
 
-        <div className="max-w-3xl mx-auto space-y-4 ">
+        <div className="max-w-xl mx-auto space-y-4 ">
           {t.points.map((text: string, index: number) => (
-            <div key={index} className="flex items-start gap-3">
-              
+            <div key={index} className="flex items-start gap-4">
+                {/* Neumorphic dot */}
+  <span className="why-dot mt-2" />
+
               {/* Diamond icon */}
-              <Image
+              {/* <Image
                 src="/diamond.png"
                 alt="Diamond bullet"
                 width={18}
                 height={18}
                 className="mt-1"
-              />
+              /> */}
 
               {/* Text */}
-              <p className="text-gray-800">
+              <p className="text-gray-800 leading-relaxed">
                 {text}
               </p>
             </div>

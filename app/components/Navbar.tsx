@@ -9,6 +9,7 @@ import LanguageToggle from "./LanguageToggle";
 export default function Navbar({ locale }: { locale: "en" | "de" }) {
   const [open, setOpen] = useState(false);
   const t = translations[locale].nav;
+  
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
@@ -21,19 +22,21 @@ export default function Navbar({ locale }: { locale: "en" | "de" }) {
     setOpen(false);
   };
 
-  return (
-    <nav className="neu-navbar fixed top-0 w-full z-50">
+  
 
-      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 h-[72px]">
+  return (
+    <nav className="neu-navbar fixed top-0 w-full z-50 ">
+
+      <div className="max-w-7xl mx-auto flex items-center justify-between mt-1  h-[112px]">
 
         {/* Logo */}
         <Image
-          src="/b-logo.png"
+          src="/brightwaytooDeutschland-logo.png"
           alt="Brightway logo"
-          width={200}
-          height={80}
+          width={600}
+          height={100}
           priority
-          className="h-50 w-[300] object-contain"
+          className="h-auto w-[180px] object-contain"
         />
 
         {/* Desktop Nav */}

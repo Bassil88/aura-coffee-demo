@@ -46,7 +46,7 @@ export default function Contact({ locale }: { locale: "de" | "en" }) {
               <Image src="/viber-icons.png" alt="viber" width={48} height={48} />
             </a>
 
-            <a href="https://www.facebook.com/YOUR_FACEBOOK_PAGE" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page" className="hover:opacity-80 transition">
+            <a href="https://www.facebook.com/share/17mSYUDRA6/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page" className="hover:opacity-80 transition">
               <Image src="/round-blue-facebook-button-icon-size_64.png" alt="Facebook" width={48} height={48} />
             </a>
             <a href="/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page" className="hover:opacity-80 transition">
