@@ -17,16 +17,6 @@ export default function WhyChooseUs({ locale }: { locale: "de" | "en" }) {
                 {/* Neumorphic dot */}
   <span className="why-dot mt-2" />
 
-              {/* Diamond icon */}
-              {/* <Image
-                src="/diamond.png"
-                alt="Diamond bullet"
-                width={18}
-                height={18}
-                className="mt-1"
-              /> */}
-
-              {/* Text */}
               <p className="text-gray-800 leading-relaxed">
                 {text}
               </p>

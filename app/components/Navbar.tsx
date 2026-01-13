@@ -60,7 +60,7 @@ export default function Navbar({ locale }: { locale: "en" | "de" }) {
 </div>
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-gray-700 text-2xl"
+          className="md:hidden text-gray-700 text-3xl mr-4"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >

@@ -442,3 +442,69 @@ small {
     inset -1px -1px 3px rgba(0, 0, 0, 0.12);
   pointer-events: none;
 }
+
+/* ===== Neumorphic Language Toggle ===== */
+.neu-lang-toggle {
+  position: relative;
+  width: 76px;
+  height: 36px;
+  border-radius: 999px;
+  background: #f5f6f8;
+
+  box-shadow:
+    4px 4px 10px rgba(0, 0, 0, 0.12),
+    -4px -4px 10px rgba(255, 255, 255, 0.9);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px;
+
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Sliding thumb */
+.neu-lang-thumb {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 32px;
+  height: 28px;
+  border-radius: 999px;
+
+   background: linear-gradient(
+    90deg,
+    #1f2933d4 0%,    /* soft black */
+    #b91c1cc0 50%,   /* muted red */
+    #d49e17c9 100%  /* soft gold (NOT neon yellow) */
+  );
+  /* background: #a4925c; */
+
+  /* background: #a4925cb7; */
+  /* background: #9aa3ab; */
+  /* background: #7f97ad; */
+
+  box-shadow:
+    inset 1px 1px 2px rgba(255, 255, 255, 0.45),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.25),
+    2px 2px 6px rgba(0, 0, 0, 0.25);
+
+  transition: transform 0.35s ease;
+  z-index: 1;
+}
+
+/* Labels */
+.neu-lang-label {
+  width: 50%;
+  text-align: center;
+  z-index: 2;
+  color: #6b7280;
+  transition: color 0.3s ease;
+}
+
+.neu-lang-label.active {
+  color: #ffffff;
+}
