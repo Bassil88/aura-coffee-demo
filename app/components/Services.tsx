@@ -70,8 +70,10 @@ export default function Services({ locale }: { locale: "de" | "en" }) {
 
   return (
     <section id="services" className={`py-24 bg-[#f5f6f8] `}>
-
-      <h2 className="text-center mb-10">Our Services are</h2>
+        <h2 className="text-center mb-5 text-slate-500 max-w-3xl mx-auto text-sm
+      sm:text-base
+      md:text-lg
+      lg:text-xl ">{t.intro}</h2>
       <div className="max-w-6xl mx-auto grid sm:grid-cols-2 gap-10 px-3">
         {t.items.map(
           (

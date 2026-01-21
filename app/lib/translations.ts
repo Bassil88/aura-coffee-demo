@@ -59,6 +59,9 @@ whyChooseUs: {
 
 
     services: {
+              intro:
+    "Our services include",
+  
       items: [
         {
           title: "Consultation & Orientation",
@@ -231,6 +234,9 @@ whyChooseUs: {
     },
 
     services: {
+        intro:
+    "Dienstleistungsangebot",
+  
       items: [
         {
           title: "Beratung & Orientierung",
