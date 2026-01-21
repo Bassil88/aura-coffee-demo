@@ -1,7 +1,8 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.brightway2deutschland.com";
+const baseUrl = "https://brightway2deutschland.com";
+
 
   return [
     {
