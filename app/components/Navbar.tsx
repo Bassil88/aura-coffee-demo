@@ -27,7 +27,7 @@ export default function Navbar({ locale }: { locale: "en" | "de" }) {
   return (
     <nav className="neu-navbar fixed top-0 w-full z-50 ">
 
-      <div className="max-w-7xl mx-auto flex items-center justify-between mt-1  h-[112px]">
+      <div className="max-w-7xl mx-auto flex items-center justify-between mt-0  h-[92px]">
 
         {/* Logo */}
         <Image
@@ -36,21 +36,33 @@ export default function Navbar({ locale }: { locale: "en" | "de" }) {
           width={600}
           height={100}
           priority
-          className="h-auto w-[180px] object-contain"
+          className="h-auto w-[130px] object-contain"
         />
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex gap-6 font-medium text-gray-700">
-          <button onClick={() => scrollTo("services")} className="neu-nav-link">
+        <div className="hidden md:flex gap-1 font-medium text-gray-700">
+          <button onClick={() => scrollTo("services")} className="neu-nav-link text-sm
+      sm:text-base
+      md:text-lg
+      lg:text-xl ">
             {t.services}
           </button>
-          <button onClick={() => scrollTo("requirements")} className="neu-nav-link">
+          <button onClick={() => scrollTo("requirements")} className="neu-nav-link text-sm
+      sm:text-base
+      md:text-lg
+      lg:text-xl ">
             {t.requirements}
           </button>
-          <button onClick={() => scrollTo("howItWorks")} className="neu-nav-link">
+          <button onClick={() => scrollTo("howItWorks")} className="neu-nav-link text-sm
+      sm:text-base
+      md:text-lg
+      lg:text-xl ">
             {t.howItWorks}
           </button>
-          <button onClick={() => scrollTo("contact")} className="neu-nav-link">
+          <button onClick={() => scrollTo("contact")} className="neu-nav-link text-sm
+      sm:text-base
+      md:text-lg
+      lg:text-xl ">
             {t.contact}
           </button>
         </div>

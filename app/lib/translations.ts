@@ -9,13 +9,11 @@ export const translations = {
 
     hero: {
       title: "Start Your Ausbildung Journey in Germany",
-      description: `Consultation, preparation, and guided self-application support
-for international applicants pursuing vocational training in Germany.
-
-We support motivated international applicants with clear guidance, professional preparation, and structured coaching for Ausbildung (vocational training) in Germany.`,
+      description: `Many international applicants struggle not because they lack motivation but because their applications are unclear, unsuitable, or poorly prepared.
+`,
       disclaimer:
-        "No job or visa guarantees — just honest, effective consulting.",
-      cta: "Get Started",
+        "No job or visa guarantees — just honest, transparent, preparation-focused consulting.",
+      cta: "We provide structured consultation, document preparation support, and guided self-application assistance to help applicants apply independently with confidence.",
     },
 
     howItWorks: {
@@ -32,33 +30,50 @@ We support motivated international applicants with clear guidance, professional 
       note:
         "We guide and support applicants throughout the process. Applications and decisions remain the responsibility of applicants and employers.",
     },
-    whyChooseUs: {
-  title: "Why Choose Us",
+whyChooseUs: {
+  title: "Why Applicants Choose Our Guidance",
   points: [
-    "Transparent processes and realistic expectations",
-    "Clear and realistic guidance without false promises",
-    "Preparation-focused approach to build strong applications",
-    "Applicant independence and responsibility emphasized",
-  ],
+    {
+      title: "Germany-Based Expertise",
+      description:
+        "We operate within the German Ausbildung system and understand real employer expectations."
+    },
+    {
+      title: "Employer-Focused Applications",
+      description:
+        "We guide applicants to prepare documents and interviews aligned with what German companies value."
+    },
+    {
+      title: "Structured & Transparent Process",
+      description:
+        "Clear steps, realistic expectations, and full transparency throughout the entire process."
+    },
+    {
+      title: "Independent & Responsible Applicants",
+      description:
+        "Applicants remain responsible for their applications and decisions, supported through structured guidance."
+    }
+  ]
 },
+
 
 
     services: {
       items: [
         {
           title: "Consultation & Orientation",
-          desc: `Individual consultation to understand Ausbildung pathways,
-requirements, and suitable career options.`,
+          desc: `Individual consultation to understand Ausbildung
+options, requirements, and realistic pathways.`,
         },
         {
           title: "CV & Document Preparation",
-          desc: `Preparation and review of CV (Lebenslauf) and motivation letters
-according to German standards.`,
+          desc: `Preparation and review of CV (Lebenslauf) and
+motivation letters according to German standards.`,
         },
         {
           title: "Interview Preparation",
-          desc: `Interview coaching, common questions, and communication guidance
-to help applicants prepare confidently.`,
+          desc: `Interview coaching, common questions, and
+communication guidance to optimally prepare applicants.`,
         },
         {
           title: "Guided Self-Application Support",
@@ -88,6 +103,7 @@ Applicants submit applications independently.`,
     },
 
     about: {
+      label: "Who We Are",
       title: "About Us",
       paragraphs: [
         "Brightway2Deutschland was founded to support international applicants who want to understand and prepare for vocational training (Ausbildung) in Germany.",
@@ -98,8 +114,8 @@ Applicants submit applications independently.`,
     contact: {
   title: "Contact Us",
   intro:
-    "We guide and support applicants throughout the process. Applications and final decisions remain the responsibility of applicants and employers.",
-  cta: "Ready to begin your Ausbildung journey?",
+    "Ready to begin your Ausbildung journey with clear guidance and realistic expectations?",
+  cta: "Get in Touch",
   whatsapp: "Chat on WhatsApp",
 },
 faq: {
@@ -128,6 +144,30 @@ faq: {
   ],
 },
 
+realChallenge: {
+  title: "The Real Challenge of Applying for Ausbildung",
+  paragraphs: [
+    "Before starting the Ausbildung application process, it is important to understand that success depends heavily on preparation and strategy.",
+
+    "A professional CV and motivation letter in German are essential first steps. These documents reflect not only qualifications and experience, but also readiness, motivation, and suitability for Ausbildung positions in Germany.",
+
+    "Equally important is understanding which Ausbildung fits your profile and how to apply correctly and independently."
+  ],
+  note: "Lack of preparation is one of the most common reasons for rejection."
+},
+commonChallenges: {
+  title: "Common Challenges Applicants Face",
+  items: [
+    "Unclear or weak application documents",
+    "Applying for unsuitable Ausbildung positions",
+    "Lack of understanding of employer expectations",
+    "Applications being overlooked or ignored"
+  ],
+  note: "These challenges are common and do not reflect a lack of ability, but they can significantly reduce the chances of receiving interview invitations."
+}
+
+
+
 
   },
 
@@ -141,23 +181,38 @@ faq: {
 
     hero: {
       title: "Starte deine Ausbildung in Deutschland",
-      description: `Beratung, Vorbereitung und begleitete Unterstützung bei der Eigenbewerbung
-für internationale Bewerber, die eine Ausbildung in Deutschland anstreben.
-
-Wir unterstützen motivierte internationale Bewerber mit klarer Orientierung, professioneller Vorbereitung und strukturiertem Coaching für eine Ausbildung in Deutschland.`,
+      description: `Viele internationale Bewerber scheitern nicht an mangelnder Motivation,
+sondern an unklaren, unpassenden oder schlecht vorbereiteten Bewerbungen.`,
       disclaimer:
-        "Keine Job- oder Visagarantien — nur ehrliche und effektive Beratung.",
-      cta: "Jetzt starten",
+        "Keine Job- oder Visagarantien – sondern ehrliche, transparente und ",
+      cta: "Wir bieten strukturierte Beratung, Unterstützung bei Bewerbungsunterlagenund begleitete Selbstbewerbung, damit Bewerber das System verstehen und vorbereitungsorientierte Beratung.",
     },
-    whyChooseUs: {
-  title: "Warum wir",
+whyChooseUs: {
+  title: "Warum sich Bewerber für unsere Beratung entscheiden",
   points: [
-    "Transparente Prozesse und realistische Erwartungen",
-    "Klare und realistische Beratung ohne falsche Versprechen",
-    "Vorbereitungsorientierter Ansatz für starke Bewerbungen",
-    "Eigenständigkeit und Verantwortung der Bewerber stehen im Fokus",
-  ],
+    {
+      title: "Praxisnahe Expertise in Deutschland",
+      description:
+        "Als in Deutschland ansässiger Beratungsdienst kennen wir den Ausbildungsprozess aus der Praxis und verstehen die Erwartungen der Arbeitgeber."
+    },
+    {
+      title: "Arbeitgeberorientierte Bewerbungen",
+      description:
+        "Wir unterstützen Bewerber dabei, Unterlagen und Vorstellungsgespräche an den tatsächlichen Anforderungen deutscher Unternehmen auszurichten."
+    },
+    {
+      title: "Strukturierter und transparenter Ablauf",
+      description:
+        "Klare Schritte, realistische Erwartungen und volle Transparenz während des gesamten Prozesses."
+    },
+    {
+      title: "Eigenverantwortliche Bewerber",
+      description:
+        "Die Verantwortung für Bewerbungen und Entscheidungen bleibt beim Bewerber – wir begleiten strukturiert und unterstützend."
+    }
+  ]
 },
+
 
 
     howItWorks: {
@@ -179,18 +234,18 @@ Wir unterstützen motivierte internationale Bewerber mit klarer Orientierung, pr
       items: [
         {
           title: "Beratung & Orientierung",
-          desc: `Individuelle Beratung zur Orientierung über Ausbildungsmöglichkeiten,
-Voraussetzungen und geeignete Karrierewege.`,
+          desc: `Individuelle Beratung zur Einordnung geeigneter Ausbildungsberufe,
+Anforderungen und realistischer Karrierewege.`,
         },
         {
-          title: "Lebenslauf- & Dokumentenvorbereitung",
-          desc: `Vorbereitung und Überprüfung von Lebenslauf und Motivationsschreiben
+          title: "Lebenslauf & Dokumentenvorbereitung",
+          desc: `Erstellung und Prüfung von Lebenslauf und Bewerbungsschreiben
 nach deutschen Standards.`,
         },
         {
           title: "Interviewvorbereitung",
-          desc: `Interview-Coaching, typische Fragen und Kommunikationshilfen,
-um Bewerber optimal vorzubereiten.`,
+          desc: `Training zu typischen Fragen, Kommunikation und Auftreten
+zur sicheren Vorbereitung auf Gespräche.`,
         },
         {
           title: "Begleitete Eigenbewerbung",
@@ -198,7 +253,7 @@ um Bewerber optimal vorzubereiten.`,
 Die Bewerbungen werden eigenständig eingereicht.`,
         },
         {
-          title: "Integrations- & Bildungsberatung",
+          title: "Integrations & Bildungsberatung",
           desc: "Allgemeine Orientierung zum Leben, zur Ausbildung und Bildung in Deutschland.",
         },
       ],
@@ -220,6 +275,7 @@ Die Bewerbungen werden eigenständig eingereicht.`,
     },
 
     about: {
+      label: "Wer wir sind",
       title: "Über uns",
       paragraphs: [
         "Brightway2Deutschland wurde gegründet, um internationale Bewerber dabei zu unterstützen, die berufliche Ausbildung (Ausbildung) in Deutschland zu verstehen und sich darauf vorzubereiten.",
@@ -231,7 +287,7 @@ Die Bewerbungen werden eigenständig eingereicht.`,
   title: "Kontakt",
   intro:
     "Wir begleiten und unterstützen Bewerber während des gesamten Prozesses. Bewerbungen und endgültige Entscheidungen liegen in der Verantwortung der Bewerber und Arbeitgeber.",
-  cta: "Bereit, deine Ausbildung in Deutschland zu starten?",
+  cta: "Bereit, deine Ausbildung in Deutschland mit klarer Orientierungund realistischen Erwartungen zu beginnen?",
   whatsapp: "Chat auf WhatsApp",
 },
 faq: {
@@ -259,6 +315,30 @@ faq: {
     },
   ],
 },
+
+realChallenge: {
+  title: "Die eigentliche Herausforderung bei der Ausbildungssuche",
+  paragraphs: [
+    "Bevor man mit dem Bewerbungsprozess für eine Ausbildung beginnt, ist es wichtig zu verstehen, dass der Erfolg maßgeblich von guter Vorbereitung und einer klaren Strategie abhängt.",
+
+    "Ein professioneller Lebenslauf und ein überzeugendes Bewerbungsschreiben auf Deutsch sind grundlegende Voraussetzungen. Diese Unterlagen zeigen nicht nur Qualifikationen und Erfahrungen, sondern auch Motivation, Einsatzbereitschaft und Eignung für eine Ausbildung in Deutschland.",
+
+    "Ebenso entscheidend ist es, die passende Ausbildung für das eigene Profil zu finden und den Bewerbungsprozess korrekt und eigenständig durchzuführen."
+  ],
+  note: "Unzureichende Vorbereitung ist eine der häufigsten Ursachen für Absagen."
+},
+commonChallenges: {
+  title: "Typische Herausforderungen im Bewerbungsprozess",
+  items: [
+    "Unklare oder schwache Bewerbungsunterlagen",
+    "Bewerbung auf ungeeignete Ausbildungsberufe",
+    "Unzureichendes Verständnis der Erwartungen deutscher Arbeitgeber",
+    "Bewerbungen werden übersehen oder spät berücksichtigt"
+  ],
+  note: "Diese Herausforderungen sind weit verbreitet und kein Zeichen mangelnder Fähigkeiten, sie können jedoch die Chancen auf Einladung zu Vorstellungsgesprächen deutlich verringern."
+}
+
+
 
 
   },

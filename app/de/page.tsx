@@ -6,17 +6,21 @@ import WhyChooseUs from "../components/WhyChooseUs";
 import HowItWorks from "../components/Process";
 import Contact from "../components/Contact";
 import FAQ from "../components/FAQ";
+import RealChallenge from "../components/RealChallenge";
+import CommonChallenges from "../components/CommenChallenges";
 
 export default function DePage() {
   return (
     <>
       <Hero locale="de" />
+      <RealChallenge locale="de" />
       <Services locale="de" />
-      <Requirements locale="de" />
-      <OurStory locale="de" />
+      <CommonChallenges locale="de" />
       <WhyChooseUs locale="de" />
       <HowItWorks locale="de" />
+      <Requirements locale="de" />
       <Contact locale="de" />
+      <OurStory locale="de" />
       <FAQ locale="de" />
     </>
   );

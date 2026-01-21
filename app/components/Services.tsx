@@ -52,7 +52,7 @@
 // }
 
 
-
+"use client";
 import Image from "next/image";
 import { translations } from "../lib/translations";
 
@@ -67,8 +67,11 @@ export default function Services({ locale }: { locale: "de" | "en" }) {
     "/intergration-education-guidance.png",
   ];
 
+
   return (
-    <section id="services" className="py-24 bg-[#f5f6f8]">
+    <section id="services" className={`py-24 bg-[#f5f6f8] `}>
+
+      <h2 className="text-center mb-10">Our Services are</h2>
       <div className="max-w-6xl mx-auto grid sm:grid-cols-2 gap-10 px-3">
         {t.items.map(
           (
@@ -76,8 +79,8 @@ export default function Services({ locale }: { locale: "de" | "en" }) {
             index: number
           ) => (
             <div
-              key={s.title}
-              className="neu-card p-6 cursor-pointer flex flex-col tone-${index}"
+            key={s.title}
+            className="neu-card p-6 cursor-pointer flex flex-col tone-${index}"
             >
               {/* Image */}
               <div className="mb-5 neu-image-wrapper">
@@ -88,7 +91,7 @@ export default function Services({ locale }: { locale: "de" | "en" }) {
       fill
       className="object-cover"
       sizes="(max-width: 768px) 100vw, 33vw"
-    />
+      />
   </div>
 </div>
 
@@ -98,7 +101,10 @@ export default function Services({ locale }: { locale: "de" | "en" }) {
                 {s.title}
               </h4>
 
-              <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+              <p className="text-gray-700 leading-relaxed whitespace-pre-line text-sm
+      sm:text-base
+      md:text-lg
+      lg:text-xl ">
                 {s.desc}
               </p>
             </div>

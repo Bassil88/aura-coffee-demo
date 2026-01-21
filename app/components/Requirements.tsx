@@ -33,6 +33,7 @@
 //     </section>
 //   );
 // }
+"use client";
 import Image from "next/image";
 import { translations } from "../lib/translations";
 
@@ -40,14 +41,20 @@ export default function Requirements({ locale }: { locale: "de" | "en" }) {
   const t = translations[locale].requirements;
 
 
+
   return (
-    <section id="requirements" className="py-24 bg-[#f7f8fa]">
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+    <section id="requirements" className={`py-24 bg-[#f7f8fa] `}>
+    
+
+      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center glass-challengeo py-24">
         {/* LEFT */}
         <div>
           <h3 className="font-bold text-gray-900 mb-8">{t.title}</h3>
 
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-3 text-sm
+      sm:text-base
+      md:text-lg
+      lg:text-xl ">
   {t.items.map((text: string, index: number) => (
     <span key={index} className="req-pill">
       {text}
@@ -56,7 +63,10 @@ export default function Requirements({ locale }: { locale: "de" | "en" }) {
 </div>
 
 
-          <h4 className="text-center text-gray-600 mt-8 text-base max-w-md">{t.note}</h4>
+          <h4 className="text-center text-gray-600 mt-8 text-base max-w-md text-sm
+      sm:text-base
+      md:text-lg
+      lg:text-xl ">{t.note}</h4>
         </div>
 
         {/* RIGHT IMAGE */}

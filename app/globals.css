@@ -7,15 +7,536 @@ html, body {
   width: 100%;
   min-height: 100%;
 }
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.fade-up-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
 /* * {
   outline: 1px solid rgb(148, 148, 148);
 } */
 
 
+
+/* =====------ Glass Base (used by navbar & contact) ===== */
+.glass-shell {
+  position: relative;
+  overflow: hidden;
+
+  background-color: #f7f8fa;
+
+  box-shadow:
+    6px 6px 14px rgba(0, 0, 0, 0.08),
+    -6px -6px 14px rgba(255, 255, 255, 0.9),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+
+/* ===== Glass Contact Container ===== */
+.neu-contact {
+  position: relative;
+  overflow: hidden;
+
+  background: #f5f6f8;
+
+  /* Use YOUR organic contact radius */
+  border-radius: 96% 4% 86% 14% / 4% 70% 30% 96%;
+
+  box-shadow:
+    10px 10px 24px rgba(0, 0, 0, 0.18),
+    -10px -10px 24px rgba(255, 255, 255, 0.95);
+}
+
+/* Glass edge highlight */
+.neu-contact::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: inherit;
+
+  box-shadow:
+    inset 1px 1px 4px rgba(255, 255, 255, 0.45),
+    inset -1px -1px 4px rgba(0, 0, 0, 0.18);
+
+  pointer-events: none;
+}
+
+
+
+/* -------------------------------------------------------------- */
+/* -------------------------------------------------------------- */
+/* ===== Glass Edge container with on edge (FULL WIDTH) ===== */
+.glass-challengeo {
+  position: relative;
+  overflow: hidden;
+
+  /* YOUR organic contact radius */
+  border-radius: 96% 4% 86% 14% / 4% 70% 7% 6%;
+
+  /* keep your dark background */
+
+  background: a8283e;
+}
+
+/* OUTER soft glow */
+.glass-challengeo::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: inherit;
+
+  background: radial-gradient(
+    ellipse at top,
+    rgba(255, 255, 255, 0.25),
+    transparent 70%
+  );
+
+  filter: blur(14px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* INNER glass edge */
+.glass-challengeo::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: inherit;
+/* background: radial-gradient(at top, #ff000042, #0000 70%); */
+  box-shadow:
+    inset 1px 1px 3px rgba(255, 255, 255, 0.45),
+    inset -1px -1px 4px rgba(0, 0, 0, 0.35);
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ensure content stays above glass */
+.glass-challengeo > * {
+  position: relative;
+  z-index: 2;
+}
+
+.neu-image-wrapper-challengeo {
+  position: relative;
+  overflow: hidden; /* ✅ THIS IS THE FIX */
+
+  border-radius: 91% 9% 93% 7% / 20% 100% 0% 80%;
+  /* background: #f5f6f8; */
+
+  box-shadow:
+    8px 8px 20px rgba(0, 0, 0, 0.15),
+    -8px -8px 20px rgba(255, 255, 255, 0.9);
+
+  /* padding: 6px; */
+}
+
+.neu-image-wrapper-challengeo::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 91% 9% 93% 7% / 20% 100% 0% 80%;
+  box-shadow:
+    inset 1px 1px 3px rgba(255, 255, 255, 0.35),
+    inset -1px -1px 3px rgba(0, 0, 0, 0.12);
+  pointer-events: none;
+}
+
+/* -------------------------------------------------------------- */
+
+
+
+
+
+
+/* -------------------------------------------------------------- */
+/* ===== Glass Edge container with on edge (FULL WIDTH) ===== */
+.glass-about-us {
+  position: relative;
+  overflow: hidden;
+
+  /* YOUR organic contact radius */
+  border-radius: 96% 4% 86% 14% / 4% 70% 7% 6%;
+
+  /* keep your dark background */
+
+  background: a8283e;
+}
+
+/* OUTER soft glow */
+.glass-about-us::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: inherit;
+
+  background: radial-gradient(
+    ellipse at top,
+    rgba(255, 255, 255, 0.25),
+    transparent 70%
+  );
+
+  filter: blur(14px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* INNER glass edge */
+.glass-about-us::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: inherit;
+
+  box-shadow:
+    inset 1px 1px 3px rgba(255, 255, 255, 0.45),
+    inset -1px -1px 4px rgba(0, 0, 0, 0.35);
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ensure content stays above glass */
+.glass-about-us > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* -------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------------- */
+/* ===== Glass Edge Hero (FULL WIDTH) ===== */
+.glass-hero {
+  position: relative;
+  overflow: hidden;
+
+  /* YOUR organic contact radius */
+  /* border-radius: 96% 4% 86% 14% / 4% 70% 30% 96%; */
+  border-radius:6% 4% 9% 9% / 6% 16% 1% 7%;
+
+  /* keep your dark background */
+  /* background: #925959; */
+  /* background: #59585835; */
+  background: #b3cae19c;
+}
+
+/* OUTER soft glow */
+.glass-hero::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: inherit;
+
+  background: radial-gradient(
+    ellipse at top,
+    rgba(255, 255, 255, 0.25),
+    transparent 70%
+  );
+
+  filter: blur(14px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* INNER glass edge */
+.glass-hero::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+
+  box-shadow:
+    inset 1px 1px 3px rgba(255, 255, 255, 0.45),
+    inset -1px -1px 4px rgba(0, 0, 0, 0.35);
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ensure content stays above glass */
+.glass-hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+.liquid-glass-hero {
+  position: relative;
+  padding: 64px 56px;
+  border-radius: 96% 4% 86% 14% / 4% 70% 30% 96%;
+
+  isolation: isolate;
+
+  background: rgba(255, 255, 255, 0.22);
+
+  backdrop-filter: blur(22px) saturate(140%);
+  -webkit-backdrop-filter: blur(22px) saturate(140%);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* highlight */
+.liquid-glass-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 96% 4% 86% 14% / 4% 70% 30% 96%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.08)
+  );
+  pointer-events: none;
+}
+
+/* liquid distortion */
+.liquid-glass-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 96% 4% 86% 14% / 4% 70% 30% 96%;
+
+  filter: url(#glass-distortion);
+  -webkit-filter: url(#glass-distortion);
+
+  pointer-events: none;
+}
+
+@media (hover: hover) {
+  .liquid-glass-hero {
+    transition: transform 0.4s ease;
+  }
+
+  .liquid-glass-hero:hover {
+    transform: translateY(-4px);
+  }
+}
+
+
+
+@keyframes liquidMove {
+  from {
+    filter: url(#glass-distortion);
+  }
+  to {
+    filter: blur(1px) url(#glass-distortion);
+  }
+}
+/* -------------------------------------------------------------- */
+/* ===== Glass Edge container with on edge (FULL WIDTH) ===== */
+.glass-containerro {
+  position: relative;
+  overflow: hidden;
+
+  /* YOUR organic contact radius */
+  /* border-radius: 96% 4% 86% 14% / 4% 70% 30% 96%; */
+  border-radius: 90% 20% 90% 14% / 4% 20% 20% 46%;
+
+  /* keep your dark background */
+
+  background: invisible;
+}
+
+/* OUTER soft glow */
+.glass-containerro::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: inherit;
+
+  background: radial-gradient(
+    ellipse at top,
+    rgba(255, 255, 255, 0.25),
+    transparent 70%
+  );
+
+  filter: blur(14px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* INNER glass edge */
+.glass-containerro::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: inherit;
+
+  box-shadow:
+    inset 1px 1px 3px rgba(255, 255, 255, 0.45),
+    inset -1px -1px 4px rgba(0, 0, 0, 0.35);
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ensure content stays above glass */
+.glass-containerro > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* -------------------------------------------------------------- */
+
+/* -------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------------- */
+/* ===== Glass Edge Why us (FULL WIDTH) ===== */
+.glass-why {
+  position: relative;
+  overflow: hidden;
+
+  /* YOUR organic contact radius */
+  /* border-radius: 96% 4% 86% 14% / 4% 70% 30% 96%; */
+
+  /* keep your dark background */
+  background: #ffffff;
+}
+
+/* OUTER soft glow */
+.glass-why::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: inherit;
+
+  background: radial-gradient(
+    ellipse at top,
+    rgba(255, 255, 255, 0.25),
+    transparent 70%
+  );
+
+  filter: blur(14px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* INNER glass edge */
+/* .glass-why::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: inherit;
+
+  box-shadow:
+    inset 1px 1px 3px rgba(255, 255, 255, 0.45),
+    inset -1px -1px 4px rgba(0, 0, 0, 0.35);
+
+  pointer-events: none;
+  z-index: 1;
+} */
+
+/* ensure content stays above glass */
+.glass-why > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* -------------------------------------------------------------- */
+
+
+
+
+
+
+/* -------------------------------------------------------------- */
+
+/* ===== Glass Edge Section (FULL WIDTH) ===== */
+.glass-section {
+  position: relative;
+  overflow: hidden;
+
+  /* YOUR organic contact radius */
+  border-radius: 96% 4% 86% 14% / 4% 70% 30% 96%;
+
+  /* keep your dark background */
+  background: #1e293b;
+}
+
+/* OUTER soft glow */
+.glass-section::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: inherit;
+
+  background: radial-gradient(
+    ellipse at top,
+    rgba(255, 255, 255, 0.25),
+    transparent 70%
+  );
+
+  filter: blur(14px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* INNER glass edge */
+.glass-section::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: inherit;
+
+  box-shadow:
+    inset 1px 1px 3px rgba(255, 255, 255, 0.45),
+    inset -1px -1px 4px rgba(0, 0, 0, 0.35);
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ensure content stays above glass */
+.glass-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* -------------------------------------------------------------- */
+
+
+
+
+
 /* ===== Neumorphic Navbar ===== */
 .neu-navbar {
   background-color: #f7f8fa;
-  border-radius: 99% 99% 16% 14% / 14% 10% 99% 92%;
+  /* border-radius: 99% 99% 16% 14% / 14% 10% 99% 92%; */
+
+  /* border-radius:96% 99% 86% 14% / 4% 40% 30% 96% ; */
+  border-radius:96% 99% 86% 14% / 4% 0% 76% 75% ;
   box-shadow:
     6px 6px 14px rgba(0, 0, 0, 0.08),
     -6px -6px 14px rgba(255, 255, 255, 0.9),
@@ -25,16 +546,43 @@ html, body {
   
 }
 
+
+
+/* ===== Glass edge for navbar ===== */
+.neu-navbar::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: inherit;
+
+  box-shadow:
+    inset 1px 1px 3px rgba(255, 255, 255, 0.45),
+    inset -1px -1px 3px rgba(0, 0, 0, 0.15);
+
+  pointer-events: none;
+}
+
 .contact-radius {
-  border-radius: 4% 70% 30% 96% / 96% 4% 86% 14%;
+  border-radius:  96% 4% 86% 14% / 4% 70% 30% 96% ;
   overflow: hidden;
 }
 
 .footer-radius{
-  border-radius: 96% 4% 100% 0% / 14% 100% 0% 86%   ;
+  border-radius: 96% 4% 86% 14% / 4% 70% 30% 96% ;
   overflow: hidden;
 
+  position: relative;
+  overflow: hidden; /* ✅ THIS IS THE FIX */
+
+
+
+  box-shadow:
+    8px 8px 20px rgba(0, 0, 0, 0.15),
+    -8px -8px 20px rgba(255, 255, 255, 0.9);
+
 }
+
+
 
 .neu-nav-link {
   position: relative;
@@ -80,11 +628,11 @@ html, body {
 
 .neu-card {
   background: #f5f6f8;
-  border-radius: 40px;
+  /* border-radius: 40px; */
+  border-radius: 96% 4% 86% 14% / 12% 70% 7% 6%;
 
   box-shadow:
-    8px 8px 16px rgba(0, 0, 0, 0.08),
-    -8px -8px 16px rgba(255, 255, 255, 0.9);
+    15px 20px 16px #00000014, -20px -20px 16px #ffffffe6;
 
   transition:
     transform 0.3s ease,
@@ -152,7 +700,7 @@ html, body {
 
 /* ===== Organic image radius ===== */
 .image-mask {
-  border-radius: 91% 9% 93% 7% / 20% 100% 0% 80% 
+  border-radius: 91% 9% 93% 7% / 20% 100% 0% 80% ;
 }
 
 /* ===== Warum wir – Neumorphic bullet ===== */
@@ -321,7 +869,7 @@ html, body {
     8px 8px 20px rgba(0, 0, 0, 0.15),
     -8px -8px 20px rgba(255, 255, 255, 0.9);
 
-  padding: 6px;
+  /* padding: 6px; */
 }
 
 .neu-image-wrapper::after {
@@ -448,7 +996,8 @@ small {
   position: relative;
   width: 76px;
   height: 36px;
-  border-radius: 999px;
+  /* border-radius: 999px; */
+  border-radius: 62% 60% 86% 14% / 21% 18% 45% 33%;
   background: #f5f6f8;
 
   box-shadow:
@@ -473,7 +1022,8 @@ small {
   left: 4px;
   width: 32px;
   height: 28px;
-  border-radius: 999px;
+  /* border-radius: 999px; */
+  border-radius: 62% 60% 86% 14% / 21% 18% 45% 33%;
 
    background: linear-gradient(
     90deg,
@@ -508,3 +1058,39 @@ small {
 .neu-lang-label.active {
   color: #ffffff;
 }
+
+
+
+
+
+
+
+
+
+/* 
+@media (prefers-reduced-motion: reduce) {
+  .fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  will-change: opacity, transform;
+}
+
+  .fade-up-visible {
+    transition: none;
+    transform: none;
+  }
+} */
+
+.reveal {
+  animation: revealUp 0.5s ease-out forwards;
+}
+
+@keyframes revealUp {
+  from {
+    transform: translateY(16px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+

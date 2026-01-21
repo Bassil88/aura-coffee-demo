@@ -1,9 +1,12 @@
+"use client";
 import Image from "next/image";
 import { translations } from "../lib/translations";
 export default function Process({ locale }: { locale: "de" | "en" }) {
   const t = translations[locale].howItWorks;
+
   return (
-    <section className="py-24 bg-[#f5f6f8]" id="howItWorks">
+    <section className={`py-24 bg-[#f5f6f8]`} id="howItWorks">
+  
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
 
         {/* LEFT: Steps */}
@@ -14,14 +17,20 @@ export default function Process({ locale }: { locale: "de" | "en" }) {
 
           <ul className="space-y-5">
             {t.steps.map((step, i) => (
-              <li key={i} className="how-step">
+              <li key={i} className="how-step text-sm
+              sm:text-base
+              md:text-lg
+              lg:text-xl ">
                 <span className="step-number">{i + 1}</span>
                 <span className="step-text">{step}</span>
               </li>
             ))}
           </ul>
 
-          <p className=" text-gray-500 mt-6 max-w-md">
+          <p className=" text-gray-500 mt-6 max-w-md text-sm
+      sm:text-base
+      md:text-lg
+      lg:text-xl ">
 {t.note}
           </p>
         </div>
@@ -34,7 +43,7 @@ export default function Process({ locale }: { locale: "de" | "en" }) {
     fill
     className="object-cover "
     sizes="(max-width: 1024px) 100vw, 50vw"
-  />
+    />
 </div>
 
 
