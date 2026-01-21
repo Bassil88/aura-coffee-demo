@@ -14,9 +14,41 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// export const metadata: Metadata = {
+//   title: "Brightway2Deutschland",
+//   description: "Helping abroad applicants build a future in Germany",
+
+//   icons: {
+//     icon: [
+//       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+//       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+//     ],
+//     apple: "/apple-touch-icon.png",
+//   },
+// };
+
+
 export const metadata: Metadata = {
-  title: "Brightway2Deutschland",
-  description: "Helping Asian applicants build a future in Germany",
+  title: "Brightway2Deutschland | Ausbildung & Career Consulting in Germany",
+  description:
+    "Brightway2Deutschland helps international applicants find Ausbildung opportunities and build a professional future in Germany. Personal consulting, guidance, and support.",
+
+  metadataBase: new URL("https://brightway2deutschland.com"),
+
+  openGraph: {
+    title: "Brightway2Deutschland | Ausbildung Consulting in Germany",
+    description:
+      "Professional Ausbildung consulting for international applicants. Personal guidance, career planning, and support for your future in Germany.",
+    url: "https://brightway2deutschland.com",
+    siteName: "Brightway2Deutschland",
+    locale: "de_DE",
+    type: "website",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 
   icons: {
     icon: [
@@ -26,6 +58,7 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
 };
+
 
 
 export default function RootLayout({
