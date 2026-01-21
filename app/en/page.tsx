@@ -8,6 +8,14 @@ import Contact from "../components/Contact";
 import FAQ from "../components/FAQ";
 import RealChallenge from "../components/RealChallenge";
 import CommonChallenges from "../components/CommenChallenges";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Ausbildung Consulting for International Applicants | Brightway2Deutschland",
+  description:
+    "Professional Ausbildung consulting for international applicants. Career guidance, application support, and long-term success in Germany.",
+};
+
 
 export default function EePage() {
   return (

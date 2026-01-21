@@ -34,6 +34,15 @@ export const metadata: Metadata = {
     "Brightway2Deutschland helps international applicants find Ausbildung opportunities and build a professional future in Germany. Personal consulting, guidance, and support.",
 
   metadataBase: new URL("https://brightway2deutschland.com"),
+  
+  alternates: {
+    canonical: "https://brightway2deutschland.com/de",
+    languages: {
+      de: "https://brightway2deutschland.com/de",
+      en: "https://brightway2deutschland.com/en",
+    },
+  },
+  
 
   openGraph: {
     title: "Brightway2Deutschland | Ausbildung Consulting in Germany",
