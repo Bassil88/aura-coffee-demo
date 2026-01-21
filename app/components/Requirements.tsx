@@ -63,7 +63,7 @@ export default function Requirements({ locale }: { locale: "de" | "en" }) {
 </div>
 
 
-          <h4 className="text-center text-gray-600 mt-8 text-base max-w-md text-sm
+          <h4 className="text-center text-gray-600 mt-8 max-w-md text-sm
       sm:text-base
       md:text-lg
       lg:text-xl ">{t.note}</h4>
