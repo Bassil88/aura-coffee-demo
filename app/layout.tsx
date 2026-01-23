@@ -33,13 +33,12 @@ export const metadata: Metadata = {
 
   metadataBase: new URL("https://brightway2deutschland.com"),
 
-  alternates: {
-    canonical: "https://brightway2deutschland.com/de",
-    languages: {
-      de: "https://brightway2deutschland.com/de",
-      en: "https://brightway2deutschland.com/en",
-    },
+alternates: {
+  languages: {
+    "de-DE": "https://brightway2deutschland.com/de",
+    "en-US": "https://brightway2deutschland.com/en",
   },
+},
 
   openGraph: {
     title: "Brightway2Deutschland | Ausbildung Consulting in Germany",

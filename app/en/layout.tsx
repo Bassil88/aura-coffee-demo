@@ -6,7 +6,11 @@ export const metadata: Metadata = {
     default: "Brightway2Deutschland | Ausbildung Consulting",
     template: "%s | Brightway2Deutschland",
   },
+  alternates: {
+    canonical: "https://brightway2deutschland.com/en",
+  },
 };
+
 
 export default function EnLayout({
   children,
