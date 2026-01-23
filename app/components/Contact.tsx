@@ -27,27 +27,33 @@ export default function Contact({ locale }: { locale: "de" | "en" }) {
       sm:text-base
       md:text-lg
       lg:text-xl " >{t.cta}</p>
+        <p className="text-slate-400 mb-1 text-sm
+      sm:text-base
+      md:text-lg
+      lg:text-xl " >{t.getintouch}</p>
 
         <div className="space-y-3 text-slate-200">
           {/* EMAIL */}
           
 
-          {/* WHATSAPP */}
+
           {/* <div className="flex justify-center items-center gap-3 mb-6">
-            <Image src="/handset-icon-size_32.png" alt="WhatsApp" width={20} height={20} />
-            <a href="https://wa.me/4915?text=Hello%20I%20would%20like%20to%20know%20more%20about%20Ausbildung" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition text-sm
+            <Image src="/handset-icon-size_32.png" alt="WhatsApp" width={45} height={45} />
+            <a href="https://wa.me/491631897653?text=Hello%20I%20would%20like%20to%20know%20more%20about%20Ausbildung" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition text-sm
       sm:text-base
       md:text-lg
       lg:text-xl ">
-              {t.whatsapp}
+              
             </a>
           </div> */}
 
           {/* FACEBOOK */}
-          <div className="flex justify-center pb-8 gap-6">
-            {/* <a href="/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page" className="hover:opacity-80 transition">
-              <Image src="/viber-icons.png" alt="viber" width={48} height={48} />
-            </a> */}
+          <div className="flex justify-center py-8 gap-6">
+            
+            <a href="viber://chat?number=%2B491631897653"
+ target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page" className="hover:opacity-80 transition">
+              <Image src="/viber_icon.png" alt="viber" width={48} height={48} />
+            </a>
 
             <a href="https://www.facebook.com/share/17mSYUDRA6/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page" className="hover:opacity-80 transition">
               <Image src="/round-blue-facebook-button-icon-size_64.png" alt="Facebook" width={48} height={48} />
@@ -55,6 +61,12 @@ export default function Contact({ locale }: { locale: "de" | "en" }) {
             {/* <a href="/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page" className="hover:opacity-80 transition">
               <Image src="/telegram-icons.png" alt="telegram" width={48} height={48} />
             </a> */}
+
+                      {/* WHATSAPP */}
+            <a href="https://wa.me/491631897653?text=Hello%20I%20would%20like%20to%20know%20more%20about%20Ausbildung" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition ">
+               <Image src="/whatsapp-200.png" alt="WhatsApp" width={45} height={45} />
+              
+            </a>
           </div>
           <div className="flex justify-center items-center gap-3 mb-3">
             <Image src="/gmail-icon-size_32.png" alt="Email" width={20} height={20} />

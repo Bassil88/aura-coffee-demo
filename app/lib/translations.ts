@@ -117,9 +117,9 @@ Applicants submit applications independently.`,
     contact: {
   title: "Contact Us",
   intro:
-    "Ready to begin your Ausbildung journey with clear guidance and realistic expectations?",
+    "Thinking about an Ausbildung in Germany? Let’s take the first step together with clear and realistic guidance.",
   cta: "Get in Touch",
-  whatsapp: "Chat on WhatsApp",
+  getintouch: "Book your first consultation to discuss your plans and next steps.",
 },
 faq: {
   title: "FAQ",
@@ -292,9 +292,9 @@ Die Bewerbungen werden eigenständig eingereicht.`,
     contact: {
   title: "Kontakt",
   intro:
-    "Wir begleiten und unterstützen Bewerber während des gesamten Prozesses. Bewerbungen und endgültige Entscheidungen liegen in der Verantwortung der Bewerber und Arbeitgeber.",
-  cta: "Bereit, deine Ausbildung in Deutschland mit klarer Orientierungund realistischen Erwartungen zu beginnen?",
-  whatsapp: "Chat auf WhatsApp",
+    "Denken Sie über eine Ausbildung in Deutschland nach? Lassen Sie uns den ersten Schritt gemeinsam gehen mit klarer und realistischer Beratung.",
+  cta: "Kontakt aufnehmen",
+  getintouch: "Vereinbaren Sie ein erstes Beratungsgespräch, um Ihre Pläne und nächsten Schritte zu besprechen.",
 },
 faq: {
   title: "Häufige Fragen",
