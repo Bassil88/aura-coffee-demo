@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import Footer from "./components/Footer";
+import ScrollToContactButton from "./components/ScrollToContactButton";
+import ScrollToContact from "./components/ScrollToContactButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -130,7 +132,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
 
-        <main>{children}</main>
+        <main>{children}
+          <ScrollToContact />
+        </main>
         <Footer />
       </body>
     </html>

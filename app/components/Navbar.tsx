@@ -31,7 +31,20 @@ export default function Navbar({ locale }: { locale: "en" | "de" }) {
     <nav className="neu-navbar fixed top-0 w-full z-50 ">
       <div className="max-w-7xl mx-auto flex items-center justify-between mt-0  h-[92px]">
         {/* Logo */}
-        <Image src="/logo.png" alt="Brightway to deutschland logo" width={600} height={100} priority className="h-auto w-[130px] object-contain" />
+        <button
+  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+  aria-label="Scroll to top"
+  className="cursor-pointer"
+>
+  <Image
+    src="/logo.png"
+    alt="Brightway to deutschland logo"
+    width={600}
+    height={100}
+    priority
+    className="h-auto w-[130px] object-contain"
+  />
+</button>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex gap-1 font-medium text-gray-700">

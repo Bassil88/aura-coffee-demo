@@ -52,20 +52,20 @@ export default function Hero({ locale }: { locale: "de" | "en" }) {
  
     <h1 className="text-center font-bold
       mb-2
-      
+      text-shadow-soft drop-shadow-sm
       leading-tight ">
       {t.title}
     </h1>
  <div className=" mx-auto max-w-8xl text-center weight-light" >
   
-    <h4 className="glass-hero text-sm 
+    <h4 className="text-shadow-soft drop-shadow-sm glass-hero text-sm 
       sm:text-base
       md:text-lg
       lg:text-xl inline-block mt-5 px-1 py-1  next-leading-relaxed ">
       {t.description}
     </h4> <br />
 
-    <h4 className="glass-hero text-sm
+    <h4 className="glass-hero text-sm text-shadow-soft drop-shadow-sm 
       sm:text-base
       md:text-lg
       lg:text-xl inline-block mt-5 px-1 py-1  next-leading-relaxed
