@@ -27,14 +27,12 @@ const geistMono = Geist_Mono({
 //   },
 // };
 
-
 export const metadata: Metadata = {
   title: "Brightway2Deutschland | Ausbildung & Career Consulting in Germany",
-  description:
-    "Brightway2Deutschland helps international applicants find Ausbildung opportunities and build a professional future in Germany. Personal consulting, guidance, and support.",
+  description: "Brightway2Deutschland helps international applicants find Ausbildung opportunities and build a professional future in Germany. Personal consulting, guidance, and support.",
 
   metadataBase: new URL("https://brightway2deutschland.com"),
-  
+
   alternates: {
     canonical: "https://brightway2deutschland.com/de",
     languages: {
@@ -42,12 +40,10 @@ export const metadata: Metadata = {
       en: "https://brightway2deutschland.com/en",
     },
   },
-  
 
   openGraph: {
     title: "Brightway2Deutschland | Ausbildung Consulting in Germany",
-    description:
-      "Professional Ausbildung consulting for international applicants. Personal guidance, career planning, and support for your future in Germany.",
+    description: "Professional Ausbildung consulting for international applicants. Personal guidance, career planning, and support for your future in Germany.",
     url: "https://brightway2deutschland.com",
     siteName: "Brightway2Deutschland",
     locale: "de_DE",
@@ -68,18 +64,11 @@ export const metadata: Metadata = {
   },
 };
 
-
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     // NOTE: lang here is fine; real locale lang is set in [locale]/layout.tsx
     <html lang="de">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-
         {/* GLOBAL SVG FILTER – OK */}
         {/* <svg width="0" height="0" style={{ position: "absolute" }}>
           <defs>
@@ -103,28 +92,44 @@ export default function RootLayout({
           </defs>
         </svg> */}
 
-                {/* ✅ GLOBAL SVG FILTER – ONCE */}
+        {/* ✅ GLOBAL SVG FILTER – ONCE */}
         <svg width="0" height="0" style={{ position: "absolute" }}>
           <defs>
             <filter id="glass-distortion">
-              <feTurbulence
-                type="fractalNoise"
-                baseFrequency="0.008 0.008"
-                numOctaves="2"
-                seed="92"
-                result="noise"
-              />
+              <feTurbulence type="fractalNoise" baseFrequency="0.008 0.008" numOctaves="2" seed="92" result="noise" />
               <feGaussianBlur in="noise" stdDeviation="2" result="blurred" />
-              <feDisplacementMap
-                in="SourceGraphic"
-                in2="blurred"
-                scale="18"
-                xChannelSelector="R"
-                yChannelSelector="G"
-              />
+              <feDisplacementMap in="SourceGraphic" in2="blurred" scale="18" xChannelSelector="R" yChannelSelector="G" />
             </filter>
           </defs>
         </svg>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Brightway2Deutschland",
+              url: "https://brightway2deutschland.com",
+              logo: "https://brightway2deutschland.com/logo.png",
+              image: "https://brightway2deutschland.com/logo.png",
+              description: "Brightway2Deutschland provides Ausbildung and career consulting for international applicants seeking a professional future in Germany.",
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+49-4141-428438",
+                contactType: "customer support",
+                areaServed: "DE",
+                availableLanguage: ["de", "en"],
+              },
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Kolonnenstraße 8",
+                addressLocality: "Berlin",
+                postalCode: "10827",
+                addressCountry: "DE",
+              },
+            }),
+          }}
+        />
 
         <main>{children}</main>
         <Footer />

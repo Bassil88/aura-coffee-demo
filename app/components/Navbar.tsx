@@ -31,8 +31,8 @@ export default function Navbar({ locale }: { locale: "en" | "de" }) {
 
         {/* Logo */}
         <Image
-          src="/brightwaytooDeutschland-logo.png"
-          alt="Brightway logo"
+          src="/logo.png"
+          alt="Brightway to deutschland logo"
           width={600}
           height={100}
           priority
