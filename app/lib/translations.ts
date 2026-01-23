@@ -1,10 +1,10 @@
 export const translations = {
   en: {
     nav: {
-      services: "Services",
+      services: "Our Services",
       requirements: "Requirements",
-      howItWorks: "Process",
-      contact: "Contact",
+      howItWorks: "How It Works",
+      contact: "Contact us",
     },
 
     hero: {
@@ -46,7 +46,7 @@ motivation letters according to German standards.`,
         {
           title: "Interview Preparation",
           desc: `Interview coaching, common questions, and
-communication guidance to optimally prepare applicants.`,
+communication guidance to prepare applicants effectively.`,
         },
         {
           title: "Guided Self-Application Support",
@@ -194,7 +194,7 @@ Applicants submit applications independently.`,
 sondern an unklaren, unpassenden oder schlecht vorbereiteten Bewerbungen.`,
       disclaimer:
         "Keine Job- oder Visagarantien – sondern ehrliche, transparente und ",
-      cta: "Wir bieten strukturierte Beratung, Unterstützung bei Bewerbungsunterlagenund begleitete Selbstbewerbung, damit Bewerber das System verstehen und vorbereitungsorientierte Beratung.",
+      cta:   "Wir bieten strukturierte Beratung, Unterstützung bei Bewerbungsunterlagen und begleitete Selbstbewerbung, damit Bewerber den Prozess verstehen und sich gezielt vorbereiten können.",
     },
 
     realChallenge: {
@@ -302,7 +302,7 @@ Die Bewerbungen werden eigenständig eingereicht.`,
         "Abgeschlossene Schulausbildung (10. oder 12. Klasse)",
         "Motivation, in Deutschland zu arbeiten und zu lernen",
         "Bereitschaft zur Vorbereitung von Unterlagen und Teilnahme an Interviews",
-        "Ein professioneller Lebenslauf und ein Anschreiben",
+        "Ein professioneller Lebenslauf und ein Bewerbungsschreiben",
         "Fähigkeit zur selbstständigen Bewerbung mit Begleitung",
         "Visumantrag wird persönlich vom Bewerber gestellt",
       ],
