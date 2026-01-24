@@ -11,7 +11,7 @@ export default function LenisProvider({
 }) {
   useEffect(() => {
     const lenis = new Lenis({
-      smooth: true,
+
       lerp: 0.08,
       wheelMultiplier: 0.9,
     });
