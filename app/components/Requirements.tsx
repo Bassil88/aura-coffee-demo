@@ -45,11 +45,14 @@ export default function Requirements({ locale }: { locale: "de" | "en" }) {
   return (
     <section id="requirements" className={`py-24 bg-[#f7f8fa] mx-4`}>
     
-
+          <h2 className="text-center mb-5 text-slate-500 max-w-3xl mx-auto text-sm
+      sm:text-base
+      md:text-lg
+      lg:text-xl ">{t.title}</h2>
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center neu-card py-24">
         {/* LEFT */}
         <div>
-          <h3 className="font-bold text-gray-900 mb-8">{t.title}</h3>
+          {/* <h3 className="font-bold text-gray-900 mb-8">{t.title}</h3> */}
 
           <div className="flex flex-wrap gap-3 text-sm
       sm:text-base

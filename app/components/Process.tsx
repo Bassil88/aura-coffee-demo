@@ -6,14 +6,17 @@ export default function Process({ locale }: { locale: "de" | "en" }) {
 
   return (
     <section className={`py-24 mx-3 md:mx-6 mb-10 bg-[#f5f6f8] neu-card `} id="howItWorks">
-  
+            <h2 className="text-center mb-5 text-slate-500 max-w-3xl mx-auto text-sm
+      sm:text-base
+      md:text-lg
+      lg:text-xl ">{t.title}</h2>
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
 
         {/* LEFT: Steps */}
         <div>
-          <h3 className="font-bold text-gray-900 mb-8">
+          {/* <h3 className="font-bold text-gray-900 mb-8">
             {t.title}
-          </h3>
+          </h3> */}
 
           <ul className="space-y-5">
             {t.steps.map((step, i) => (
