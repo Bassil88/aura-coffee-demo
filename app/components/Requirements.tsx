@@ -43,10 +43,10 @@ export default function Requirements({ locale }: { locale: "de" | "en" }) {
 
 
   return (
-    <section id="requirements" className={`py-24 bg-[#f7f8fa] `}>
+    <section id="requirements" className={`py-24 bg-[#f7f8fa] mx-4`}>
     
 
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center glass-challengeo py-24">
+      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center neu-card py-24">
         {/* LEFT */}
         <div>
           <h3 className="font-bold text-gray-900 mb-8">{t.title}</h3>
@@ -70,9 +70,19 @@ export default function Requirements({ locale }: { locale: "de" | "en" }) {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="relative neu-image-wrapper  overflow-hidden h-[400px]">
-          <Image src="/requirements.png" alt="Requirements for Ausbildung applicants" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
-        </div>
+{/* RIGHT IMAGE */}
+{/* IMAGE */}
+<div className="relative neu-image-wrapper overflow-hidden h-[400px] order-first lg:order-last">
+  <Image
+    src="/requirements.png"
+    alt="Requirements for Ausbildung applicants"
+    fill
+    className="object-cover"
+    sizes="(max-width: 1024px) 100vw, 50vw"
+  />
+</div>
+
+
       </div>
     </section>
   );

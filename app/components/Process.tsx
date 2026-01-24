@@ -5,7 +5,7 @@ export default function Process({ locale }: { locale: "de" | "en" }) {
   const t = translations[locale].howItWorks;
 
   return (
-    <section className={`py-24 bg-[#f5f6f8]`} id="howItWorks">
+    <section className={`py-24 mx-3 md:mx-6 mb-10 bg-[#f5f6f8] neu-card `} id="howItWorks">
   
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
 
@@ -36,15 +36,17 @@ export default function Process({ locale }: { locale: "de" | "en" }) {
         </div>
 
         {/* RIGHT: Image */}
-<div className="neu-image-wrapper relative h-[420px]">
+{/* RIGHT: Image */}
+<div className="neu-image-wrapper relative h-[420px] order-first lg:order-last">
   <Image
     src="/how-it-works.png"
     alt="How Ausbildung application works"
     fill
-    className="object-cover "
+    className="object-cover"
     sizes="(max-width: 1024px) 100vw, 50vw"
-    />
+  />
 </div>
+
 
 
 

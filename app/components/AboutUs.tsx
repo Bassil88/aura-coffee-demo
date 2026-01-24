@@ -28,7 +28,8 @@ export default function About({ locale }: { locale: "de" | "en" }) {
   return (
     <section
       id="ourStory"
-      className="glass-about-us my-16 py-5 md:py-15 lg:py-20 xl:py-24 max-w-5xl mx-auto md:px-8 px-5 "
+      className="neu-card my-16 py-5 md:py-15 lg:py-20 xl:py-24 max-w-5xl mx-4 lg:mx-auto md:px-8 px-5"
+
     >
 
 

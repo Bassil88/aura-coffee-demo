@@ -5,6 +5,9 @@ import "./globals.css";
 import Footer from "./components/Footer";
 import ScrollToContactButton from "./components/ScrollToContactButton";
 import ScrollToContact from "./components/ScrollToContactButton";
+import ScrollIndicator from "./components/ScrollIndicator";
+import LenisProvider from "./providers/LenisProvider";
+import ScrollShader from "./components/ScrollShader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -132,8 +135,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
 
-        <main>{children}
-          <ScrollToContact />
+        <main>
+          
+            
+  <LenisProvider>{children}</LenisProvider>
+  <ScrollIndicator />
+
+          {/* <ScrollToContact /> */}
+
+
         </main>
         <Footer />
       </body>

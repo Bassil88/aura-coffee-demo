@@ -1,3 +1,6 @@
+import { subtle } from "crypto";
+import { sub } from "three/tsl";
+
 export const translations = {
   en: {
     nav: {
@@ -16,6 +19,7 @@ export const translations = {
     },
 
     realChallenge: {
+      subtle: "CHALLENGING PART",
       title: "The Real Challenge of Applying for Ausbildung",
       paragraphs: [
         "Before starting the Ausbildung application process, it is important to understand that success depends heavily on preparation and strategy.",
@@ -62,6 +66,7 @@ Applicants submit applications independently.`,
 
 
     commonChallenges: {
+      eyebrow: "Typical Problems",
       title: "Common Challenges Applicants Face",
       items: [
         "Unclear or weak application documents",
@@ -198,6 +203,7 @@ sondern an unklaren, unpassenden oder schlecht vorbereiteten Bewerbungen.`,
     },
 
     realChallenge: {
+      subtle: "Herausforderung",
       title: "Die eigentliche Herausforderung bei der Ausbildungssuche",
       paragraphs: [
         "Bevor man mit dem Bewerbungsprozess für eine Ausbildung beginnt, ist es wichtig zu verstehen, dass der Erfolg maßgeblich von guter Vorbereitung und einer klaren Strategie abhängt.",
@@ -242,6 +248,7 @@ Die Bewerbungen werden eigenständig eingereicht.`,
     },
 
     commonChallenges: {
+      eyebrow: "Häufige Probleme",
       title: "Typische Herausforderungen im Bewerbungsprozess",
       items: [
         "Unklare oder schwache Bewerbungsunterlagen",

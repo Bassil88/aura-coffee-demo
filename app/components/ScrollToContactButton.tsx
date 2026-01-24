@@ -1,6 +1,10 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 export default function ScrollToContact() {
+  const [visible, setVisible] = useState(true);
+
   const scrollToContact = () => {
     const el = document.getElementById("contact");
     if (!el) return;
@@ -10,6 +14,25 @@ export default function ScrollToContact() {
 
     window.scrollTo({ top: y, behavior: "smooth" });
   };
+
+  useEffect(() => {
+    const contact = document.getElementById("contact");
+    if (!contact) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setVisible(!entry.isIntersecting);
+      },
+      {
+        threshold: 0.3,
+      }
+    );
+
+    observer.observe(contact);
+    return () => observer.disconnect();
+  }, []);
+
+  if (!visible) return null;
 
   return (
     <button
@@ -35,7 +58,7 @@ export default function ScrollToContact() {
         hover:bg-white/10
         transition
         group
-cursor-pointer
+        cursor-pointer
       "
     >
       <span className="text-[8px] md:text-xs tracking-widest font-medium text-gray-700">
@@ -43,7 +66,7 @@ cursor-pointer
       </span>
 
       <span className="relative h-6 w-[2px] overflow-hidden bg-gray-400">
-        <span className="absolute top-0 left-0 h-full w-full bg-gray-900 animate-scroll-line" />
+        <span className="absolute inset-0 bg-gray-900 animate-scroll-line" />
       </span>
     </button>
   );
