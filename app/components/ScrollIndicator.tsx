@@ -59,8 +59,6 @@
 
 // };
 
-
-
 // /* -----------------------------
 //    Sections
 // ------------------------------ */
@@ -86,7 +84,6 @@
 //   const [visible, setVisible] = useState(false);
 //   const [theme, setTheme] = useState("text-black");
 // const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
-
 
 //   /* Magnetic cursor */
 //   useMagnetic(indicatorRef);
@@ -176,8 +173,6 @@
 //   window.scrollTo({ top: y, behavior: "smooth" });
 // };
 
-
-
 //   if (!visible) return null;
 
 //   return (
@@ -208,7 +203,7 @@
 //   flex
 //   items-center
 //   justify-center
-//   ${isMobile 
+//   ${isMobile
 //     ? "bottom-6 right-1/2 translate-x-1/2 h-14 w-8 rounded-full"
 //     : "top-1/2 right-8 -translate-y-1/2 px-4 py-3 rounded-full"}
 //  bg-white/10
@@ -218,7 +213,6 @@
 //   cursor-pointer
 //   ${theme}
 // `}
-
 
 //     >
 // {/* <span
@@ -235,7 +229,6 @@
 // >
 //   {isMobile ? "" : label}
 // </span>
-
 
 //       {/* <svg
 //         ref={arrowRef}
@@ -290,8 +283,8 @@ const sectionColors: Record<string, string> = {
   howItWorks: "text-amber-500",
   requirements: "text-cyan-600",
   contact: "text-green-600",
-  ourStory: "text-indigo-600",
-  faq: "text-pink-600",
+  ourStory: "text-amber-900",
+  faq: "text-indigo-600",
 };
 
 /* -----------------------------
@@ -306,7 +299,7 @@ const sections = [
   { id: "howItWorks", label: "PROCESS" },
   { id: "requirements", label: "REQUIREMENTS" },
   { id: "contact", label: "CONTACT" },
-  { id: "ourStory", label: "ABOUT" },
+  { id: "ourStory", label: "ABOUT US" },
   { id: "faq", label: "FAQ" },
 ];
 type ClosestSection = {
@@ -314,7 +307,6 @@ type ClosestSection = {
   label: string;
   top: number;
 };
-
 
 export default function ScrollIndicator() {
   const indicatorRef = useRef<HTMLButtonElement>(null);
@@ -325,9 +317,8 @@ export default function ScrollIndicator() {
   const [theme, setTheme] = useState("text-black");
   const [visible, setVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-const [isScrolling, setIsScrolling] = useState(false);
-const blurClass = isMobile ? "" : "backdrop-blur-md";
-
+  const [isScrolling, setIsScrolling] = useState(false);
+  const blurClass = isMobile ? "" : "backdrop-blur-md";
 
   /* -----------------------------
      Mobile detection (stable)
@@ -345,11 +336,7 @@ const blurClass = isMobile ? "" : "backdrop-blur-md";
   useEffect(() => {
     if (!indicatorRef.current) return;
 
-    gsap.fromTo(
-      indicatorRef.current,
-      { opacity: 0, x: 30 },
-      { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }
-    );
+    gsap.fromTo(indicatorRef.current, { opacity: 0, x: 30 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" });
   }, []);
 
   /* -----------------------------
@@ -372,9 +359,7 @@ const blurClass = isMobile ? "" : "backdrop-blur-md";
     const onScroll = () => {
       if (!textRef.current) return;
 
-      const progress =
-        window.scrollY /
-        (document.documentElement.scrollHeight - window.innerHeight);
+      const progress = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
 
       gsap.to(textRef.current, {
         rotate: progress * 180,
@@ -391,17 +376,16 @@ const blurClass = isMobile ? "" : "backdrop-blur-md";
      ACTIVE SECTION DETECTION (FIXED)
   ------------------------------ */
   const isNearBottom = () => {
-  const scrollPosition = window.scrollY + window.innerHeight;
-  const threshold = document.documentElement.scrollHeight - 120;
-  return scrollPosition >= threshold;
-};
+    const scrollPosition = window.scrollY + window.innerHeight;
+    const threshold = document.documentElement.scrollHeight - 120;
+    return scrollPosition >= threshold;
+  };
 
-useEffect(() => {
-  const onScroll = () => {
-    const offset = isMobile ? 120 : 150;
+  useEffect(() => {
+    const onScroll = () => {
+      const offset = isMobile ? 120 : 150;
 
-    const closestSection = sections.reduce<ClosestSection | null>(
-      (closest, s) => {
+      const closestSection = sections.reduce<ClosestSection | null>((closest, s) => {
         const el = document.getElementById(s.id);
         if (!el) return closest;
 
@@ -413,44 +397,39 @@ useEffect(() => {
         }
 
         return closest;
-      },
-      null
-    );
+      }, null);
 
-    if (closestSection) {
-  if (isNearBottom()) {
-    setLabel("TOP");
-    setTheme("text-white");
-  } else {
-    setLabel(closestSection.label);
-    setTheme(sectionColors[closestSection.id] ?? "text-white");
-  }
-  setVisible(true);
-}
+      if (closestSection) {
+        if (isNearBottom()) {
+          setLabel("TOP");
+          setTheme(isMobile ? "text-black" : "text-white");
+        } else {
+          setLabel(closestSection.label);
+          setTheme(sectionColors[closestSection.id] ?? "text-white");
+        }
+        setVisible(true);
+      }
+    };
 
-  };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [isMobile]);
+  // -----------------------------
+  useEffect(() => {
+    if (!isMobile) return;
 
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
-  return () => window.removeEventListener("scroll", onScroll);
-}, [isMobile]);
-// -----------------------------
-useEffect(() => {
-  if (!isMobile) return;
+    let timeout: ReturnType<typeof setTimeout>;
 
-  let timeout: ReturnType<typeof setTimeout>;
+    const onScroll = () => {
+      setIsScrolling(true);
+      clearTimeout(timeout);
+      timeout = setTimeout(() => setIsScrolling(false), 120);
+    };
 
-  const onScroll = () => {
-    setIsScrolling(true);
-    clearTimeout(timeout);
-    timeout = setTimeout(() => setIsScrolling(false), 120);
-  };
-
-  window.addEventListener("scroll", onScroll, { passive: true });
-  return () => window.removeEventListener("scroll", onScroll);
-}, [isMobile]);
-
-
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [isMobile]);
 
   /* -----------------------------
      Click scroll
@@ -473,33 +452,27 @@ useEffect(() => {
   // };
 
   const handleClick = () => {
-  // 🔼 Special case: TOP → go to hero
-  if (label === "TOP") {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    return;
-  }
+    // 🔼 Special case: TOP → go to hero
+    if (label === "TOP") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
 
-  const currentIndex = sections.findIndex(
-    (s) => s.label === label
-  );
+    const currentIndex = sections.findIndex((s) => s.label === label);
 
-  const nextSection =
-    sections[currentIndex + 1] ?? sections[0];
+    const nextSection = sections[currentIndex + 1] ?? sections[0];
 
-  const el = document.getElementById(nextSection.id);
-  if (!el) return;
+    const el = document.getElementById(nextSection.id);
+    if (!el) return;
 
-  const offset = isMobile ? 100 : 140;
-  const y = el.getBoundingClientRect().top + window.scrollY - offset;
+    const offset = isMobile ? 100 : 140;
+    const y = el.getBoundingClientRect().top + window.scrollY - offset;
 
-  window.scrollTo({ top: y, behavior: "smooth" });
-};
-
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
 
   if (!visible) return null;
-const mobileSafe = isMobile
-  ? "bg-white/20"
-  : "bg-white/10 backdrop-blur-md mix-blend-difference";
+  const mobileSafe = isMobile ? "bg-white/20" : "bg-white/10 backdrop-blur-md mix-blend-difference";
   return (
     <button
       ref={indicatorRef}
@@ -508,9 +481,7 @@ const mobileSafe = isMobile
       className={`
         fixed z-40
         flex flex-col items-center gap-1
-        ${isMobile
-          ? "bottom-7 right-10 translate-x-1/2 px-3 py-2 scale-90"
-          : "top-1/2 right-8 -translate-y-1/2 px-4 py-3"}
+        ${isMobile ? "bottom-7 right-10 translate-x-1/2 px-3 py-2 scale-90" : "top-1/2 right-8 -translate-y-1/2 px-4 py-3"}
         rounded-full
         bg-white/10
         backdrop-blur-md
@@ -541,17 +512,7 @@ const mobileSafe = isMobile
   {label}
 </span> */}
 
-      <svg
-        ref={arrowRef}
-        width={isMobile ? 14 : 18}
-        height={isMobile ? 14 : 18}
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
+      <svg ref={arrowRef} width={isMobile ? 14 : 18} height={isMobile ? 14 : 18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 5v14" />
         <path d="M5 12l7 7 7-7" />
       </svg>

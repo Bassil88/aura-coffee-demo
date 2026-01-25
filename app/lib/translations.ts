@@ -155,31 +155,76 @@ Applicants submit applications independently.`,
       ],
     },
 
-    faq: {
-      title: "FAQ",
-      items: [
-        {
-          question: "Do you guarantee jobs or visas?",
-          answer:
-            "No. We provide preparation and consultation. Hiring decisions are made by German companies, and visas are applied for directly by applicants at their embassy.",
-        },
-        {
-          question: "Can applicants from abroad apply?",
-          answer:
-            "Yes. Many German companies consider motivated international applicants who meet the requirements.",
-        },
-        {
-          question: "Do you apply to companies on behalf of applicants?",
-          answer:
-            "No. Applicants apply independently with guided support.",
-        },
-        {
-          question: "Do you charge placement or recruitment fees?",
-          answer:
-            "No. We do not offer recruitment or placement services. Our fees are for consultation, preparation, and coaching only.",
-        },
-      ],
-    }
+faq: {
+  title: "FAQ",
+  showLess: "Show less",
+  readMore: "Read more",
+  items: [
+    {
+      question: "Do you guarantee jobs or visas?",
+      answer:
+        "No. We provide preparation and consultation. Hiring decisions are made by German companies, and visas are applied for directly by applicants at their embassy.",
+    },
+    {
+      question: "Can applicants from abroad apply?",
+      answer:
+        "Yes. Many German companies consider motivated international applicants who meet the requirements.",
+    },
+    {
+      question: "Do you apply to companies on behalf of applicants?",
+      answer:
+        "No. Applicants apply independently with guided support.",
+    },
+    {
+      question: "Do you charge placement or recruitment fees?",
+      answer:
+        "No. We do not offer recruitment or placement services. Our fees are for consultation, preparation, and coaching only.",
+    },
+
+    /* --- NEW QUESTIONS --- */
+
+    {
+      question: "What level of German language is required for Ausbildung?",
+      answer:
+        "Most Ausbildung positions require at least B1 German. A B2 level significantly improves application success and interview performance.",
+    },
+    {
+      question: "Can I apply if I do not have work experience?",
+      answer:
+        "Yes. Many Ausbildung programs are designed for beginners. Motivation, language skills, and a well-prepared application are often more important than prior experience.",
+    },
+    {
+      question: "Do you help choose the right Ausbildung?",
+      answer:
+        "Yes. We help applicants understand which Ausbildung professions fit their background, education, and language level.",
+    },
+    {
+      question: "How long does the Ausbildung application process take?",
+      answer:
+        "The process can take several months. Preparation, applications, interviews, and visa procedures all require sufficient time and planning.",
+    },
+    {
+      question: "Do you help with CVs and motivation letters?",
+      answer:
+        "Yes. We support applicants in preparing CVs and motivation letters according to German standards and employer expectations.",
+    },
+    {
+      question: "Is your service suitable for all nationalities?",
+      answer:
+        "Yes. Our guidance is open to applicants of all nationalities, provided they meet the basic requirements for Ausbildung and visa eligibility.",
+    },
+    {
+      question: "Can you help with interview preparation?",
+      answer:
+        "Yes. We provide interview coaching, typical questions, and communication guidance to help applicants prepare confidently.",
+    },
+    {
+      question: "Do you assist with the visa application?",
+      answer:
+        "We provide general guidance and preparation tips. However, the visa application must always be submitted personally by the applicant at the responsible embassy.",
+    },
+  ],
+},
 
 
 
@@ -341,30 +386,76 @@ Die Bewerbungen werden eigenständig eingereicht.`,
       ],
     },
 
-    faq: {
-      title: "Häufige Fragen",
-      items: [
-        {
-          question: "Garantiert ihr Jobs oder Visa?",
-          answer:
-            "Nein. Wir bieten Vorbereitung und Beratung an. Einstellungsentscheidungen treffen deutsche Unternehmen, und der Visumantrag wird vom Bewerber direkt bei der Botschaft gestellt.",
-        },
-        {
-          question: "Können sich Bewerber aus dem Ausland bewerben?",
-          answer:
-            "Ja. Viele deutsche Unternehmen berücksichtigen motivierte internationale Bewerber, die die Voraussetzungen erfüllen.",
-        },
-        {
-          question: "Bewerbt ihr euch im Namen der Bewerber bei Unternehmen?",
-          answer:
-            "Nein. Bewerber bewerben sich eigenständig mit begleitender Unterstützung.",
-        },
-        {
-          question: "Erhebt ihr Vermittlungs- oder Platzierungsgebühren?",
-          answer:
-            "Nein. Wir bieten keine Vermittlungs- oder Rekrutierungsdienste an. Unsere Gebühren beziehen sich ausschließlich auf Beratung, Vorbereitung und Coaching.",
-        },
-      ],
+faq: {
+  title: "Häufige Fragen",
+  showLess: "Weniger anzeigen",
+  readMore: "Mehr anzeigen",
+  items: [
+    {
+      question: "Garantiert ihr Jobs oder Visa?",
+      answer:
+        "Nein. Wir bieten Vorbereitung und Beratung an. Einstellungsentscheidungen treffen deutsche Unternehmen, und der Visumantrag wird vom Bewerber direkt bei der Botschaft gestellt.",
     },
+    {
+      question: "Können sich Bewerber aus dem Ausland bewerben?",
+      answer:
+        "Ja. Viele deutsche Unternehmen berücksichtigen motivierte internationale Bewerber, die die Voraussetzungen erfüllen.",
+    },
+    {
+      question: "Bewerbt ihr euch im Namen der Bewerber bei Unternehmen?",
+      answer:
+        "Nein. Bewerber bewerben sich eigenständig mit begleitender Unterstützung.",
+    },
+    {
+      question: "Erhebt ihr Vermittlungs- oder Platzierungsgebühren?",
+      answer:
+        "Nein. Wir bieten keine Vermittlungs- oder Rekrutierungsdienste an. Unsere Gebühren beziehen sich ausschließlich auf Beratung, Vorbereitung und Coaching.",
+    },
+
+    /* --- NEUE FRAGEN --- */
+
+    {
+      question: "Welches Sprachniveau wird für eine Ausbildung benötigt?",
+      answer:
+        "Für die meisten Ausbildungsberufe wird mindestens Deutsch auf Niveau B1 erwartet. Ein B2-Niveau erhöht die Chancen deutlich.",
+    },
+    {
+      question: "Kann ich mich ohne Berufserfahrung bewerben?",
+      answer:
+        "Ja. Viele Ausbildungsberufe sind für Berufseinsteiger gedacht. Motivation, Sprachkenntnisse und gute Bewerbungsunterlagen sind entscheidend.",
+    },
+    {
+      question: "Unterstützt ihr bei der Auswahl der passenden Ausbildung?",
+      answer:
+        "Ja. Wir helfen Bewerbern dabei, geeignete Ausbildungsberufe passend zum Profil, Bildungsstand und Sprachniveau zu finden.",
+    },
+    {
+      question: "Wie lange dauert der Bewerbungsprozess?",
+      answer:
+        "Der Bewerbungsprozess kann mehrere Monate dauern. Vorbereitung, Bewerbungen, Vorstellungsgespräche und Visumverfahren benötigen ausreichend Zeit.",
+    },
+    {
+      question: "Helft ihr bei Lebenslauf und Bewerbungsschreiben?",
+      answer:
+        "Ja. Wir unterstützen bei der Erstellung und Überarbeitung von Lebenslauf und Bewerbungsschreiben nach deutschen Standards.",
+    },
+    {
+      question: "Ist eure Beratung für alle Nationalitäten geeignet?",
+      answer:
+        "Ja. Unsere Beratung richtet sich an Bewerber aller Nationalitäten, sofern die grundlegenden Voraussetzungen für Ausbildung und Visum erfüllt sind.",
+    },
+    {
+      question: "Bereitet ihr auf Vorstellungsgespräche vor?",
+      answer:
+        "Ja. Wir bieten gezielte Interviewvorbereitung, typische Fragen und Kommunikationshinweise.",
+    },
+    {
+      question: "Unterstützt ihr beim Visumantrag?",
+      answer:
+        "Wir geben allgemeine Orientierung und Vorbereitungshinweise. Der Visumantrag muss jedoch immer persönlich vom Bewerber gestellt werden.",
+    },
+  ],
+},
+
   },
 } as const;
