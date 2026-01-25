@@ -15,7 +15,7 @@ const sectionColors: Record<string, string> = {
   howItWorks: "text-amber-500",
   requirements: "text-cyan-600",
   contact: "text-green-600",
-  faq: "text-amber-100",
+  faq: "text-amber-500",
   ourStory: "text-indigo-600",
 };
 

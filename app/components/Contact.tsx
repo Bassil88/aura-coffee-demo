@@ -91,7 +91,7 @@ export default function Contact({ locale }: { locale: "de" | "en" }) {
             <div className="flex justify-center items-center gap-3 mb-6 ">
               <Image src="/office-phone-94.png" alt="Phone" width={29} height={29} />
               <a
-                href="tel:+49 4141 428 438"
+                href="tel:+49 163 1897 654"
                 className="hover:text-blue-400 text-sm
       sm:text-base
       md:text-lg
