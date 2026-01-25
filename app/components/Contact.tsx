@@ -97,7 +97,7 @@ export default function Contact({ locale }: { locale: "de" | "en" }) {
       md:text-lg
       lg:text-xl transition"
               >
-                +49 4141 428 438
+                +49 163 1897 654
               </a>
             </div>
             <p
