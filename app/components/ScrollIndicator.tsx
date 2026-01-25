@@ -359,7 +359,7 @@ const blurClass = isMobile ? "" : "backdrop-blur-md";
     if (!arrowRef.current) return;
 
     gsap.to(arrowRef.current, {
-      rotate: label === "ABOUT" ? 180 : 0,
+      rotate: label === "TOP" ? 180 : 0,
       duration: 0.4,
       ease: "power3.inOut",
     });
@@ -390,6 +390,12 @@ const blurClass = isMobile ? "" : "backdrop-blur-md";
   /* -----------------------------
      ACTIVE SECTION DETECTION (FIXED)
   ------------------------------ */
+  const isNearBottom = () => {
+  const scrollPosition = window.scrollY + window.innerHeight;
+  const threshold = document.documentElement.scrollHeight - 120;
+  return scrollPosition >= threshold;
+};
+
 useEffect(() => {
   const onScroll = () => {
     const offset = isMobile ? 120 : 150;
@@ -412,10 +418,16 @@ useEffect(() => {
     );
 
     if (closestSection) {
-      setLabel(closestSection.label);
-      setTheme(sectionColors[closestSection.id] ?? "text-black");
-      setVisible(true);
-    }
+  if (isNearBottom()) {
+    setLabel("TOP");
+    setTheme("text-white");
+  } else {
+    setLabel(closestSection.label);
+    setTheme(sectionColors[closestSection.id] ?? "text-white");
+  }
+  setVisible(true);
+}
+
   };
 
   onScroll();
@@ -443,22 +455,46 @@ useEffect(() => {
   /* -----------------------------
      Click scroll
   ------------------------------ */
+  // const handleClick = () => {
+  //   const currentIndex = sections.findIndex(
+  //     (s) => s.label === label
+  //   );
+
+  //   const nextSection =
+  //     sections[currentIndex + 1] ?? sections[0];
+
+  //   const el = document.getElementById(nextSection.id);
+  //   if (!el) return;
+
+  //   const offset = isMobile ? 100 : 140;
+  //   const y = el.getBoundingClientRect().top + window.scrollY - offset;
+
+  //   window.scrollTo({ top: y, behavior: "smooth" });
+  // };
+
   const handleClick = () => {
-    const currentIndex = sections.findIndex(
-      (s) => s.label === label
-    );
+  // 🔼 Special case: TOP → go to hero
+  if (label === "TOP") {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    return;
+  }
 
-    const nextSection =
-      sections[currentIndex + 1] ?? sections[0];
+  const currentIndex = sections.findIndex(
+    (s) => s.label === label
+  );
 
-    const el = document.getElementById(nextSection.id);
-    if (!el) return;
+  const nextSection =
+    sections[currentIndex + 1] ?? sections[0];
 
-    const offset = isMobile ? 100 : 140;
-    const y = el.getBoundingClientRect().top + window.scrollY - offset;
+  const el = document.getElementById(nextSection.id);
+  if (!el) return;
 
-    window.scrollTo({ top: y, behavior: "smooth" });
-  };
+  const offset = isMobile ? 100 : 140;
+  const y = el.getBoundingClientRect().top + window.scrollY - offset;
+
+  window.scrollTo({ top: y, behavior: "smooth" });
+};
+
 
   if (!visible) return null;
 const mobileSafe = isMobile
