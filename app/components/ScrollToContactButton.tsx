@@ -25,7 +25,7 @@ export default function ScrollToContact() {
       },
       {
         threshold: 0.3,
-      }
+      },
     );
 
     observer.observe(contact);
@@ -61,9 +61,7 @@ export default function ScrollToContact() {
         cursor-pointer
       "
     >
-      <span className="text-[8px] md:text-xs tracking-widest font-medium text-gray-700">
-        scroll
-      </span>
+      <span className="text-[8px] md:text-xs tracking-widest font-medium text-gray-700">scroll</span>
 
       <span className="relative h-6 w-[2px] overflow-hidden bg-gray-400">
         <span className="absolute inset-0 bg-gray-900 animate-scroll-line" />
