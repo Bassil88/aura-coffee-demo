@@ -289,7 +289,7 @@ const sectionColors: Record<string, string> = {
   whyChooseUs: "text-emerald-600",
   howItWorks: "text-amber-500",
   requirements: "text-cyan-600",
-  contact: "text-black",
+  contact: "text-green-600",
   ourStory: "text-indigo-600",
   faq: "text-pink-600",
 };
@@ -315,6 +315,7 @@ type ClosestSection = {
   top: number;
 };
 
+
 export default function ScrollIndicator() {
   const indicatorRef = useRef<HTMLButtonElement>(null);
   const arrowRef = useRef<SVGSVGElement>(null);
@@ -324,6 +325,9 @@ export default function ScrollIndicator() {
   const [theme, setTheme] = useState("text-black");
   const [visible, setVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+const [isScrolling, setIsScrolling] = useState(false);
+const blurClass = isMobile ? "" : "backdrop-blur-md";
+
 
   /* -----------------------------
      Mobile detection (stable)
@@ -418,6 +422,22 @@ useEffect(() => {
   window.addEventListener("scroll", onScroll, { passive: true });
   return () => window.removeEventListener("scroll", onScroll);
 }, [isMobile]);
+// -----------------------------
+useEffect(() => {
+  if (!isMobile) return;
+
+  let timeout: ReturnType<typeof setTimeout>;
+
+  const onScroll = () => {
+    setIsScrolling(true);
+    clearTimeout(timeout);
+    timeout = setTimeout(() => setIsScrolling(false), 120);
+  };
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  return () => window.removeEventListener("scroll", onScroll);
+}, [isMobile]);
+
 
 
   /* -----------------------------
@@ -441,7 +461,9 @@ useEffect(() => {
   };
 
   if (!visible) return null;
-
+const mobileSafe = isMobile
+  ? "bg-white/20"
+  : "bg-white/10 backdrop-blur-md mix-blend-difference";
   return (
     <button
       ref={indicatorRef}
@@ -451,12 +473,12 @@ useEffect(() => {
         fixed z-40
         flex flex-col items-center gap-1
         ${isMobile
-          ? "bottom-2 right-10 translate-x-1/2 px-3 py-2 scale-90"
+          ? "bottom-7 right-10 translate-x-1/2 px-3 py-2 scale-90"
           : "top-1/2 right-8 -translate-y-1/2 px-4 py-3"}
         rounded-full
         bg-white/10
         backdrop-blur-md
-        mix-blend-difference
+         ${mobileSafe}
         shadow-[0_0_20px_rgba(255,255,255,0.15)]
         cursor-pointer
         ${theme}

@@ -3,7 +3,6 @@
 // import Image from "next/image";
 // import { translations } from "../lib/translations";
 
-
 // export default function RealChallenge({ locale }: { locale: "de" | "en" }) {
 //   const t = translations[locale].realChallenge;
 //   const { ref, isVisible } = useInView<HTMLDivElement>({
@@ -20,9 +19,9 @@
 //     fade-up ${isVisible ? "fade-up-visible" : ""}
 //     `}>
 //       <div className={``}>
-        
+
 //       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-6 items-center">
-        
+
 //         {/* LEFT CONTENT */}
 //         <div>
 //           <h3 className="font-bold text-gray-900 mb-6">
@@ -60,7 +59,6 @@
 // }
 
 // -------------------------------------------------------------------------------
-
 
 // import { translations } from "../lib/translations";
 
@@ -115,13 +113,6 @@
 
 // -------------------------------------------------------------------------------
 
-
-
-
-
-
-
-
 // -------------------------------------------------------------------------------
 // "use client";
 // import Image from "next/image";
@@ -150,7 +141,7 @@
 // >
 
 //       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
-        
+
 //         {/* LEFT — TEXT */}
 //         <div>
 //           {/* Eyebrow */}
@@ -201,20 +192,19 @@
 // }
 // -------------------------------------------------------------------------------
 
-
 "use client";
 import { translations } from "../lib/translations";
 import { useInView } from "../lib/useInView";
 
 export default function RealChallenge({ locale }: { locale: "de" | "en" }) {
   const t = translations[locale].realChallenge;
-const { ref, isVisible } = useInView<HTMLDivElement>({ threshold: 0.2 });
+  const { ref, isVisible } = useInView<HTMLDivElement>({ threshold: 0.2 });
 
   return (
     <section
-  ref={ref}
-  id="real-challenge"
-  className={`
+      ref={ref}
+      id="real-challenge"
+      className={`
     relative
     mt-32
     py-28
@@ -225,18 +215,17 @@ const { ref, isVisible } = useInView<HTMLDivElement>({ threshold: 0.2 });
     mb-25
     ${isVisible ? "fade-up-visible" : ""}
   `}
-  style={{
-    backgroundImage: "url('/real-challenge.png')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
->
-
+      style={{
+        backgroundImage: "url('/real-challenge.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       {/* GRADIENT OVERLAY (NOT HEAVY BLUR) */}
       <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/10 to-black/90" />
 
       {/* CONTENT */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-1">
         <div
           className="
             max-w-2xl
@@ -248,9 +237,7 @@ const { ref, isVisible } = useInView<HTMLDivElement>({ threshold: 0.2 });
           "
         >
           {/* EYEBROW */}
-          <p className="text-xs uppercase tracking-widest text-gray-500 mb-4">
-            {t.subtle}
-          </p>
+          <p className="text-xs uppercase tracking-widest text-gray-500 mb-4">{t.subtle}</p>
 
           {/* TITLE */}
           <h3
@@ -273,11 +260,7 @@ const { ref, isVisible } = useInView<HTMLDivElement>({ threshold: 0.2 });
           </div>
 
           {/* NOTE */}
-          {t.note && (
-            <p className="mt-6 text-sm text-gray-500">
-              {t.note}
-            </p>
-          )}
+          {t.note && <p className="mt-6 text-sm text-gray-500">{t.note}</p>}
         </div>
       </div>
     </section>
