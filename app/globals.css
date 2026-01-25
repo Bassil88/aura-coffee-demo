@@ -41,6 +41,21 @@ html, body {
 .animate-scroll-line {
   animation: scroll-line 1.8s ease-in-out infinite;
 }
+ 
+/* .gradient-text {
+  background: conic-gradient(
+    from 180deg,
+    #8b5cf6,
+    #22c55e,
+    #eab308,
+    #ef4444,
+    #3b82f6,
+    #8b5cf6
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+} */
 
 
 

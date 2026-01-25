@@ -123,7 +123,8 @@ export default function Hero({ locale }: { locale: "de" | "en" }) {
         rounded-[36px]
         mx-3 sm:mx-6 lg:mx-12
         mt-24
-        min-h-[85vh]
+        min-h-[88vh]
+        md:min-h-[85vh]
         flex items-center
       "
       style={{
@@ -136,7 +137,7 @@ export default function Hero({ locale }: { locale: "de" | "en" }) {
       <div className="absolute inset-0 bg-gradient-to-l from-black/50 via-black/35 to-transparent" />
 
       {/* CONTENT */}
-      <div className="relative z-10 w-full">
+      <div className=" mx-4 relative z-10 w-full">
         <div
           className="
             mx-auto max-w-4xl
@@ -146,7 +147,7 @@ export default function Hero({ locale }: { locale: "de" | "en" }) {
             sm:px-10 sm:py-14
             backdrop-blur-md
             bg-white/10
-            border border-white/20
+            border border-white/10
           "
         >
           {/* TITLE */}

@@ -37,6 +37,7 @@ Deutschland
 Kontakt:<br />
 E-Mail: contact@brightway2deutschland.com<br />
 Telefon: +49 4141 428 438
+Handy: +49 163 1897 654
 </p>
 
 <p>
