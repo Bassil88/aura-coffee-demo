@@ -1,13 +1,14 @@
 import Navbar from "../components/Navbar";
 import type { Metadata } from "next";
+import ScrollIndicator from "../components/ScrollIndicator";
 
 export const metadata: Metadata = {
   title: {
-    default: "Brightway2Deutschland | Ausbildung Consulting",
+    default: "Brightway2Deutschland | Ausbildung & Beratung",
     template: "%s | Brightway2Deutschland",
   },
   alternates: {
-    canonical: "https://brightway2deutschland.com/en",
+    canonical: "https://brightway2deutschland.com/de",
     languages: {
       de: "https://brightway2deutschland.com/de",
       en: "https://brightway2deutschland.com/en",
@@ -16,14 +17,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function EnLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function DeLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <Navbar locale="en" />
+      <Navbar locale="de" />
+      <ScrollIndicator locale="de" />
       {children}
     </>
   );

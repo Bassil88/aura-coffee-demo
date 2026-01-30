@@ -5,7 +5,7 @@ import "./globals.css";
 import Footer from "./components/Footer";
 import ScrollToContactButton from "./components/ScrollToContactButton";
 import ScrollToContact from "./components/ScrollToContactButton";
-import ScrollIndicator from "./components/ScrollIndicator";
+// import ScrollIndicator from "./components/ScrollIndicator";
 import LenisProvider from "./providers/LenisProvider";
 import ScrollShader from "./components/ScrollShader";
 
@@ -38,12 +38,12 @@ export const metadata: Metadata = {
 
   metadataBase: new URL("https://brightway2deutschland.com"),
 
-alternates: {
-  languages: {
-    "de-DE": "https://brightway2deutschland.com/de",
-    "en-US": "https://brightway2deutschland.com/en",
+  alternates: {
+    languages: {
+      "de-DE": "https://brightway2deutschland.com/de",
+      "en-US": "https://brightway2deutschland.com/en",
+    },
   },
-},
 
   openGraph: {
     title: "Brightway2Deutschland | Ausbildung Consulting in Germany",
@@ -136,14 +136,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
 
         <main>
-          
-            
-  <LenisProvider>{children}</LenisProvider>
-  <ScrollIndicator />
+          <LenisProvider>{children}</LenisProvider>
+          {/* <ScrollIndicator /> */}
 
           {/* <ScrollToContact /> */}
-
-
         </main>
         <Footer />
       </body>

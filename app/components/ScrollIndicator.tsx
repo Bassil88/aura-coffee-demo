@@ -1,7 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { translations } from "../lib/translations";
 import gsap from "gsap";
+
+type SectionId = "hero" | "real-challenge" | "services" | "commonChallenges" | "whyChooseUs" | "howItWorks" | "requirements" | "contact" | "ourStory" | "faq";
 
 /* -----------------------------
    Section colors
@@ -15,32 +18,21 @@ const sectionColors: Record<string, string> = {
   howItWorks: "text-amber-500",
   requirements: "text-cyan-600",
   contact: "text-green-600",
-  faq: "text-amber-500",
-  ourStory: "text-indigo-600",
+  faq: "text-lime-600",
+  ourStory: "text-yellow-600",
 };
 
 /* -----------------------------
    Sections (ORDER MATTERS)
 ------------------------------ */
-const sections = [
-  { id: "hero", label: "START" },
-  { id: "real-challenge", label: "CHALLENGES" },
-  { id: "services", label: "SERVICES" },
-  { id: "commonChallenges", label: "CHALLENGES" },
-  { id: "whyChooseUs", label: "WHY US" },
-  { id: "howItWorks", label: "PROCESS" },
-  { id: "requirements", label: "REQUIREMENTS" },
-  { id: "contact", label: "CONTACT" },
-  { id: "ourStory", label: "ABOUT US" },
-  { id: "faq", label: "FAQ" },
-];
+const sections: { id: SectionId }[] = [{ id: "hero" }, { id: "real-challenge" }, { id: "services" }, { id: "commonChallenges" }, { id: "whyChooseUs" }, { id: "howItWorks" }, { id: "requirements" }, { id: "contact" }, { id: "ourStory" }, { id: "faq" }];
+
 type ClosestSection = {
-  id: string;
-  label: string;
+  id: SectionId;
   top: number;
 };
 
-export default function ScrollIndicator() {
+export default function ScrollIndicator({ locale }: { locale: "en" | "de" }) {
   const indicatorRef = useRef<HTMLButtonElement>(null);
   const arrowRef = useRef<SVGSVGElement>(null);
   const textRef = useRef<HTMLSpanElement>(null);
@@ -51,6 +43,9 @@ export default function ScrollIndicator() {
   const [isMobile, setIsMobile] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
   const blurClass = isMobile ? "" : "backdrop-blur-md";
+  const labels = translations[locale].scrollIndicator;
+  const [activeSectionId, setActiveSectionId] = useState<SectionId>("hero");
+  const [isAtTop, setIsAtTop] = useState(false);
 
   /* -----------------------------
      Mobile detection (stable)
@@ -78,11 +73,11 @@ export default function ScrollIndicator() {
     if (!arrowRef.current) return;
 
     gsap.to(arrowRef.current, {
-      rotate: label === "TOP" ? 180 : 0,
+      rotate: isAtTop ? 180 : 0,
       duration: 0.4,
       ease: "power3.inOut",
     });
-  }, [label]);
+  }, [isAtTop]);
 
   /* -----------------------------
      Text rotation on scroll
@@ -125,28 +120,33 @@ export default function ScrollIndicator() {
         const top = Math.abs(rect.top - offset);
 
         if (!closest || top < closest.top) {
-          return { id: s.id, label: s.label, top };
+          return { id: s.id, top };
         }
 
         return closest;
       }, null);
 
-      if (closestSection) {
-        if (isNearBottom()) {
-          setLabel("TOP");
-          setTheme(isMobile ? "text-black" : "text-white");
-        } else {
-          setLabel(closestSection.label);
-          setTheme(sectionColors[closestSection.id] ?? "text-white");
-        }
-        setVisible(true);
+      if (!closestSection) return;
+
+      if (isNearBottom()) {
+        setIsAtTop(true);
+        setLabel(labels.TOP);
+        setTheme(isMobile ? "text-black" : "text-white");
+      } else {
+        setIsAtTop(false);
+        setActiveSectionId(closestSection.id);
+        setLabel(labels[closestSection.id]);
+        setTheme(sectionColors[closestSection.id] ?? "text-white");
       }
+
+      setVisible(true);
     };
 
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, [isMobile]);
+
   // -----------------------------
   useEffect(() => {
     if (!isMobile) return;
@@ -185,12 +185,12 @@ export default function ScrollIndicator() {
 
   const handleClick = () => {
     // 🔼 Special case: TOP → go to hero
-    if (label === "TOP") {
+    if (isAtTop) {
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
 
-    const currentIndex = sections.findIndex((s) => s.label === label);
+    const currentIndex = sections.findIndex((s) => s.id === activeSectionId);
 
     const nextSection = sections[currentIndex + 1] ?? sections[0];
 
@@ -213,7 +213,7 @@ export default function ScrollIndicator() {
       className={`
         fixed z-40
         flex flex-col items-center gap-1
-        ${isMobile ? "bottom-7 right-10 translate-x-1/2 px-3 py-2 scale-90" : "top-1/2 right-8 -translate-y-1/2 px-4 py-3"}
+        ${isMobile ? "bottom-7 right-10 translate-x-1/2 px-3 py-2 scale-90" : "top-1/2 right-8 -translate-y-1/2 px-4 py-1"}
         rounded-full
         bg-white/10
         backdrop-blur-md
