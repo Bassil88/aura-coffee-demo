@@ -5,6 +5,7 @@ import { translations } from "../../lib/translations";
 import Image from "next/image";
 import Link from "next/link";
 import { use } from "react";
+import { useRouter } from "next/navigation";
 
 export default function CartPage({
   params,
@@ -12,12 +13,13 @@ export default function CartPage({
   params: Promise<{ locale: "en" | "de" }>;
 }) {
   const { locale } = use(params);
-  const { resolvedItems, removeItem, totalPrice, clearCart } = useCart();
+  const router = useRouter();
+  const { resolvedItems, removeItem, updateQuantity, totalPrice, clearCart } = useCart();
   const t = translations[locale].shop;
 
   const handleCheckout = () => {
-    alert(t.checkoutSuccess);
     clearCart();
+    router.push(`/${locale}/shop/success`);
   };
 
   return (
@@ -45,9 +47,23 @@ export default function CartPage({
                     <h3 className="font-semibold text-gray-900">
                       {item.product.name[locale]}
                     </h3>
-                    <p className="text-sm text-gray-500">
-                      {item.quantity} x €{item.product.price.toFixed(2)}
-                    </p>
+                    <div className="flex items-center gap-3 mt-2">
+                      <button
+                        onClick={() => updateQuantity(item.product.id, -1)}
+                        className="w-8 h-8 rounded-full bg-[#f5f6f8] shadow-[2px_2px_5px_rgba(0,0,0,0.1),-2px_-2px_5px_rgba(255,255,255,0.8)] active:shadow-inner flex items-center justify-center font-bold text-gray-600"
+                      >
+                        -
+                      </button>
+                      <span className="w-8 text-center font-medium text-gray-700">
+                        {item.quantity}
+                      </span>
+                      <button
+                        onClick={() => updateQuantity(item.product.id, 1)}
+                        className="w-8 h-8 rounded-full bg-[#f5f6f8] shadow-[2px_2px_5px_rgba(0,0,0,0.1),-2px_-2px_5px_rgba(255,255,255,0.8)] active:shadow-inner flex items-center justify-center font-bold text-gray-600"
+                      >
+                        +
+                      </button>
+                    </div>
                   </div>
 
                   <div className="flex flex-col items-end gap-2">

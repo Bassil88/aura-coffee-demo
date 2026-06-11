@@ -18,6 +18,7 @@ interface CartContextType {
   resolvedItems: ResolvedCartItem[];
   addItem: (id: string) => void;
   removeItem: (id: string) => void;
+  updateQuantity: (id: string, delta: number) => void;
   clearCart: () => void;
   totalCount: number;
   totalPrice: number;
@@ -37,8 +38,6 @@ export function CartProvider({ children }: { children: ReactNode }) {
       try {
         const parsed = JSON.parse(savedCart);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          // Wrap in a function to satisfy some linting rules if necessary, 
-          // but the error is about synchronous state updates in effects.
           setItems(parsed);
         }
       } catch (e) {
@@ -71,6 +70,16 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setItems((prev) => prev.filter((item) => item.id !== id));
   };
 
+  const updateQuantity = (id: string, delta: number) => {
+    setItems((prev) =>
+      prev
+        .map((item) =>
+          item.id === id ? { ...item, quantity: item.quantity + delta } : item
+        )
+        .filter((item) => item.quantity > 0)
+    );
+  };
+
   const clearCart = () => {
     setItems([]);
   };
@@ -96,6 +105,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
         resolvedItems,
         addItem,
         removeItem,
+        updateQuantity,
         clearCart,
         totalCount,
         totalPrice,

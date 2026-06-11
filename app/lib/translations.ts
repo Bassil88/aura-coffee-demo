@@ -253,7 +253,10 @@ Applicants submit applications independently.`,
       remove: "Remove",
       items: "items",
       item: "item",
-      checkoutSuccess: "Thank you! This is a dummy checkout."
+      checkoutSuccess: "Thank you! This is a dummy checkout.",
+      successTitle: "Order Confirmed!",
+      successMessage: "Thank you for your purchase. We will contact you soon for the next steps.",
+      continueShopping: "Continue Shopping"
     }
   },
 
@@ -511,7 +514,10 @@ Die Bewerbungen werden eigenständig eingereicht.`,
       remove: "Entfernen",
       items: "Artikel",
       item: "Artikel",
-      checkoutSuccess: "Vielen Dank! Dies ist eine Demo-Kasse."
+      checkoutSuccess: "Vielen Dank! Dies ist eine Demo-Kasse.",
+      successTitle: "Bestellung bestätigt!",
+      successMessage: "Vielen Dank für Ihren Kauf. Wir werden uns in Kürze für die weiteren Schritte mit Ihnen in Verbindung setzen.",
+      continueShopping: "Weiter einkaufen"
     }
   },
 } as const;
