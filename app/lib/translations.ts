@@ -238,8 +238,16 @@ Applicants submit applications independently.`,
       ourStory: "ABOUT US",
       faq: "FAQ",
     },
-
-
+    shop: {
+      title: "Our Packages",
+      search: "Search services...",
+      filterAll: "All Categories",
+      addToCart: "Add to Cart",
+      viewDetails: "Details",
+      price: "Price",
+      cart: "Cart",
+      noProducts: "No services found."
+    }
   },
 
   de: {
@@ -481,6 +489,15 @@ Die Bewerbungen werden eigenständig eingereicht.`,
       ourStory: "ÜBER UNS",
       faq: "FAQ",
     },
-
+    shop: {
+      title: "Unsere Pakete",
+      search: "Services suchen...",
+      filterAll: "Alle Kategorien",
+      addToCart: "In den Warenkorb",
+      viewDetails: "Details",
+      price: "Preis",
+      cart: "Warenkorb",
+      noProducts: "Keine Services gefunden."
+    }
   },
 } as const;
