@@ -3,11 +3,11 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import Footer from "./components/Footer";
-import ScrollToContactButton from "./components/ScrollToContactButton";
-import ScrollToContact from "./components/ScrollToContactButton";
-// import ScrollIndicator from "./components/ScrollIndicator";
+// import ScrollToContactButton from "./components/ScrollToContactButton";
+// import ScrollToContact from "./components/ScrollToContactButton";
 import LenisProvider from "./providers/LenisProvider";
-import ScrollShader from "./components/ScrollShader";
+// import ScrollShader from "./components/ScrollShader";
+import { CartProvider } from "./providers/CartProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,19 +18,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-// export const metadata: Metadata = {
-//   title: "Brightway2Deutschland",
-//   description: "Helping abroad applicants build a future in Germany",
-
-//   icons: {
-//     icon: [
-//       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-//       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-//     ],
-//     apple: "/apple-touch-icon.png",
-//   },
-// };
 
 export const metadata: Metadata = {
   title: "Brightway2Deutschland | Ausbildung & Career Consulting in Germany",
@@ -70,33 +57,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    // NOTE: lang here is fine; real locale lang is set in [locale]/layout.tsx
     <html lang="de">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* GLOBAL SVG FILTER – OK */}
-        {/* <svg width="0" height="0" style={{ position: "absolute" }}>
-          <defs>
-            <filter id="glass-distortion" x="0%" y="0%" width="100%" height="100%">
-              <feTurbulence
-                type="fractalNoise"
-                baseFrequency="0.005 0.005"
-                numOctaves="2"
-                seed="92"
-                result="noise"
-              />
-              <feGaussianBlur in="noise" stdDeviation="2" result="blurred" />
-              <feDisplacementMap
-                in="SourceGraphic"
-                in2="blurred"
-                scale="160"
-                xChannelSelector="R"
-                yChannelSelector="G"
-              />
-            </filter>
-          </defs>
-        </svg> */}
-
-        {/* ✅ GLOBAL SVG FILTER – ONCE */}
         <svg width="0" height="0" style={{ position: "absolute" }}>
           <defs>
             <filter id="glass-distortion">
@@ -136,10 +98,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
 
         <main>
-          <LenisProvider>{children}</LenisProvider>
-          {/* <ScrollIndicator /> */}
-
-          {/* <ScrollToContact /> */}
+          <CartProvider>
+            <LenisProvider>{children}</LenisProvider>
+          </CartProvider>
         </main>
         <Footer />
       </body>

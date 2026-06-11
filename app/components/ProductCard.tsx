@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Product } from "../lib/mockData";
 import { translations } from "../lib/translations";
+import AddToCartButton from "./AddToCartButton";
 
 interface ProductCardProps {
   product: Product;
@@ -47,9 +48,7 @@ export default function ProductCard({ product, locale }: ProductCardProps) {
           </span>
         </div>
         
-        <button className="neu-btn-link text-xs font-bold py-2 px-4">
-          {t.addToCart}
-        </button>
+        <AddToCartButton productId={product.id} label={t.addToCart} />
       </div>
     </div>
   );

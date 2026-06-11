@@ -4,19 +4,25 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { translations } from "../lib/translations";
 import LanguageToggle from "./LanguageToggle";
+import Link from "next/link";
+import { useCart } from "../providers/CartProvider";
 
 export default function Navbar({ locale }: { locale: "en" | "de" }) {
   const [open, setOpen] = useState(false);
+  const { totalCount } = useCart();
   const t = translations[locale].nav;
 
   const scrollTo = (id: string) => {
+    // If we are on the home page, scroll to element
     const el = document.getElementById(id);
-    if (!el) return;
-
-    const yOffset = -100;
-    const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
-
-    window.scrollTo({ top: y, behavior: "smooth" });
+    if (el) {
+      const yOffset = -100;
+      const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    } else {
+      // If we are on another page (like shop), navigate home first
+      window.location.href = `/${locale}#${id}`;
+    }
     setOpen(false);
   };
   useEffect(() => {
@@ -31,9 +37,9 @@ export default function Navbar({ locale }: { locale: "en" | "de" }) {
     <nav className="neu-navbar fixed top-0 w-full z-50 ">
       <div className="max-w-7xl mx-auto flex items-center justify-between mt-0  h-[70px]">
         {/* Logo */}
-        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} aria-label="Scroll to top" className="cursor-pointer">
+        <Link href={`/${locale}`} aria-label="Go to home" className="cursor-pointer">
           <Image src="/logo.png" alt="Brightway to deutschland logo" width={600} height={100} priority className="h-auto w-[130px] object-contain" />
-        </button>
+        </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex gap-1 font-medium text-gray-700">
@@ -55,15 +61,29 @@ export default function Navbar({ locale }: { locale: "en" | "de" }) {
           >
             {t.requirements}
           </button>
-          <button
-            onClick={() => scrollTo("howItWorks")}
+          <Link
+            href={`/${locale}/shop`}
             className="neu-nav-link text-sm
       sm:text-base
       md:text-lg
       lg:text-xl "
           >
-            {t.howItWorks}
-          </button>
+            {locale === "en" ? "Shop" : "Shop"}
+          </Link>
+          <Link
+            href={`/${locale}/cart`}
+            className="neu-nav-link text-sm
+      sm:text-base
+      md:text-lg
+      lg:text-xl flex items-center gap-1"
+          >
+            🛒
+            {totalCount > 0 && (
+              <span className="bg-blue-600 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
+                {totalCount}
+              </span>
+            )}
+          </Link>
           <button
             onClick={() => scrollTo("contact")}
             className="neu-nav-link text-sm
@@ -78,14 +98,6 @@ export default function Navbar({ locale }: { locale: "en" | "de" }) {
         <div className="mr-4 flex justify-center">
           <LanguageToggle />
         </div>
-        {/* Mobile Toggle */}
-        {/* <button
-          className="md:hidden text-gray-700 text-3xl mr-4"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-        >
-          ☰
-        </button> */}
 
         <button onClick={() => setOpen(!open)} aria-label="Toggle menu" aria-expanded={open} className="md:hidden mr-4 flex h-8 w-8 flex-col justify-center items-center gap-1.5">
           <span className={`block h-0.5 w-6 bg-gray-800 transition-all duration-300 ${open ? "rotate-45 translate-y-2" : ""}`} />
@@ -104,33 +116,23 @@ export default function Navbar({ locale }: { locale: "en" | "de" }) {
             <button onClick={() => scrollTo("requirements")} className="neu-nav-link">
               {t.requirements}
             </button>
-            <button onClick={() => scrollTo("howItWorks")} className="neu-nav-link">
-              {t.howItWorks}
-            </button>
+            <Link href={`/${locale}/shop`} className="neu-nav-link" onClick={() => setOpen(false)}>
+              {locale === "en" ? "Shop" : "Shop"}
+            </Link>
+            <Link href={`/${locale}/cart`} className="neu-nav-link flex items-center gap-2" onClick={() => setOpen(false)}>
+              🛒 {translations[locale].shop.cart}
+              {totalCount > 0 && (
+                <span className="bg-blue-600 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold">
+                  {totalCount}
+                </span>
+              )}
+            </Link>
             <button onClick={() => scrollTo("contact")} className="neu-nav-link">
               {t.contact}
             </button>
           </div>
         </div>
       </div>
-      {/* {open && (
-        <div className="md:hidden px-6 pb-4">
-          <div className="flex flex-col gap-3 bg-[#f7f8fa] p-4">
-            <button onClick={() => scrollTo("services")} className="neu-nav-link">
-              {t.services}
-            </button>
-            <button onClick={() => scrollTo("requirements")} className="neu-nav-link">
-              {t.requirements}
-            </button>
-            <button onClick={() => scrollTo("howItWorks")} className="neu-nav-link">
-              {t.howItWorks}
-            </button>
-            <button onClick={() => scrollTo("contact")} className="neu-nav-link">
-              {t.contact}
-            </button>
-          </div>
-        </div>
-      )} */}
     </nav>
   );
 }

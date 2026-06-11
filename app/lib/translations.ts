@@ -246,7 +246,14 @@ Applicants submit applications independently.`,
       viewDetails: "Details",
       price: "Price",
       cart: "Cart",
-      noProducts: "No services found."
+      noProducts: "No services found.",
+      emptyCart: "Your cart is empty.",
+      total: "Total",
+      checkout: "Checkout",
+      remove: "Remove",
+      items: "items",
+      item: "item",
+      checkoutSuccess: "Thank you! This is a dummy checkout."
     }
   },
 
@@ -497,7 +504,14 @@ Die Bewerbungen werden eigenständig eingereicht.`,
       viewDetails: "Details",
       price: "Preis",
       cart: "Warenkorb",
-      noProducts: "Keine Services gefunden."
+      noProducts: "Keine Services gefunden.",
+      emptyCart: "Ihr Warenkorb ist leer.",
+      total: "Gesamt",
+      checkout: "Zur Kasse",
+      remove: "Entfernen",
+      items: "Artikel",
+      item: "Artikel",
+      checkoutSuccess: "Vielen Dank! Dies ist eine Demo-Kasse."
     }
   },
 } as const;
