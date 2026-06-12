@@ -1,7 +1,7 @@
 export interface Product {
   id: string;
   price: number;
-  category: 'Consultation' | 'Preparation' | 'Support' | 'Integration';
+  category: 'Coffee' | 'Tea' | 'Wellness' | 'Equipment';
   image: string;
   name: { en: string; de: string };
   description: { en: string; de: string };
@@ -10,114 +10,114 @@ export interface Product {
 export const products: Product[] = [
   {
     id: '1',
-    price: 49.00,
-    category: 'Consultation',
+    price: 18.00,
+    category: 'Coffee',
     image: '/consultation-orientationn.png',
     name: { 
-      en: 'Initial Consultation', 
-      de: 'Erstberatung' 
+      en: 'Ethiopian Yirgacheffe', 
+      de: 'Äthiopischer Yirgacheffe' 
     },
     description: { 
-      en: 'A 45-minute deep dive into your goals and the German Ausbildung system.', 
-      de: 'Ein 45-minütiges Gespräch über Ihre Ziele und das deutsche Ausbildungssystem.' 
+      en: 'Light roast with floral notes of jasmine and citrus. Single-origin and ethically sourced.', 
+      de: 'Helle Röstung mit floralen Noten von Jasmin und Zitrusfrüchten. Single-Origin und ethisch bezogen.' 
     }
   },
   {
     id: '2',
-    price: 89.00,
-    category: 'Preparation',
+    price: 24.00,
+    category: 'Tea',
     image: '/c.v-document-praparation.png',
     name: { 
-      en: 'CV & Cover Letter Review', 
-      de: 'Lebenslauf & Anschreiben Check' 
+      en: 'Ceremonial Grade Matcha', 
+      de: 'Ceremonial Grade Matcha' 
     },
     description: { 
-      en: 'Professional review and optimization of your application documents according to German standards.', 
-      de: 'Professionelle Prüfung und Optimierung Ihrer Bewerbungsunterlagen nach deutschen Standards.' 
+      en: 'Stone-ground organic green tea from Uji, Japan. Rich in antioxidants and vibrant in color.', 
+      de: 'Stein-gemahlener Bio-Grüntee aus Uji, Japan. Reich an Antioxidantien und lebendig in der Farbe.' 
     }
   },
   {
     id: '3',
-    price: 129.00,
-    category: 'Preparation',
+    price: 14.00,
+    category: 'Wellness',
     image: '/interview-preparationn.png',
     name: { 
-      en: 'Interview Coaching', 
-      de: 'Interview-Coaching' 
+      en: 'Midnight Lavender Tea', 
+      de: 'Mitternachts-Lavendeltee' 
     },
     description: { 
-      en: 'One-on-one session to prepare you for interviews with German employers.', 
-      de: 'Einzelcoaching zur Vorbereitung auf Vorstellungsgespräche bei deutschen Arbeitgebern.' 
+      en: 'A soothing blend of organic lavender and chamomile for a perfect night\'s sleep.', 
+      de: 'Eine beruhigende Mischung aus Bio-Lavendel und Kamille für einen perfekten Schlaf.' 
     }
   },
   {
     id: '4',
-    price: 199.00,
-    category: 'Support',
+    price: 45.00,
+    category: 'Equipment',
     image: '/guided-self-Application-support.png',
     name: { 
-      en: 'Full Application Support', 
-      de: 'Komplette Bewerbungsbegleitung' 
+      en: 'Precision Pour-Over Kit', 
+      de: 'Präzisions-Handfilter-Set' 
     },
     description: { 
-      en: 'Step-by-step guidance through the entire application process for 3 months.', 
-      de: 'Schritt-für-Schritt-Begleitung durch den gesamten Bewerbungsprozess für 3 Monate.' 
+      en: 'Everything you need for the perfect pour-over. Includes glass dripper and paper filters.', 
+      de: 'Alles, was Sie für den perfekten Handfilter benötigen. Inklusive Glas-Dripper und Papierfilter.' 
     }
   },
   {
     id: '5',
-    price: 75.00,
-    category: 'Integration',
+    price: 22.00,
+    category: 'Coffee',
     image: '/intergration-education-guidance.png',
     name: { 
-      en: 'Integration Workshop', 
-      de: 'Integrations-Workshop' 
+      en: 'Aura Signature Blend', 
+      de: 'Aura Signature Blend' 
     },
     description: { 
-      en: 'Learn about life in Germany, administrative steps, and cultural nuances.', 
-      de: 'Erfahren Sie mehr über das Leben in Deutschland, Behördengänge und kulturelle Unterschiede.' 
+      en: 'Medium-dark roast with chocolatey undertones and a smooth, balanced finish.', 
+      de: 'Mitteldunkle Röstung mit schokoladigen Untertönen und einem sanften, ausgewogenen Abgang.' 
     }
   },
   {
     id: '6',
-    price: 59.00,
-    category: 'Consultation',
+    price: 19.00,
+    category: 'Tea',
     image: '/hero-bg7.jpg',
     name: { 
-      en: 'Visa Process Guidance', 
-      de: 'Visum-Prozess Beratung' 
+      en: 'Golden Turmeric Chai', 
+      de: 'Goldener Kurkuma-Chai' 
     },
     description: { 
-      en: 'Personalized advice on the requirements and steps for your visa application.', 
-      de: 'Individuelle Beratung zu den Voraussetzungen und Schritten für Ihren Visumantrag.' 
+      en: 'A warming spice blend with organic turmeric, ginger, and black pepper.', 
+      de: 'Eine wärmende Gewürzmischung mit Bio-Kurkuma, Ingwer und schwarzem Pfeffer.' 
     }
   },
   {
     id: '7',
-    price: 150.00,
-    category: 'Support',
+    price: 32.00,
+    category: 'Wellness',
     image: '/requirements.png',
     name: { 
-      en: 'Priority Support Package', 
-      de: 'Priority Support Paket' 
+      en: 'Morning Ritual Bundle', 
+      de: 'Morgenritual-Bundle' 
     },
     description: { 
-      en: 'Get faster responses and dedicated assistance for your urgent questions.', 
-      de: 'Erhalten Sie schnellere Antworten und engagierte Unterstützung für Ihre dringenden Fragen.' 
+      en: 'A curated selection of our best-selling coffee and wellness teas to start your day.', 
+      de: 'Eine kuratierte Auswahl unserer meistverkauften Kaffee- und Wellness-Tees für den Start in den Tag.' 
     }
   },
   {
     id: '8',
-    price: 99.00,
-    category: 'Preparation',
+    price: 16.00,
+    category: 'Coffee',
     image: '/real-challenge.png',
     name: { 
-      en: 'Self-Application Kit', 
-      de: 'Selbstbewerber-Kit' 
+      en: 'Decaf Mountain Water', 
+      de: 'Entkoffeinierter Bergwasser-Kaffee' 
     },
     description: { 
-      en: 'Templates and guides to help you manage your applications effectively.', 
-      de: 'Vorlagen und Leitfäden, die Ihnen helfen, Ihre Bewerbungen effektiv zu verwalten.' 
+      en: 'Premium decaf processed using the natural mountain water method. Full flavor, zero caffeine.', 
+      de: 'Premium-Entkoffeinierung nach der natürlichen Bergwassermethode. Voller Geschmack, null Koffein.' 
     }
   }
 ];

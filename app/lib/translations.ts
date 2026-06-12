@@ -4,415 +4,355 @@ import { sub } from "three/tsl";
 export const translations = {
   en: {
     nav: {
-      services: "Our Services",
-      requirements: "Requirements",
-      howItWorks: "How It Works",
-      contact: "Contact us",
+      services: "Collections",
+      requirements: "Sourcing",
+      howItWorks: "Brewing Guide",
+      contact: "Contact",
     },
 
     hero: {
-      title: "Start Your Ausbildung Journey in Germany",
-      description: `Many international applicants struggle not because they lack motivation but because their applications are unclear, unsuitable, or poorly prepared.`,
+      title: "Elevate Your Morning Ritual with Aura",
+      description: `Experience the finest organic specialty coffee and wellness blends, ethically sourced and small-batch roasted for peak freshness.`,
       disclaimer:
-        "No job or visa guarantees — just honest, transparent, preparation-focused consulting.",
-      cta: "We provide structured consultation, document preparation support, and guided self-application assistance to help applicants apply independently with confidence.",
+        "100% Organic — Sustainable Sourcing — Direct Trade",
+      cta: "Explore our curated collections of single-origin beans, ceremonial teas, and sustainable lifestyle essentials.",
     },
 
     realChallenge: {
-      subtle: "CHALLENGING PART",
-      title: "The Real Challenge of Applying for Ausbildung",
+      subtle: "OUR PHILOSOPHY",
+      title: "The Art of Sustainable Sourcing",
       paragraphs: [
-        "Before starting the Ausbildung application process, it is important to understand that success depends heavily on preparation and strategy.",
+        "We believe that a perfect cup starts long before the brew. It begins with the soil, the climate, and the hands that harvest the crop.",
 
-        "A professional CV and motivation letter in German are essential first steps. These documents reflect not only qualifications and experience, but also readiness, motivation, and suitability for Ausbildung positions in Germany.",
+        "Every bean and leaf in our collection is selected based on a rigorous set of standards for flavor, purity, and environmental impact.",
 
-        "Equally important is understanding which Ausbildung fits your profile and how to apply correctly and independently."
+        "By working directly with small-scale farmers, we ensure transparency and fair compensation at every step of the journey."
       ],
-      note: "Lack of preparation is one of the most common reasons for rejection."
+      note: "Sustainability is at the heart of everything we do."
     },
-
 
     services: {
-      intro:
-        "Our services include",
-
+      intro: "Our Collections",
       items: [
         {
-          title: "Consultation & Orientation",
-          desc: `Individual consultation to understand Ausbildung
-options, requirements, and realistic pathways.`,
+          title: "Single Origin Coffee",
+          desc: `Small-batch roasted beans from the world's most renowned growing regions.`,
         },
         {
-          title: "CV & Document Preparation",
-          desc: `Preparation and review of CV (Lebenslauf) and
-motivation letters according to German standards.`,
+          title: "Ceremonial Teas",
+          desc: `Pure, high-grade matcha and traditional teas sourced directly from heritage gardens.`,
         },
         {
-          title: "Interview Preparation",
-          desc: `Interview coaching, common questions, and
-communication guidance to prepare applicants effectively.`,
+          title: "Wellness Blends",
+          desc: `Functional botanicals and herbal infusions designed to support your daily well-being.`,
         },
         {
-          title: "Guided Self-Application Support",
-          desc: `Step-by-step guidance during the application process.
-Applicants submit applications independently.`,
+          title: "Brewing Equipment",
+          desc: `Minimalist tools for the perfect home brewing experience.`,
         },
         {
-          title: "Integration & Education Guidance",
-          desc: "General orientation about life, training, and education in Germany.",
+          title: "Eco-Lifestyle Goods",
+          desc: "Sustainable accessories for a conscious and mindful home.",
         },
       ],
     },
-
 
     commonChallenges: {
-      eyebrow: "Typical Problems",
-      title: "Common Challenges Applicants Face",
+      eyebrow: "Why Choose Organic?",
+      title: "The Difference of Pure Sourcing",
       items: [
-        "Unclear or weak application documents",
-        "Applying for unsuitable Ausbildung positions",
-        "Lack of understanding of employer expectations",
-        "Applications being overlooked or ignored"
+        "Free from synthetic pesticides and fertilizers",
+        "Rich, natural flavor profiles preserved",
+        "Supports healthy soil and biodiversity",
+        "Higher antioxidant and nutrient density"
       ],
-      note: "These challenges are common and do not reflect a lack of ability, but they can significantly reduce the chances of receiving interview invitations."
+      note: "Taste the purity in every sip."
     },
 
-
-
     whyChooseUs: {
-      title: "Why Applicants Choose Our Guidance",
+      title: "The Aura Standards",
       points: [
         {
-          title: "Germany-Based Expertise",
+          title: "Direct Trade",
           description:
-            "We operate within the German Ausbildung system and understand real employer expectations."
+            "We build long-term relationships with farmers, ensuring higher pay and ethical working conditions."
         },
         {
-          title: "Employer-Focused Applications",
+          title: "Zero Waste Packaging",
           description:
-            "We guide applicants to prepare documents and interviews aligned with what German companies value."
+            "Our bags and boxes are fully compostable or recyclable, minimizing our environmental footprint."
         },
         {
-          title: "Structured & Transparent Process",
+          title: "Freshness Guaranteed",
           description:
-            "Clear steps, realistic expectations, and full transparency throughout the entire process."
+            "Coffee is roasted to order in small batches and shipped immediately for maximum flavor."
         },
         {
-          title: "Independent & Responsible Applicants",
+          title: "Certified Organic",
           description:
-            "Applicants remain responsible for their applications and decisions, supported through structured guidance."
+            "Every product we offer is rigorously tested and certified for organic purity."
         }
       ]
     },
 
     howItWorks: {
-      title: "Process",
+      title: "Brewing Guide",
       steps: [
-        "Initial consultation and eligibility assessment",
-        "CV, cover letter and document preparation",
-        "Guided self-application support via video call",
-        "Interview preparation and coaching",
-        "Applicant attends interviews independently",
-        "Final decision made by the German company",
-        "Visa application submitted personally by the applicant",
+        "Choose your preferred brewing method (Pour-over, AeroPress, etc.)",
+        "Use fresh, filtered water heated to the ideal temperature",
+        "Measure your beans or tea leaves with precision",
+        "Grind just before brewing for maximum freshness",
+        "Follow our step-by-step ratio guides for the perfect cup",
+        "Take a moment to enjoy the aroma and complexity",
+        "Compost your used grounds and filters",
       ],
       note:
-        "We guide and support applicants throughout the process. Applications and decisions remain the responsibility of applicants and employers.",
+        "Master the art of brewing at home with our curated guides and expert tips.",
     },
 
-
-
     requirements: {
-      title: "Requirements for International Applicants",
+      title: "Our Sourcing Standards",
       items: [
-        "German language level B1 (recommended), B2 is a strong advantage",
-        "Completed high school (10th or 12th grade)",
-        "Motivation to work and learn in Germany",
-        "Willingness to prepare documents and attend interviews",
-        "A professional CV and cover letter",
-        "Ability to apply independently with guidance",
-        "Visa application submitted personally by the applicant",
+        "100% Organic Certification required for all producers",
+        "No use of harmful synthetic chemicals or GMOs",
+        "Fair wages and safe working conditions for all laborers",
+        "Transparent supply chains from farm to warehouse",
+        "Commitment to regenerative agricultural practices",
+        "Traceability to the specific lot or harvest date",
+        "Environmentally responsible shipping and handling",
       ],
       note:
-        "We help you prepare everything needed for applications — but hiring decisions are made by German companies.",
+        "We never compromise on quality or ethics. If it doesn't meet our standards, it doesn't make it to your cup.",
     },
 
     contact: {
-      title: "Contact Us",
+      title: "Join the Aura Community",
       intro:
-        "Thinking about an Ausbildung in Germany? Let’s take the first step together with clear and realistic guidance.",
-      cta: "Get in Touch",
-      getintouch: "Book your first consultation to discuss your plans and next steps.",
+        "Questions about our beans or brewing techniques? We're here to help you perfect your ritual.",
+      cta: "Contact Us",
+      getintouch: "Reach out for wholesale inquiries, gift sets, or personal brewing advice.",
     },
 
     about: {
-      label: "Who We Are",
-      title: "About Us",
+      label: "Our Story",
+      title: "About Aura",
       paragraphs: [
-        "Brightway2Deutschland was founded to support international applicants who want to understand and prepare for vocational training (Ausbildung) in Germany.",
-        "Many applicants face challenges not because opportunities do not exist, but because the process is complex and unfamiliar. Our goal is to provide clear information, realistic guidance, and structured preparation so applicants can navigate the process confidently and independently.",
-        "We believe long-term success comes from preparation, transparency, and personal responsibility.",
+        "Aura was born from a simple desire: to bring the world's most exceptional, ethically sourced coffee and wellness goods to those who value quality and sustainability.",
+        "We believe that daily rituals—whether it's your first cup of coffee or a mid-day tea—should be moments of mindful connection and pure enjoyment.",
+        "By focusing on organic purity and direct trade, we're not just selling products; we're supporting a global community of conscious growers and drinkers.",
       ],
     },
 
     faq: {
-      title: "FAQ",
+      title: "Common Questions",
       showLess: "Show less",
       readMore: "Read more",
       items: [
         {
-          question: "Do you guarantee jobs or visas?",
+          question: "Is all your coffee organic?",
           answer:
-            "No. We provide preparation and consultation. Hiring decisions are made by German companies, and visas are applied for directly by applicants at their embassy.",
+            "Yes, every coffee we source is certified organic and grown without the use of synthetic pesticides or fertilizers.",
         },
         {
-          question: "Can applicants from abroad apply?",
+          question: "Do you ship internationally?",
           answer:
-            "Yes. Many German companies consider motivated international applicants who meet the requirements.",
+            "We currently ship throughout Europe and North America. Shipping times and costs vary by location.",
         },
         {
-          question: "Do you apply to companies on behalf of applicants?",
+          question: "How should I store my coffee?",
           answer:
-            "No. Applicants apply independently with guided support.",
+            "For maximum freshness, keep your coffee in a cool, dark place in an airtight container. Avoid the fridge or freezer.",
         },
         {
-          question: "Do you charge placement or recruitment fees?",
+          question: "What is your return policy?",
           answer:
-            "No. We do not offer recruitment or placement services. Our fees are for consultation, preparation, and coaching only.",
-        },
-
-        /* --- NEW QUESTIONS --- */
-
-        {
-          question: "What level of German language is required for Ausbildung?",
-          answer:
-            "Most Ausbildung positions require at least B1 German. A B2 level significantly improves application success and interview performance.",
+            "If you're not satisfied with your order, please contact us within 14 days for a replacement or refund.",
         },
         {
-          question: "Can I apply if I do not have work experience?",
+          question: "Is your packaging recyclable?",
           answer:
-            "Yes. Many Ausbildung programs are designed for beginners. Motivation, language skills, and a well-prepared application are often more important than prior experience.",
+            "Our coffee bags are 100% compostable, and our shipping boxes are made from recycled materials and are fully recyclable.",
         },
         {
-          question: "Do you help choose the right Ausbildung?",
+          question: "Do you offer wholesale?",
           answer:
-            "Yes. We help applicants understand which Ausbildung professions fit their background, education, and language level.",
-        },
-        {
-          question: "How long does the Ausbildung application process take?",
-          answer:
-            "The process can take several months. Preparation, applications, interviews, and visa procedures all require sufficient time and planning.",
-        },
-        {
-          question: "Do you help with CVs and motivation letters?",
-          answer:
-            "Yes. We support applicants in preparing CVs and motivation letters according to German standards and employer expectations.",
-        },
-        {
-          question: "Is your service suitable for all nationalities?",
-          answer:
-            "Yes. Our guidance is open to applicants of all nationalities, provided they meet the basic requirements for Ausbildung and visa eligibility.",
-        },
-        {
-          question: "Can you help with interview preparation?",
-          answer:
-            "Yes. We provide interview coaching, typical questions, and communication guidance to help applicants prepare confidently.",
-        },
-        {
-          question: "Do you assist with the visa application?",
-          answer:
-            "We provide general guidance and preparation tips. However, the visa application must always be submitted personally by the applicant at the responsible embassy.",
+            "Yes! We partner with cafes, offices, and retailers. Contact our team for pricing and partnership details.",
         },
       ],
     },
     scrollIndicator: {
       TOP: "TOP",
       hero: "START",
-      "real-challenge": "CHALLENGES",
-      services: "SERVICES",
-      commonChallenges: "CHALLENGES",
-      whyChooseUs: "WHY US",
-      howItWorks: "PROCESS",
-      requirements: "REQUIREMENTS",
+      "real-challenge": "PHILOSOPHY",
+      services: "COLLECTIONS",
+      commonChallenges: "PURITY",
+      whyChooseUs: "STANDARDS",
+      howItWorks: "BREWING",
+      requirements: "SOURCING",
       contact: "CONTACT",
-      ourStory: "ABOUT US",
+      ourStory: "OUR STORY",
       faq: "FAQ",
     },
     shop: {
-      title: "Our Packages",
-      search: "Search services...",
-      filterAll: "All Categories",
+      title: "Our Collections",
+      search: "Search products...",
+      filterAll: "All Products",
       addToCart: "Add to Cart",
       viewDetails: "Details",
       price: "Price",
       cart: "Cart",
-      noProducts: "No services found.",
+      noProducts: "No products found.",
       emptyCart: "Your cart is empty.",
       total: "Total",
       checkout: "Checkout",
       remove: "Remove",
       items: "items",
       item: "item",
-      checkoutSuccess: "Thank you! This is a dummy checkout.",
+      checkoutSuccess: "Thank you for supporting sustainable sourcing!",
       successTitle: "Order Confirmed!",
-      successMessage: "Thank you for your purchase. We will contact you soon for the next steps.",
+      successMessage: "Your organic treasures are being prepared. You'll receive a tracking number shortly.",
       continueShopping: "Continue Shopping"
     }
   },
 
   de: {
     nav: {
-      services: "Dienstleistungen",
-      requirements: "Voraussetzungen",
-      howItWorks: "Prozess",
+      services: "Kollektionen",
+      requirements: "Bezug",
+      howItWorks: "Brüh-Guide",
       contact: "Kontakt",
     },
 
     hero: {
-      title: "Starte deine Ausbildung in Deutschland",
-      description: `Viele internationale Bewerber scheitern nicht an mangelnder Motivation,
-sondern an unklaren, unpassenden oder schlecht vorbereiteten Bewerbungen.`,
+      title: "Veredeln Sie Ihr Morgenritual mit Aura",
+      description: `Erleben Sie feinsten Bio-Spezialitätenkaffee und Wellness-Mischungen, ethisch bezogen und in kleinen Chargen für maximale Frische geröstet.`,
       disclaimer:
-        "Keine Job- oder Visagarantien – sondern ehrliche, transparente und ",
-      cta: "Wir bieten strukturierte Beratung, Unterstützung bei Bewerbungsunterlagen und begleitete Selbstbewerbung, damit Bewerber den Prozess verstehen und sich gezielt vorbereiten können.",
+        "100% Bio — Nachhaltige Beschaffung — Direkter Handel",
+      cta: "Entdecken Sie unsere kuratierten Kollektionen von Single-Origin-Bohnen, zeremoniellen Tees und nachhaltigen Lifestyle-Essentials.",
     },
 
     realChallenge: {
-      subtle: "Herausforderung",
-      title: "Die eigentliche Herausforderung bei der Ausbildungssuche",
+      subtle: "UNSERE PHILOSOPHIE",
+      title: "Die Kunst der nachhaltigen Beschaffung",
       paragraphs: [
-        "Bevor man mit dem Bewerbungsprozess für eine Ausbildung beginnt, ist es wichtig zu verstehen, dass der Erfolg maßgeblich von guter Vorbereitung und einer klaren Strategie abhängt.",
+        "Wir glauben, dass eine perfekte Tasse lange vor dem Aufbrühen beginnt. Sie beginnt mit dem Boden, dem Klima und den Händen, die die Ernte einbringen.",
 
-        "Ein professioneller Lebenslauf und ein überzeugendes Bewerbungsschreiben auf Deutsch sind grundlegende Voraussetzungen. Diese Unterlagen zeigen nicht nur Qualifikationen und Erfahrungen, sondern auch Motivation, Einsatzbereitschaft und Eignung für eine Ausbildung in Deutschland.",
+        "Jede Bohne und jedes Blatt in unserer Kollektion wird nach strengen Standards für Geschmack, Reinheit und Umweltschutz ausgewählt.",
 
-        "Ebenso entscheidend ist es, die passende Ausbildung für das eigene Profil zu finden und den Bewerbungsprozess korrekt und eigenständig durchzuführen."
+        "Durch die direkte Zusammenarbeit mit Kleinbauern garantieren wir Transparenz und faire Entlohnung auf jedem Schritt der Reise."
       ],
-      note: "Unzureichende Vorbereitung ist eine der häufigsten Ursachen für Absagen."
+      note: "Nachhaltigkeit steht im Mittelpunkt unseres Handelns."
     },
 
     services: {
-      intro:
-        "Dienstleistungsangebot",
-
+      intro: "Unsere Kollektionen",
       items: [
         {
-          title: "Beratung & Orientierung",
-          desc: `Individuelle Beratung zur Einordnung geeigneter Ausbildungsberufe,
-Anforderungen und realistischer Karrierewege.`,
+          title: "Single-Origin Kaffee",
+          desc: `Frisch geröstete Bohnen aus den renommiertesten Anbauregionen der Welt.`,
         },
         {
-          title: "Lebenslauf & Dokumentenvorbereitung",
-          desc: `Erstellung und Prüfung von Lebenslauf und Bewerbungsschreiben
-nach deutschen Standards.`,
+          title: "Zeremonielle Tees",
+          desc: `Reiner, hochwertiger Matcha und traditionelle Tees direkt aus historischen Gärten.`,
         },
         {
-          title: "Interviewvorbereitung",
-          desc: `Training zu typischen Fragen, Kommunikation und Auftreten
-zur sicheren Vorbereitung auf Gespräche.`,
+          title: "Wellness-Mischungen",
+          desc: `Funktionale Botanicals und Kräutertees zur Unterstützung Ihres täglichen Wohlbefindens.`,
         },
         {
-          title: "Begleitete Eigenbewerbung",
-          desc: `Schritt-für-Schritt-Begleitung während des Bewerbungsprozesses.
-Die Bewerbungen werden eigenständig eingereicht.`,
+          title: "Brüh-Zubehör",
+          desc: `Minimalistische Werkzeuge für das perfekte Brüh-Erlebnis zu Hause.`,
         },
         {
-          title: "Integrations & Bildungsberatung",
-          desc: "Allgemeine Orientierung zum Leben, zur Ausbildung und Bildung in Deutschland.",
+          title: "Eco-Lifestyle Produkte",
+          desc: "Nachhaltiges Zubehör für ein bewusstes und achtsames Zuhause.",
         },
       ],
     },
 
     commonChallenges: {
-      eyebrow: "Häufige Probleme",
-      title: "Typische Herausforderungen im Bewerbungsprozess",
+      eyebrow: "Warum Bio?",
+      title: "Der Unterschied reiner Beschaffung",
       items: [
-        "Unklare oder schwache Bewerbungsunterlagen",
-        "Bewerbung auf ungeeignete Ausbildungsberufe",
-        "Unzureichendes Verständnis der Erwartungen deutscher Arbeitgeber",
-        "Bewerbungen werden übersehen oder spät berücksichtigt"
+        "Frei von synthetischen Pestiziden und Düngemitteln",
+        "Natürliche Geschmacksprofile bleiben erhalten",
+        "Unterstützt gesunde Böden und Biodiversität",
+        "Höhere Dichte an Antioxidantien und Nährstoffen"
       ],
-      note: "Diese Herausforderungen sind weit verbreitet und kein Zeichen mangelnder Fähigkeiten, sie können jedoch die Chancen auf Einladung zu Vorstellungsgesprächen deutlich verringern."
+      note: "Schmecken Sie die Reinheit in jedem Schluck."
     },
 
     whyChooseUs: {
-      title: "Warum sich Bewerber für unsere Beratung entscheiden",
+      title: "Die Aura-Standards",
       points: [
         {
-          title: "Praxisnahe Expertise in Deutschland",
+          title: "Direkter Handel",
           description:
-            "Als in Deutschland ansässiger Beratungsdienst kennen wir den Ausbildungsprozess aus der Praxis und verstehen die Erwartungen der Arbeitgeber."
+            "Wir pflegen langfristige Beziehungen zu Bauern und garantieren faire Bezahlung und ethische Arbeitsbedingungen."
         },
         {
-          title: "Arbeitgeberorientierte Bewerbungen",
+          title: "Zero-Waste Verpackung",
           description:
-            "Wir unterstützen Bewerber dabei, Unterlagen und Vorstellungsgespräche an den tatsächlichen Anforderungen deutscher Unternehmen auszurichten."
+            "Unsere Beutel und Kartons sind vollständig kompostierbar oder recycelbar, um unseren ökologischen Fußabdruck zu minimieren."
         },
         {
-          title: "Strukturierter und transparenter Ablauf",
+          title: "Frischegarantie",
           description:
-            "Klare Schritte, realistische Erwartungen und volle Transparenz während des gesamten Prozesses."
+            "Kaffee wird auf Bestellung in kleinen Chargen geröstet und sofort für maximales Aroma versandt."
         },
         {
-          title: "Eigenverantwortliche Bewerber",
+          title: "Zertifiziert Bio",
           description:
-            "Die Verantwortung für Bewerbungen und Entscheidungen bleibt beim Bewerber – wir begleiten strukturiert und unterstützend."
+            "Jedes unserer Produkte wird streng auf ökologische Reinheit geprüft und zertifiziert."
         }
       ]
     },
 
-
-
     howItWorks: {
-      title: "So funktioniert es",
+      title: "Brüh-Guide",
       steps: [
-        "Erstberatung und Prüfung der Voraussetzungen",
-        "Vorbereitung von Lebenslauf, Bewerbungsschreiben und Unterlagen",
-        "Begleitete Eigenbewerbung per Video-Beratung",
-        "Interview-Vorbereitung und Coaching",
-        "Teilnahme an Vorstellungsgesprächen durch den Bewerber",
-        "Endgültige Entscheidung durch das deutsche Unternehmen",
-        "Visumantrag wird persönlich vom Bewerber gestellt",
+        "Wählen Sie Ihre bevorzugte Brühmethode (Handfilter, AeroPress, etc.)",
+        "Verwenden Sie frisches, gefiltertes Wasser mit der idealen Temperatur",
+        "Messen Sie Bohnen oder Teeblätter präzise ab",
+        "Mahlen Sie erst kurz vor dem Aufbrühen für maximale Frische",
+        "Folgen Sie unseren Mengen-Anleitungen für die perfekte Tasse",
+        "Nehmen Sie sich einen Moment Zeit, um Aroma und Komplexität zu genießen",
+        "Kompostieren Sie Kaffeesatz und Filter nach Gebrauch",
       ],
       note:
-        "Wir begleiten Bewerber während des gesamten Prozesses. Bewerbungen und Entscheidungen liegen in der Verantwortung der Bewerber und Arbeitgeber.",
+        "Meistern Sie die Kunst des Brühens zu Hause mit unseren Anleitungen und Experten-Tipps.",
     },
 
     requirements: {
-      title: "Voraussetzungen für internationale Bewerber",
+      title: "Unsere Beschaffungs-Standards",
       items: [
-        "Deutschkenntnisse auf Niveau B1 (empfohlen), B2 ist ein großer Vorteil",
-        "Abgeschlossene Schulausbildung (10. oder 12. Klasse)",
-        "Motivation, in Deutschland zu arbeiten und zu lernen",
-        "Bereitschaft zur Vorbereitung von Unterlagen und Teilnahme an Interviews",
-        "Ein professioneller Lebenslauf und ein Bewerbungsschreiben",
-        "Fähigkeit zur selbstständigen Bewerbung mit Begleitung",
-        "Visumantrag wird persönlich vom Bewerber gestellt",
+        "100% Bio-Zertifizierung für alle Produzenten erforderlich",
+        "Keine Verwendung von schädlichen Chemikalien oder Gentechnik",
+        "Faire Löhne und sichere Arbeitsbedingungen für alle Arbeiter",
+        "Transparente Lieferketten vom Bauernhof bis zum Lager",
+        "Verpflichtung zu regenerativen landwirtschaftlichen Praktiken",
+        "Rückverfolgbarkeit bis zum spezifischen Los oder Erntedatum",
+        "Umweltfreundlicher Versand und Handhabung",
       ],
       note:
-        "Wir helfen bei der Vorbereitung aller notwendigen Unterlagen — die Einstellungsentscheidung trifft jedoch das deutsche Unternehmen.",
+        "Wir machen keine Kompromisse bei Qualität oder Ethik. Wenn es unsere Standards nicht erfüllt, kommt es nicht in Ihre Tasse.",
     },
-
-
-
 
     contact: {
-      title: "Kontakt",
+      title: "Werden Sie Teil der Aura-Community",
       intro:
-        "Denken Sie über eine Ausbildung in Deutschland nach? Lassen Sie uns den ersten Schritt gemeinsam gehen mit klarer und realistischer Beratung.",
-      cta: "Kontakt aufnehmen",
-      getintouch: "Vereinbaren Sie ein erstes Beratungsgespräch, um Ihre Pläne und nächsten Schritte zu besprechen.",
+        "Fragen zu unseren Bohnen oder Brüh-Techniken? Wir helfen Ihnen gerne, Ihr Ritual zu perfektionieren.",
+      cta: "Kontaktieren Sie uns",
+      getintouch: "Kontaktieren Sie uns für Großhandelsanfragen, Geschenksets oder persönliche Beratung.",
     },
 
-
-
-
     about: {
-      label: "Wer wir sind",
-      title: "Über uns",
+      label: "Unsere Geschichte",
+      title: "Über Aura",
       paragraphs: [
-        "Brightway2Deutschland wurde gegründet, um internationale Bewerber dabei zu unterstützen, die berufliche Ausbildung (Ausbildung) in Deutschland zu verstehen und sich darauf vorzubereiten.",
-        "Viele Bewerber stehen vor Herausforderungen – nicht weil es keine Chancen gibt, sondern weil der Prozess komplex und ungewohnt ist. Unser Ziel ist es, klare Informationen, realistische Orientierung und strukturierte Vorbereitung zu bieten, damit Bewerber den Prozess selbstständig und sicher meistern können.",
-        "Wir sind überzeugt, dass langfristiger Erfolg durch Vorbereitung, Transparenz und persönliche Verantwortung entsteht.",
+        "Aura entstand aus dem Wunsch, die weltweit außergewöhnlichsten, ethisch bezogenen Kaffee- und Wellnessprodukte zu denen zu bringen, die Qualität und Nachhaltigkeit schätzen.",
+        "Wir glauben, dass tägliche Rituale — ob der erste Kaffee oder der Tee am Mittag — Momente achtsamer Verbindung und puren Genusses sein sollten.",
+        "Durch den Fokus auf ökologische Reinheit und direkten Handel verkaufen wir nicht nur Produkte; wir unterstützen eine globale Gemeinschaft von bewussten Erzeugern und Genießern.",
       ],
     },
 
@@ -422,101 +362,68 @@ Die Bewerbungen werden eigenständig eingereicht.`,
       readMore: "Mehr anzeigen",
       items: [
         {
-          question: "Garantiert ihr Jobs oder Visa?",
+          question: "Ist all Ihr Kaffee biologisch?",
           answer:
-            "Nein. Wir bieten Vorbereitung und Beratung an. Einstellungsentscheidungen treffen deutsche Unternehmen, und der Visumantrag wird vom Bewerber direkt bei der Botschaft gestellt.",
+            "Ja, jeder Kaffee, den wir beziehen, ist zertifiziert biologisch und wird ohne synthetische Pestizide angebaut.",
         },
         {
-          question: "Können sich Bewerber aus dem Ausland bewerben?",
+          question: "Versenden Sie international?",
           answer:
-            "Ja. Viele deutsche Unternehmen berücksichtigen motivierte internationale Bewerber, die die Voraussetzungen erfüllen.",
+            "Wir versenden derzeit innerhalb Europas und Nordamerikas. Lieferzeiten und Kosten variieren je nach Standort.",
         },
         {
-          question: "Bewerbt ihr euch im Namen der Bewerber bei Unternehmen?",
+          question: "Wie sollte ich meinen Kaffee lagern?",
           answer:
-            "Nein. Bewerber bewerben sich eigenständig mit begleitender Unterstützung.",
+            "Für maximale Frische lagern Sie Ihren Kaffee an einem kühlen, dunklen Ort in einem luftdichten Behälter. Vermeiden Sie Kühl- oder Gefrierschrank.",
         },
         {
-          question: "Erhebt ihr Vermittlungs- oder Platzierungsgebühren?",
+          question: "Wie lautet Ihre Rückgaberegelung?",
           answer:
-            "Nein. Wir bieten keine Vermittlungs- oder Rekrutierungsdienste an. Unsere Gebühren beziehen sich ausschließlich auf Beratung, Vorbereitung und Coaching.",
-        },
-
-        /* --- NEUE FRAGEN --- */
-
-        {
-          question: "Welches Sprachniveau wird für eine Ausbildung benötigt?",
-          answer:
-            "Für die meisten Ausbildungsberufe wird mindestens Deutsch auf Niveau B1 erwartet. Ein B2-Niveau erhöht die Chancen deutlich.",
+            "Wenn Sie nicht zufrieden sind, kontaktieren Sie uns bitte innerhalb von 14 Tagen für einen Ersatz oder eine Rückerstattung.",
         },
         {
-          question: "Kann ich mich ohne Berufserfahrung bewerben?",
+          question: "Ist Ihre Verpackung recycelbar?",
           answer:
-            "Ja. Viele Ausbildungsberufe sind für Berufseinsteiger gedacht. Motivation, Sprachkenntnisse und gute Bewerbungsunterlagen sind entscheidend.",
+            "Unsere Kaffeebeutel sind zu 100% kompostierbar, und unsere Versandkartons bestehen aus recycelten Materialien.",
         },
         {
-          question: "Unterstützt ihr bei der Auswahl der passenden Ausbildung?",
+          question: "Bieten Sie Großhandel an?",
           answer:
-            "Ja. Wir helfen Bewerbern dabei, geeignete Ausbildungsberufe passend zum Profil, Bildungsstand und Sprachniveau zu finden.",
-        },
-        {
-          question: "Wie lange dauert der Bewerbungsprozess?",
-          answer:
-            "Der Bewerbungsprozess kann mehrere Monate dauern. Vorbereitung, Bewerbungen, Vorstellungsgespräche und Visumverfahren benötigen ausreichend Zeit.",
-        },
-        {
-          question: "Helft ihr bei Lebenslauf und Bewerbungsschreiben?",
-          answer:
-            "Ja. Wir unterstützen bei der Erstellung und Überarbeitung von Lebenslauf und Bewerbungsschreiben nach deutschen Standards.",
-        },
-        {
-          question: "Ist eure Beratung für alle Nationalitäten geeignet?",
-          answer:
-            "Ja. Unsere Beratung richtet sich an Bewerber aller Nationalitäten, sofern die grundlegenden Voraussetzungen für Ausbildung und Visum erfüllt sind.",
-        },
-        {
-          question: "Bereitet ihr auf Vorstellungsgespräche vor?",
-          answer:
-            "Ja. Wir bieten gezielte Interviewvorbereitung, typische Fragen und Kommunikationshinweise.",
-        },
-        {
-          question: "Unterstützt ihr beim Visumantrag?",
-          answer:
-            "Wir geben allgemeine Orientierung und Vorbereitungshinweise. Der Visumantrag muss jedoch immer persönlich vom Bewerber gestellt werden.",
+            "Ja! Wir arbeiten mit Cafés, Büros und Einzelhändlern zusammen. Kontaktieren Sie unser Team für Details.",
         },
       ],
     },
     scrollIndicator: {
       TOP: "NACH OBEN",
       hero: "START",
-      "real-challenge": "HERAUSFORDERUNGEN",
-      services: "DIENSTLEISTUNGEN",
-      commonChallenges: "HERAUSFORDERUNGEN",
-      whyChooseUs: "WARUM WIR",
-      howItWorks: "PROZESS",
-      requirements: "VORAUSSETZUNGEN",
+      "real-challenge": "PHILOSOPHIE",
+      services: "KOLLEKTIONEN",
+      commonChallenges: "REINHEIT",
+      whyChooseUs: "STANDARDS",
+      howItWorks: "BRÜHEN",
+      requirements: "BEZUG",
       contact: "KONTAKT",
-      ourStory: "ÜBER UNS",
+      ourStory: "GESCHICHTE",
       faq: "FAQ",
     },
     shop: {
-      title: "Unsere Pakete",
-      search: "Services suchen...",
-      filterAll: "Alle Kategorien",
+      title: "Unsere Kollektionen",
+      search: "Produkte suchen...",
+      filterAll: "Alle Produkte",
       addToCart: "In den Warenkorb",
       viewDetails: "Details",
       price: "Preis",
       cart: "Warenkorb",
-      noProducts: "Keine Services gefunden.",
+      noProducts: "Keine Produkte gefunden.",
       emptyCart: "Ihr Warenkorb ist leer.",
       total: "Gesamt",
       checkout: "Zur Kasse",
       remove: "Entfernen",
       items: "Artikel",
       item: "Artikel",
-      checkoutSuccess: "Vielen Dank! Dies ist eine Demo-Kasse.",
+      checkoutSuccess: "Vielen Dank für die Unterstützung nachhaltiger Landwirtschaft!",
       successTitle: "Bestellung bestätigt!",
-      successMessage: "Vielen Dank für Ihren Kauf. Wir werden uns in Kürze für die weiteren Schritte mit Ihnen in Verbindung setzen.",
+      successMessage: "Ihre Bio-Schätze werden vorbereitet. Sie erhalten in Kürze eine Sendungsnummer.",
       continueShopping: "Weiter einkaufen"
     }
   },
