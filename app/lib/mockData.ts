@@ -12,7 +12,7 @@ export const products: Product[] = [
     id: '1',
     price: 18.00,
     category: 'Coffee',
-    image: '/coffee-beans.jpg',
+    image: '/Ethiopian-Yirgacheffe.jpg',
     name: {
       en: 'Ethiopian Yirgacheffe',
       de: 'Äthiopischer Yirgacheffe'
@@ -26,7 +26,7 @@ export const products: Product[] = [
     id: '2',
     price: 24.00,
     category: 'Tea',
-    image: '/matcha-tea.jpg',
+    image: '/organic green tea .jpg',
     name: {
       en: 'Ceremonial Grade Matcha',
       de: 'Ceremonial Grade Matcha'
@@ -40,7 +40,7 @@ export const products: Product[] = [
     id: '3',
     price: 14.00,
     category: 'Wellness',
-    image: '/wellness-tea.jpg',
+    image: '/soothing blend of organic lavender and chamomile.jpg',
     name: {
       en: 'Midnight Lavender Tea',
       de: 'Mitternachts-Lavendeltee'
@@ -54,7 +54,7 @@ export const products: Product[] = [
     id: '4',
     price: 45.00,
     category: 'Equipment',
-    image: '/brewing-kit.jpg',
+    image: '/pour-over-glass dripper.jpg',
     name: {
       en: 'Precision Pour-Over Kit',
       de: 'Präzisions-Handfilter-Set'
@@ -68,7 +68,7 @@ export const products: Product[] = [
     id: '5',
     price: 22.00,
     category: 'Coffee',
-    image: '/coffee-beans.jpg',
+    image: '/Medium-dark roast.jpg',
     name: {
       en: 'Aura Signature Blend',
       de: 'Aura Signature Blend'
@@ -82,7 +82,7 @@ export const products: Product[] = [
     id: '6',
     price: 19.00,
     category: 'Tea',
-    image: '/organic-bundle.jpg',
+    image: '/organic turmeric ginger pepper.jpg',
     name: {
       en: 'Golden Turmeric Chai',
       de: 'Goldener Kurkuma-Chai'
@@ -96,7 +96,7 @@ export const products: Product[] = [
     id: '7',
     price: 32.00,
     category: 'Wellness',
-    image: '/organic-bundle.jpg',
+    image: '/wellness teas.jpg',
     name: {
       en: 'Morning Ritual Bundle',
       de: 'Morgenritual-Bundle'
@@ -110,7 +110,7 @@ export const products: Product[] = [
     id: '8',
     price: 16.00,
     category: 'Coffee',
-    image: '/coffee-cat.jpg',
+    image: '/Premium decaf processed.jpg',
     name: {
       en: 'Decaf Mountain Water',
       de: 'Entkoffeinierter Bergwasser-Kaffee'

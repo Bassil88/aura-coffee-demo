@@ -417,6 +417,26 @@ small {
     inset -1px -1px 3px rgba(0, 0, 0, 0.12);
   pointer-events: none;
 }
+.neu-container-wrapper-search {
+  position: relative;
+  overflow: hidden;
+  border-radius: 91% 9% 93% 7% / 20% 100% 0% 80%;
+  background: #f5f6f8;
+  box-shadow:
+    8px 8px 20px rgba(0, 0, 0, 0.15),
+    -8px -8px 20px rgba(255, 255, 255, 0.9);
+  padding: 6px;
+}
+
+.neu-container-wrapper-search::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  /* box-shadow:
+    inset 1px 1px 3px rgba(255, 255, 255, 0.35),
+    inset -1px -1px 3px rgba(0, 0, 0, 0.12); */
+  pointer-events: none;
+}
 
 /* INNER = clips container with your fancy organic radius */
 .neu-container-inner {

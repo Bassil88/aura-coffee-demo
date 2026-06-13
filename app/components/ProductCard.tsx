@@ -14,7 +14,7 @@ export default function ProductCard({ product, locale }: ProductCardProps) {
   return (
     <div className="neu-card p-6 flex flex-col h-full cursor-pointer group transition-all ">
       {/* Product Image */}
-      <div className="mb-5 neu-image-wrapper ">
+      <div className="mb-5">
         <div className="relative h-56 image-mask overflow-hidden bg-gray-100 ">
           <Image
             src={product.image}

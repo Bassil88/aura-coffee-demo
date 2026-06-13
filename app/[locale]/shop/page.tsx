@@ -58,7 +58,7 @@ export default async function ShopPage({
           </div>
 
           <form action={`/${locale}/shop`} className="w-full md:w-72">
-            <div className="neu-container-wrapper !rounded-full p-1">
+            <div className="neu-container-wrapper-search !rounded-full p-1">
               <input
                 type="text"
                 name="q"
