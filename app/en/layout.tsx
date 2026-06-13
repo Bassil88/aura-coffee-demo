@@ -4,8 +4,8 @@ import ScrollIndicator from "../components/ScrollIndicator";
 
 export const metadata: Metadata = {
   title: {
-    default: "Brightway2Deutschland | Ausbildung Consulting",
-    template: "%s | Brightway2Deutschland",
+    default: "Aura Organic Coffee | Aura Bio Kaffee",
+    template: "%s | Aura Organic Coffee",
   },
   alternates: {
     canonical: "https://brightway2deutschland.com/en",

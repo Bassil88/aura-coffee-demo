@@ -47,7 +47,7 @@ export default function Requirements({ locale }: { locale: "de" | "en" }) {
         {/* RIGHT IMAGE */}
         {/* IMAGE */}
         <div className="relative neu-image-wrapper overflow-hidden h-[400px] order-first lg:order-last">
-          <Image src="/requirements.png" alt="Requirements for Ausbildung applicants" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+          <Image src="/organic-green-coffee.jpg" alt="Organic Green Coffee Beans" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
         </div>
       </div>
     </section>

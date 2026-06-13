@@ -12,10 +12,10 @@ export default function ProductCard({ product, locale }: ProductCardProps) {
   const t = translations[locale].shop;
 
   return (
-    <div className="neu-card p-6 flex flex-col h-full cursor-pointer group transition-all">
+    <div className="neu-card p-6 flex flex-col h-full cursor-pointer group transition-all ">
       {/* Product Image */}
-      <div className="mb-5 neu-image-wrapper">
-        <div className="relative h-56 image-mask overflow-hidden bg-gray-100">
+      <div className="mb-5 neu-image-wrapper ">
+        <div className="relative h-56 image-mask overflow-hidden bg-gray-100 ">
           <Image
             src={product.image}
             alt={product.name[locale]}

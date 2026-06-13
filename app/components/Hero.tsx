@@ -17,9 +17,9 @@ export default function Hero({ locale }: { locale: "de" | "en" }) {
         flex items-center
       "
       style={{
-        backgroundImage: "url('/hero-bg7.jpg')",
+        backgroundImage: "url('/Espresso-machine.jpg')",
         backgroundSize: "cover",
-        backgroundPosition: "left center",
+        backgroundPosition: "center",
       }}
     >
       {/* DARK GRADIENT OVERLAY */}

@@ -49,7 +49,7 @@ export default function Process({ locale }: { locale: "de" | "en" }) {
         {/* RIGHT: Image */}
         {/* RIGHT: Image */}
         <div className="neu-image-wrapper relative h-[420px] order-first lg:order-last">
-          <Image src="/how-it-works.png" alt="How Ausbildung application works" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+          <Image src="/guid2.jpg" alt="How the coffee selection process works" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
         </div>
       </div>
     </section>

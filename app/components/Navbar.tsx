@@ -35,10 +35,10 @@ export default function Navbar({ locale }: { locale: "en" | "de" }) {
 
   return (
     <nav className="neu-navbar fixed top-0 w-full z-50 ">
-      <div className="max-w-7xl mx-auto flex items-center justify-between mt-0  h-[70px]">
+      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-[70px]">
         {/* Logo */}
         <Link href={`/${locale}`} aria-label="Go to home" className="cursor-pointer">
-          <Image src="/logo.png" alt="Brightway to deutschland logo" width={600} height={100} priority className="h-auto w-[130px] object-contain" />
+          <Image src="/logo1.png" alt="aura logo" width={600} height={100} priority className="h-auto w-[90px] sm:w-[120px] md:w-[180px] object-contain" />
         </Link>
 
         {/* Desktop Nav */}
@@ -109,7 +109,7 @@ export default function Navbar({ locale }: { locale: "en" | "de" }) {
       {/* Mobile Menu */}
       <div className={`md:hidden overflow-hidden transition-all duration-300 ${open ? "max-h-96 opacity-100 pointer-events-auto" : "max-h-0 opacity-0 pointer-events-none"}`}>
         <div className="md:hidden px-6 pb-4">
-          <div className="flex flex-col gap-3 bg-[#f7f8fa] p-4">
+          <div className="flex flex-col items-center gap-3 bg-[#f7f8fa] p-4">
             <button onClick={() => scrollTo("services")} className="neu-nav-link">
               {t.services}
             </button>

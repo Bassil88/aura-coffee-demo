@@ -1,3 +1,4 @@
+import Navbar from "@/app/components/Navbar";
 import { products } from "../../lib/mockData";
 import { translations } from "../../lib/translations";
 import ProductCard from "../../components/ProductCard";
@@ -26,8 +27,10 @@ export default async function ShopPage({
   const categories = Array.from(new Set(products.map((p) => p.category)));
 
   return (
+    <>
+      <Navbar locale={locale} />
     <div className="pt-32 pb-24 bg-[#f5f6f8] min-h-screen">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-[1700px] mx-auto px-10">
         {/* Header */}
         <div className="mb-12 text-center">
           <h1 className="font-bold text-gray-900 mb-4">{t.title}</h1>
@@ -70,7 +73,7 @@ export default async function ShopPage({
 
         {/* Product Grid */}
         {filteredProducts.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12">
             {filteredProducts.map((product) => (
               <Link key={product.id} href={`/${locale}/shop/${product.id}`}>
                 <ProductCard product={product} locale={locale} />
@@ -84,5 +87,6 @@ export default async function ShopPage({
         )}
       </div>
     </div>
+    </>
   );
 }

@@ -27,7 +27,7 @@ export default function CommonChallenges({ locale }: { locale: "de" | "en" }) {
       <div className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center neu-card">
         {/* IMAGE */}
         <div className="neu-image-wrapper relative h-[420px] lg:order-first">
-          <Image src="/rejection.png" alt="Common challenges in Ausbildung applications" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+          <Image src="/coffe-type.jpg" alt="Common Challenges in choosing the right coffee type" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
         </div>
 
         {/* TEXT */}

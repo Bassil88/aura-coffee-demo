@@ -22,13 +22,13 @@ export default function RealChallenge({ locale }: { locale: "de" | "en" }) {
     ${isVisible ? "fade-up-visible" : ""}
   `}
       style={{
-        backgroundImage: "url('/real-challenge.png')",
+        backgroundImage: "url('/hero-coffee3.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
       {/* GRADIENT OVERLAY (NOT HEAVY BLUR) */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/10 to-black/90" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-black/20 to-black/70" />
 
       {/* CONTENT */}
       <div className="relative z-10 max-w-7xl mx-auto px-1">
@@ -43,7 +43,7 @@ export default function RealChallenge({ locale }: { locale: "de" | "en" }) {
           "
         >
           {/* EYEBROW */}
-          <p className="text-xs uppercase tracking-widest text-gray-500 mb-4">{t.subtle}</p>
+          <p className="text-xs uppercase tracking-widest text-gray-100 mb-4">{t.subtle}</p>
 
           {/* TITLE */}
           <h3
@@ -59,14 +59,14 @@ export default function RealChallenge({ locale }: { locale: "de" | "en" }) {
           </h3>
 
           {/* BODY */}
-          <div className="mt-6 space-y-1 text-gray-700 text-sm sm:text-base leading-relaxed">
+          <div className="mt-6 space-y-1 text-gray-300 text-sm sm:text-base leading-relaxed">
             {t.paragraphs.map((text: string, index: number) => (
               <p key={index}>{text}</p>
             ))}
           </div>
 
           {/* NOTE */}
-          {t.note && <p className="mt-6 text-sm text-gray-500">{t.note}</p>}
+          {t.note && <p className="mt-6 text-sm text-gray-300">{t.note}</p>}
         </div>
       </div>
     </section>

@@ -1,21 +1,13 @@
 import Hero from "../components/Hero";
 import RealChallenge from "../components/RealChallenge";
-// import Services from "../components/Services";
-// import Requirements from "../components/Requirements";
-// import OurStory from "../components/AboutUs";
-// import WhyChooseUs from "../components/WhyChooseUs";
-// import HowItWorks from "../components/Process";
-// import Contact from "../components/Contact";
-// import FAQ from "../components/FAQ";
-// import CommonChallenges from "../components/CommenChallenges";
 import dynamic from "next/dynamic";
 
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Ausbildung Consulting for International Applicants | Brightway2Deutschland",
+  title: "Aura Organic Coffee | Aura Bio Kaffee",
   description:
-    "Professional Ausbildung consulting for international applicants. Career guidance, application support, and long-term success in Germany.",
+    "Discover the rich flavors of Aura Organic Coffee, your source for premium organic coffee beans and brewing equipment.",
 };
 
 const Services = dynamic(() => import("../components/Services"));

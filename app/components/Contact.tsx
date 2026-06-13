@@ -58,11 +58,11 @@ export default function Contact({ locale }: { locale: "de" | "en" }) {
 
             {/* FACEBOOK */}
             <div className="flex justify-center py-8 gap-6">
-              <a href="viber://chat?number=%2B491631897653" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page" className="hover:opacity-80 transition">
+              <a href="viber://chat?number=%2B49163189" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page" className="hover:opacity-80 transition">
                 <Image src="/viber_icon.png" alt="viber" width={48} height={48} />
               </a>
 
-              <a href="https://www.facebook.com/share/17mSYUDRA6/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page" className="hover:opacity-80 transition">
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page" className="hover:opacity-80 transition">
                 <Image src="/round-blue-facebook-button-icon-size_64.png" alt="Facebook" width={48} height={48} />
               </a>
               {/* <a href="/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page" className="hover:opacity-80 transition">
@@ -70,7 +70,7 @@ export default function Contact({ locale }: { locale: "de" | "en" }) {
             </a> */}
 
               {/* WHATSAPP */}
-              <a href="https://wa.me/491631897653?text=Hello%20I%20would%20like%20to%20know%20more%20about%20Ausbildung" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition ">
+              <a href="https://wa.me/49163189" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition ">
                 <Image src="/whatsapp-200.png" alt="WhatsApp" width={45} height={45} />
               </a>
             </div>
@@ -83,7 +83,7 @@ export default function Contact({ locale }: { locale: "de" | "en" }) {
       md:text-lg
       lg:text-xl transition"
               >
-                contact@brightway2deutschland.com
+                info@aura-organic-coffee.com
               </a>
             </div>
 
@@ -91,13 +91,13 @@ export default function Contact({ locale }: { locale: "de" | "en" }) {
             <div className="flex justify-center items-center gap-3 mb-6 ">
               <Image src="/office-phone-94.png" alt="Phone" width={29} height={29} />
               <a
-                href="tel:+49 163 1897 653"
+                href="tel:+49 123 456 789"
                 className="hover:text-blue-400 text-sm
       sm:text-base
       md:text-lg
       lg:text-xl transition"
               >
-                +49 163 1897 653
+                +49 123 456 789
               </a>
             </div>
             <p
@@ -106,7 +106,7 @@ export default function Contact({ locale }: { locale: "de" | "en" }) {
       md:text-lg
       lg:text-xl "
             >
-              Brightway2Deutschland, Kolonnenstr. 8 | 10827 Berlin, Germany
+              Aura Organic Coffee, Muststr. 10 | 10827 Berlin, Germany
             </p>
             <div className="flex justify-center pt-4"></div>
             <div className="flex justify-center pt-4"></div>

@@ -11,10 +11,10 @@ export default function Footer() {
 
   return (
     <footer className={`h-5 flex justify-between`}>
-      <Link className="text-xs text-neutral-300 " target="_blank" href="../impressum">
+      <Link className="text-xs text-neutral-900 " target="_blank" href="../impressum">
         Impressum
       </Link>
-      <Link className="text-xs text-neutral-300" target="_blank" href="../datenschutz">
+      <Link className="text-xs text-neutral-900" target="_blank" href="../datenschutz">
         Datenschutzerklärung
       </Link>
     </footer>
