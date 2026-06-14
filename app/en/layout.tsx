@@ -8,11 +8,11 @@ export const metadata: Metadata = {
     template: "%s | Aura Organic Coffee",
   },
   alternates: {
-    canonical: "https://brightway2deutschland.com/en",
+    canonical: "https://aura-coffee.vercel.app/en",
     languages: {
-      de: "https://brightway2deutschland.com/de",
-      en: "https://brightway2deutschland.com/en",
-      "x-default": "https://brightway2deutschland.com/",
+      de: "https://aura-coffee.vercel.app/de",
+      en: "https://aura-coffee.vercel.app/en",
+      "x-default": "https://aura-coffee.vercel.app/",
     },
   },
 };

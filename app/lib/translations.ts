@@ -343,7 +343,7 @@ export const translations = {
       intro:
         "Fragen zu unseren Bohnen oder Brüh-Techniken? Wir helfen Ihnen gerne, Ihr Ritual zu perfektionieren.",
       cta: "Kontaktieren Sie uns",
-      getintouch: "Kontaktieren Sie uns für Großhandelsanfragen, Geschenksets oder persönliche Beratung.",
+      getintouch: "Kontaktieren Sie uns für Großhandelsanfragen, Geschenksets oder persönliche Produktberatung.",
     },
 
     about: {

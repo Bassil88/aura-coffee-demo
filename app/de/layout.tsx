@@ -3,16 +3,16 @@ import type { Metadata } from "next";
 import ScrollIndicator from "../components/ScrollIndicator";
 
 export const metadata: Metadata = {
-  title: {
-    default: "Brightway2Deutschland | Ausbildung & Beratung",
-    template: "%s | Brightway2Deutschland",
-  },
+title: {
+  default: "Aura Organic Coffee | Bio Kaffee & Wellness",
+  template: "%s | Aura Organic Coffee",
+},
   alternates: {
-    canonical: "https://brightway2deutschland.com/de",
+    canonical: "https://aura-coffee.vercel.app/de",
     languages: {
-      de: "https://brightway2deutschland.com/de",
-      en: "https://brightway2deutschland.com/en",
-      "x-default": "https://brightway2deutschland.com/",
+      de: "https://aura-coffee.vercel.app/de",
+      en: "https://aura-coffee.vercel.app/en",
+      "x-default": "https://aura-coffee.vercel.app/",
     },
   },
 };

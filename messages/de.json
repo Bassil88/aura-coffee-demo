@@ -1,12 +1,12 @@
 {
   "nav": {
-    "services": "Services",
-    "requirements": "Requirements",
-    "howItWorks": "How It Works",
-    "contact": "Contact"
+    "services": "Kollektionen",
+    "requirements": "Bezug",
+    "howItWorks": "Brüh-Guide",
+    "contact": "Kontakt"
   },
   "hero": {
-    "title": "Starte deine Ausbildung in Deutschland",
-    "subtitle": "Wir begleiten dich Schritt für Schritt"
+    "title": "Veredeln Sie Ihr Morgenritual mit Aura",
+    "subtitle": "Entdecken Sie reine Bio-Exzellenz"
   }
 }

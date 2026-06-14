@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-const baseUrl = "https://brightway2deutschland.com";
+const baseUrl = "https://aura-coffee.vercel.app";
 
 
   return [

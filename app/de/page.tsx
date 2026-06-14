@@ -12,9 +12,9 @@ import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Ausbildung Beratung für internationale Bewerber | Brightway2Deutschland",
-  description:
-  "Professionelle Ausbildung Beratung für internationale Bewerber. Unterstützung bei Bewerbung, Karriereplanung und Start in Deutschland.",
+  title: "Aura Organic Coffee | Bio Kaffee & Wellness",
+description:
+"Entdecken Sie hochwertigen Bio-Kaffee, Tee und Wellness-Produkte von Aura Organic Coffee.",
 };
 
 const Services = dynamic(() => import("../components/Services"));

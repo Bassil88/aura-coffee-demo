@@ -1,4 +1,3 @@
-import Navbar from "@/app/components/Navbar";
 import { products } from "../../lib/mockData";
 import { translations } from "../../lib/translations";
 import ProductCard from "../../components/ProductCard";
@@ -27,8 +26,6 @@ export default async function ShopPage({
   const categories = Array.from(new Set(products.map((p) => p.category)));
 
   return (
-    <>
-      <Navbar locale={locale} />
     <div className="pt-32 pb-24 bg-[#f5f6f8] min-h-screen">
       <div className="max-w-[1700px] mx-auto px-10">
         {/* Header */}
@@ -87,6 +84,5 @@ export default async function ShopPage({
         )}
       </div>
     </div>
-    </>
   );
 }

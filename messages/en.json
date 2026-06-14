@@ -1,12 +1,12 @@
 {
   "nav": {
-    "services": "Dienstleistungen",
-    "requirements": "Voraussetzungen",
-    "howItWorks": "So funktioniert es",
-    "contact": "Kontakt"
+    "services": "Collections",
+    "requirements": "Sourcing",
+    "howItWorks": "Brewing Guide",
+    "contact": "Contact"
   },
   "hero": {
-    "title": "Start Your Ausbildung Journey in Germany",
-    "subtitle": "We guide you step by step"
+    "title": "Elevate Your Morning Ritual with Aura",
+    "subtitle": "Discover pure organic excellence"
   }
 }

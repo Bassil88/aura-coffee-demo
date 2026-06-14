@@ -3,10 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import Footer from "./components/Footer";
-// import ScrollToContactButton from "./components/ScrollToContactButton";
-// import ScrollToContact from "./components/ScrollToContactButton";
 import LenisProvider from "./providers/LenisProvider";
-// import ScrollShader from "./components/ScrollShader";
 import { CartProvider } from "./providers/CartProvider";
 
 const geistSans = Geist({
@@ -20,10 +17,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Brightway2Deutschland | Ausbildung & Career Consulting in Germany",
-  description: "Brightway2Deutschland helps international applicants find Ausbildung opportunities and build a professional future in Germany. Personal consulting, guidance, and support.",
+  title: "Aura Organic Coffee | Aura Bio Kaffee",
+  description: "Discover the rich flavors of Aura Organic Coffee, your source for premium organic coffee beans and brewing equipment.",
 
   metadataBase: new URL("https://brightway2deutschland.com"),
+  // metadataBase: new URL("https://aura-coffee.vercel.app"),
 
   alternates: {
     languages: {
@@ -33,10 +31,10 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Brightway2Deutschland | Ausbildung Consulting in Germany",
-    description: "Professional Ausbildung consulting for international applicants. Personal guidance, career planning, and support for your future in Germany.",
+    title: "Aura Organic Coffee | Bio Kaffee & Wellness",
+    description: "Discover the rich flavors of Aura Organic Coffee, your source for premium organic coffee beans and brewing equipment.",
     url: "https://brightway2deutschland.com",
-    siteName: "Brightway2Deutschland",
+    siteName: "Aura Organic Coffee",
     locale: "de_DE",
     type: "website",
   },
@@ -58,7 +56,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="de">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}>
         <svg width="0" height="0" style={{ position: "absolute" }}>
           <defs>
             <filter id="glass-distortion">
@@ -74,21 +72,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "Brightway2Deutschland",
+              name: "Aura Organic Coffee",
               url: "https://brightway2deutschland.com",
-              logo: "https://brightway2deutschland.com/logo.png",
-              image: "https://brightway2deutschland.com/logo.png",
-              description: "Brightway2Deutschland provides Ausbildung and career consulting for international applicants seeking a professional future in Germany.",
+              logo: "https://brightway2deutschland.com/logo1.png",
+              image: "https://brightway2deutschland.com/logo1.png",
+              description: "Aura Organic Coffee provides premium organic coffee beans and brewing equipment.",
               contactPoint: {
                 "@type": "ContactPoint",
-                telephone: "+49-4141-428438",
+                telephone: "+49-123-4567890",
                 contactType: "customer support",
                 areaServed: "DE",
                 availableLanguage: ["de", "en"],
               },
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Kolonnenstraße 8",
+                streetAddress: "Musterstraße 10",
                 addressLocality: "Berlin",
                 postalCode: "10827",
                 addressCountry: "DE",
@@ -97,7 +95,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
 
-        <main>
+        <main className="flex-1">
           <CartProvider>
             <LenisProvider>{children}</LenisProvider>
           </CartProvider>

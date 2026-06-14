@@ -77,13 +77,13 @@ export default function Contact({ locale }: { locale: "de" | "en" }) {
             <div className="flex justify-center items-center gap-3 mb-3">
               <Image src="/email-100.png" alt="Email" width={35} height={35} />
               <a
-                href="mailto:contact@brightway2deutschland.com"
+                href="mailto:hello@auracoffee.demo"
                 className="hover:text-blue-400 text-sm
       sm:text-base
       md:text-lg
       lg:text-xl transition"
               >
-                info@aura-organic-coffee.com
+                hello@auracoffee.demo
               </a>
             </div>
 
@@ -106,7 +106,7 @@ export default function Contact({ locale }: { locale: "de" | "en" }) {
       md:text-lg
       lg:text-xl "
             >
-              Aura Organic Coffee, Muststr. 10 | 10827 Berlin, Germany
+              Aura Coffee Roastery, Berlin, Germany
             </p>
             <div className="flex justify-center pt-4"></div>
             <div className="flex justify-center pt-4"></div>
