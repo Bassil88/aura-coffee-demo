@@ -1,3 +1,4 @@
+import { translations } from "../../lib/translations";
 
 export default async function DatenschutzPage({
   params,
@@ -5,11 +6,10 @@ export default async function DatenschutzPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  return (
-    <>
-      {/* <Navbar locale="en" /> */}
-      <section className="min-h-screen py-14 bg-[#f7f8fa]">
+  const t = translations[locale as "en" | "de"].legal.privacy;
 
+  return (
+    <section className="min-h-screen py-14 bg-[#f7f8fa]">
       <main
         style={{
           padding: "40px",
@@ -18,28 +18,24 @@ export default async function DatenschutzPage({
           paddingTop: "120px",
         }}
       >
-        <h1>Datenschutzerklärung</h1>
+        <h1 className="text-5xl mb-6">{t.title}</h1>
 
-        <p>
-          Dies ist eine vorläufige Datenschutzerklärung für die
-          Entwicklungsphase der Website Aura Organic Coffee.
+        <p className="text-lg text-gray-700 leading-relaxed">
+          {t.p1}
         </p>
 
-        <p>
-          Eine vollständige Datenschutzerklärung wird vor dem offiziellen Start
-          der Website bereitgestellt.
+        <p className="mt-4 text-lg text-gray-700 leading-relaxed">
+          {t.p2}
         </p>
 
-        <h2>Kontakt</h2>
+        <h2 className="text-3xl mt-12 mb-4 font-semibold text-gray-900">{t.contactTitle}</h2>
 
-        <p>
-          Bei Fragen zum Datenschutz kontaktieren Sie uns bitte über die auf der
-          Website angegebenen Kontaktmöglichkeiten.
+        <p className="text-lg text-gray-700 leading-relaxed">
+          {t.contactText}
         </p>
 
-        <p>Stand: 2026</p>
+        <p className="mt-8 text-sm text-gray-500 font-medium">{t.lastUpdated}</p>
       </main>
-      </section>
-    </>
+    </section>
   );
 }

@@ -2,10 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { translations } from "../lib/translations";
 
 export default function Footer() {
   const pathname = usePathname();
-  const locale = pathname?.split("/")[1] || "de";
+  const locale = (pathname?.split("/")[1] || "de") as "en" | "de";
+  const t = translations[locale].footer;
 
   return (
     // <footer className="flex justify-between px-6 py-4 border-t border-gray-200 text-xs text-neutral-700">
@@ -17,14 +19,14 @@ export default function Footer() {
         className="text-xs text-neutral-100"
         href={`/${locale}/impressum`}
       >
-        Impressum
+        {t.impressum}
       </Link>
 
       <Link
         className="text-xs text-neutral-100"
         href={`/${locale}/datenschutz`}
       >
-        Datenschutzerklärung
+        {t.privacy}
       </Link>
     </footer>
   );

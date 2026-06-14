@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   title: "Aura Organic Coffee | Aura Bio Kaffee",
   description: "Discover the rich flavors of Aura Organic Coffee, your source for premium organic coffee beans and brewing equipment.",
 
-  metadataBase: new URL("https://brightway2deutschland.com"),
-  // metadataBase: new URL("https://aura-coffee.vercel.app"),
+  // metadataBase: new URL("https://brightway2deutschland.com"),
+  metadataBase: new URL("https://aura-coffee.vercel.app"),
 
   alternates: {
     languages: {

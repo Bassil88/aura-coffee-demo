@@ -212,7 +212,27 @@ export const translations = {
       successTitle: "Order Confirmed!",
       successMessage: "Your organic treasures are being prepared. You'll receive a tracking number shortly.",
       continueShopping: "Continue Shopping"
-    }
+    },
+    legal: {
+      impressum: {
+        title: "Legal Notice",
+        p1: "This is a temporary legal notice provided during the development phase of the Aura Organic Coffee website.",
+        p2: "A complete legal notice will be published before the official launch of the website.",
+        lastUpdated: "Last updated: 2026",
+      },
+      privacy: {
+        title: "Privacy Policy",
+        p1: "This is a temporary privacy policy provided during the development phase of the Aura Organic Coffee website.",
+        p2: "A complete privacy policy will be published before the official launch of the website.",
+        contactTitle: "Contact",
+        contactText: "If you have any questions regarding data protection, please contact us using the contact details provided on the website.",
+        lastUpdated: "Last updated: 2026",
+      }
+    },
+    footer: {
+    impressum: "Legal Notice",
+    privacy: "Privacy Policy",
+  },
   },
 
   de: {
@@ -425,6 +445,26 @@ export const translations = {
       successTitle: "Bestellung bestätigt!",
       successMessage: "Ihre Bio-Schätze werden vorbereitet. Sie erhalten in Kürze eine Sendungsnummer.",
       continueShopping: "Weiter einkaufen"
+    },
+    legal: {
+      impressum: {
+        title: "Impressum",
+        p1: "Dies ist ein vorläufiges Impressum für die Entwicklungsphase der Website Aura Organic Coffee.",
+        p2: "Ein vollständiges Impressum wird vor dem offiziellen Start der Website bereitgestellt.",
+        lastUpdated: "Stand: 2026",
+      },
+      privacy: {
+        title: "Datenschutzerklärung",
+        p1: "Dies ist eine vorläufige Datenschutzerklärung für die Entwicklungsphase der Website Aura Organic Coffee.",
+        p2: "Eine vollständige Datenschutzerklärung wird vor dem offiziellen Start der Website bereitgestellt.",
+        contactTitle: "Kontakt",
+        contactText: "Bei Fragen zum Datenschutz kontaktieren Sie uns bitte über die auf der Website angegebenen Kontaktmöglichkeiten.",
+        lastUpdated: "Stand: 2026",
+      }
+    },
+    footer: {
+      impressum: "Impressum",
+      privacy: "Datenschutzerklärung",
     }
   },
 } as const;

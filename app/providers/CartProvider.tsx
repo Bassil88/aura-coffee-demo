@@ -34,17 +34,20 @@ export function CartProvider({ children }: { children: ReactNode }) {
   // Use useEffect to handle initial load and avoid SSR mismatch
   useEffect(() => {
     const savedCart = localStorage.getItem("bw2d_cart");
-    if (savedCart) {
-      try {
-        const parsed = JSON.parse(savedCart);
-        if (Array.isArray(parsed) && parsed.length > 0) {
-          setItems(parsed);
+    const timeoutId = setTimeout(() => {
+      if (savedCart) {
+        try {
+          const parsed = JSON.parse(savedCart);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            setItems(parsed);
+          }
+        } catch (e) {
+          console.error("Failed to parse cart from localStorage", e);
         }
-      } catch (e) {
-        console.error("Failed to parse cart from localStorage", e);
       }
-    }
-    setIsHydrated(true);
+      setIsHydrated(true);
+    }, 0);
+    return () => clearTimeout(timeoutId);
   }, []);
 
   // Save to LocalStorage whenever items change (after hydration)
