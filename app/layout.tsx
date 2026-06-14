@@ -20,20 +20,20 @@ export const metadata: Metadata = {
   title: "Aura Organic Coffee | Aura Bio Kaffee",
   description: "Discover the rich flavors of Aura Organic Coffee, your source for premium organic coffee beans and brewing equipment.",
 
-  // metadataBase: new URL("https://brightway2deutschland.com"),
-  metadataBase: new URL("https://aura-coffee.vercel.app"),
+  // metadataBase: new URL("https://aura-coffee-demo.vercel.app"),
+  metadataBase: new URL("https://aura-coffee-demo.vercel.app"),
 
   alternates: {
     languages: {
-      "de-DE": "https://brightway2deutschland.com/de",
-      "en-US": "https://brightway2deutschland.com/en",
+      "de-DE": "https://aura-coffee-demo.vercel.app/de",
+      "en-US": "https://aura-coffee-demo.vercel.app/en",
     },
   },
 
   openGraph: {
     title: "Aura Organic Coffee | Bio Kaffee & Wellness",
     description: "Discover the rich flavors of Aura Organic Coffee, your source for premium organic coffee beans and brewing equipment.",
-    url: "https://brightway2deutschland.com",
+    url: "https://aura-coffee-demo.vercel.app",
     siteName: "Aura Organic Coffee",
     locale: "de_DE",
     type: "website",
@@ -73,9 +73,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Aura Organic Coffee",
-              url: "https://brightway2deutschland.com",
-              logo: "https://brightway2deutschland.com/logo1.png",
-              image: "https://brightway2deutschland.com/logo1.png",
+              url: "https://aura-coffee-demo.vercel.app",
+              logo: "https://aura-coffee-demo.vercel.app/logo1.png",
+              image: "https://aura-coffee-demo.vercel.app/logo1.png",
               description: "Aura Organic Coffee provides premium organic coffee beans and brewing equipment.",
               contactPoint: {
                 "@type": "ContactPoint",

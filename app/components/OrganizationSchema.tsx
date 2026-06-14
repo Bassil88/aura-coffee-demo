@@ -4,8 +4,8 @@ export default function OrganizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Aura Coffee & Wellness",
-    url: "https://aura-coffee.vercel.app",
-    logo: "https://aura-coffee.vercel.app/logo.png",
+    url: "https://aura-coffee-demo.vercel.app",
+    logo: "https://aura-coffee-demo.vercel.app/logo.png",
     sameAs: ["https://www.facebook.com/share/17mSYUDRA6/"],
   };
 

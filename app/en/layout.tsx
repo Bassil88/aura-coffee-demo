@@ -8,11 +8,11 @@ export const metadata: Metadata = {
     template: "%s | Aura Organic Coffee",
   },
   alternates: {
-    canonical: "https://aura-coffee.vercel.app/en",
+    canonical: "https://aura-coffee-demo.vercel.app/en",
     languages: {
-      de: "https://aura-coffee.vercel.app/de",
-      en: "https://aura-coffee.vercel.app/en",
-      "x-default": "https://aura-coffee.vercel.app/",
+      de: "https://aura-coffee-demo.vercel.app/de",
+      en: "https://aura-coffee-demo.vercel.app/en",
+      "x-default": "https://aura-coffee-demo.vercel.app/",
     },
   },
 };

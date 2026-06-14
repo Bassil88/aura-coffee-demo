@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://aura-coffee.vercel.app/sitemap.xml",
+    sitemap: "https://aura-coffee-demo.vercel.app/sitemap.xml",
   };
 }
