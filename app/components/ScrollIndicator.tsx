@@ -46,6 +46,20 @@ export default function ScrollIndicator({ locale }: { locale: "en" | "de" }) {
   const labels = translations[locale].scrollIndicator;
   const [activeSectionId, setActiveSectionId] = useState<SectionId>("hero");
   const [isAtTop, setIsAtTop] = useState(false);
+  const [isSafari, setIsSafari] = useState(false);
+  // const desktopClasses = isSafari ? "bg-white/15 backdrop-blur-xs" : "bg-white/10 backdrop-blur-md mix-blend-difference";
+  const desktopClasses = isSafari
+  ? `
+      bg-white/20
+      backdrop-blur-xl
+      border border-white/20
+      shadow-xl
+    `
+  : `
+      bg-white/10
+      backdrop-blur-md
+      mix-blend-difference
+    `;
 
   /* -----------------------------
      Mobile detection (stable)
@@ -128,16 +142,32 @@ export default function ScrollIndicator({ locale }: { locale: "en" | "de" }) {
 
       if (!closestSection) return;
 
+      // if (isNearBottom()) {
+      //   setIsAtTop(true);
+      //   setLabel(labels.TOP);
+      //   setTheme(isMobile ? "text-black" : "text-white");
+      // } else {
+      //   setIsAtTop(false);
+      //   setActiveSectionId(closestSection.id);
+      //   setLabel(labels[closestSection.id]);
+      //   setTheme(sectionColors[closestSection.id] ?? "text-white");
+      // }
+
       if (isNearBottom()) {
-        setIsAtTop(true);
-        setLabel(labels.TOP);
-        setTheme(isMobile ? "text-black" : "text-white");
-      } else {
-        setIsAtTop(false);
-        setActiveSectionId(closestSection.id);
-        setLabel(labels[closestSection.id]);
-        setTheme(sectionColors[closestSection.id] ?? "text-white");
-      }
+  setIsAtTop(true);
+  setLabel(labels.TOP);
+
+  if (isSafari) {
+    setTheme("text-black");
+  } else {
+    setTheme(isMobile ? "text-black" : "text-white");
+  }
+} else {
+  setIsAtTop(false);
+  setActiveSectionId(closestSection.id);
+  setLabel(labels[closestSection.id]);
+  setTheme(sectionColors[closestSection.id] ?? "text-white");
+}
 
       setVisible(true);
     };
@@ -145,7 +175,7 @@ export default function ScrollIndicator({ locale }: { locale: "en" | "de" }) {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, [isMobile]);
+  }, [isMobile, isSafari]);
 
   // -----------------------------
   useEffect(() => {
@@ -162,6 +192,19 @@ export default function ScrollIndicator({ locale }: { locale: "en" | "de" }) {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, [isMobile]);
+
+useEffect(() => {
+  const ua = navigator.userAgent;
+
+  console.log(ua);
+
+  const safari =
+    /^((?!chrome|android).)*safari/i.test(ua);
+
+  console.log("Safari?", safari);
+
+  setIsSafari(safari);
+}, []);
 
   /* -----------------------------
      Click scroll
@@ -204,30 +247,35 @@ export default function ScrollIndicator({ locale }: { locale: "en" | "de" }) {
   };
 
   if (!visible) return null;
-  const mobileSafe = isMobile ? "bg-white/20" : "bg-white/10 backdrop-blur-md mix-blend-difference";
+  // const mobileSafe = isMobile ? "bg-white/20" : "bg-white/10 mix-blend-difference isolation-[isolate]";
+  const mobileSafe = isMobile ? "bg-white/20" : desktopClasses;
+
   return (
-    <button
-      ref={indicatorRef}
-      onClick={handleClick}
-      aria-label="Scroll navigation"
-      className={`
-        fixed z-40
-        flex flex-col items-center gap-1
-        ${isMobile ? "bottom-7 right-10 translate-x-1/2 px-3 py-2 scale-90" : "top-1/2 right-8 -translate-y-1/2 px-4 py-1"}
-        rounded-full
-        bg-white/10
-        backdrop-blur-md
-         ${mobileSafe}
-        shadow-[0_0_20px_rgba(255,255,255,0.15)]
-        cursor-pointer
-        ${theme}
-      `}
-    >
+   <button
+  ref={indicatorRef}
+  onClick={handleClick}
+  aria-label="Scroll navigation"
+  className={`
+    fixed z-40
+    flex flex-col items-center gap-1
+    ${isMobile
+      ? "bottom-7 right-10 translate-x-1/2 px-3 py-2 scale-90"
+      : "top-1/2 right-8 -translate-y-1/2 px-4 py-1"}
+    rounded-full
+    ${mobileSafe}
+    shadow-[0_0_20px_rgba(255,255,255,0.15)]
+    cursor-pointer
+    ${theme}
+    [transform:translateZ(0)]
+    will-change-transform
+  `}
+>
       <span
         ref={textRef}
         className={`
           uppercase font-medium tracking-[0.35em]
           ${isMobile ? "text-[9px]" : "text-[10px]"}
+          will-change-transform
         `}
       >
         {label}
