@@ -155,7 +155,7 @@ Portfolio:
 https://bassil-edelbi.netlify.app
 
 LinkedIn:
-https://www.linkedin.com/in/bassil-edelbi-7b31a7277/
+https://www.linkedin.com/in/b-dev/
 
 GitHub:
 https://github.com/Bassil88
