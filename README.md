@@ -8,7 +8,7 @@ The project showcases modern frontend development practices, responsive design, 
 
 ## 🚀 Live Demo
 
-👉 **https://your-live-demo-url**
+https://aura-coffee-demo.vercel.app/de
 
 ---
 
